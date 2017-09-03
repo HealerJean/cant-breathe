@@ -1,0 +1,51 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <!-- 15 、service搭建父类 -->	  
+   <parent>
+  		<groupId>com.hlj.maven</groupId>
+		<artifactId>healer-parent</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+		<!-- 继承的绝对路径是pom的文件 -->
+		<relativePath>../healer-parent/pom.xml</relativePath>
+  </parent>
+  <artifactId>healer-service</artifactId>
+  <packaging>jar</packaging>
+  
+  <build/>
+  
+  
+  
+	  <dependencies>
+<!-- 8、junit -->	  
+	  	<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+			</dependency>
+<!-- 9、healer-core -->	  
+			
+	    <dependency>
+			<groupId>com.hlj.maven</groupId>
+			<artifactId>healer-core</artifactId>
+		</dependency>
+		
+<!-- 10、healer-log 使用下面的变量不能够跳过去-->	  		 
+		<dependency> 
+			<groupId>${project.groupId}</groupId>
+			<artifactId>healer-log</artifactId>
+<!--  12 、排除依赖 exclusions  父类中已经排除了，所以不需要了-->	   			
+		<!--	<exclusions>
+					可以排除依赖
+					<exclusion>
+						<groupId>commons-logging</groupId>
+						<artifactId>commons-logging</artifactId>
+					</exclusion>
+			</exclusions>	 -->
+		</dependency>
+<!-- 11、easymock -->	  		 
+			<dependency>
+				<groupId>org.easymock</groupId>
+				<artifactId>easymock</artifactId>
+			</dependency>
+	  
+	  </dependencies>
+</project>
