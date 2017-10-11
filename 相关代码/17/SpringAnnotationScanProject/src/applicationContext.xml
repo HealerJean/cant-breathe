@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx" 
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="
+	http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+	http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
+
+<!--  SpringProject-->
+<bean  id="testService" class="com.hlj.springTestSuccess.TestService">
+	<property name="name" value="张宇晋" />	
+</bean>
+
+
+<!-- SpringAnnotationProject -->
+	<!-- 是用于激活resource那些已经在spring容器里注册过的bean，
+	也就是说在spring中添加好了bean，需要被resource
+	（无论是通过xml的方式还是通过package sanning的方式）上面的注解。
+	 -->
+    <context:annotation-config />
+    <bean  id="idannotationService" class="com.hlj.springAnnotationTestSuccess.AnnotationServiceImp"></bean>
+     <bean  id="idtestService" class="com.hlj.springAnnotationTestSuccess.TestService"></bean>
+ 
+ 
+    <context:component-scan base-package="com" />
+    <context:component-scan base-package="com.hlj.springAnnotationTestSuccess" />
+ 
+ 
+ 
+</beans>
