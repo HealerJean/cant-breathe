@@ -32,6 +32,9 @@ http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
 		<jaxws:serviceBean> 
 			<ref bean="CommonWSImpl" /> <!-- 引入接口实现类 -->
 		</jaxws:serviceBean>
+<!-- 		<jaxws:inInterceptors>
+     		<bean class="com.atguigu.day01_ws.interceptor.CheckUserInterceptor"></bean>
+     	</jaxws:inInterceptors> -->
 	</jaxws:server>
     <!-- 接口实现类 -->
 	<bean id="CommonWSImpl" class="com.hlj.webservice.CommonWSImpl" />

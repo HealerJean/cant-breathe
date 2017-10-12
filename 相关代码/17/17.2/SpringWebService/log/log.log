@@ -1,0 +1,14 @@
+2017-10-12 13:39:18[][main] INFO [com.hlj.Log4jTest] info
+2017-10-12 13:39:18[][main] ERROR [com.hlj.Log4jTest] error
+2017-10-12 13:39:18[][main] WARN [com.hlj.Log4jTest] warn
+2017-10-12 13:53:22[][main] INFO [org.springframework.context.support.ClassPathXmlApplicationContext] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@4d630ab9: startup date [Thu Oct 12 13:53:22 CST 2017]; root of context hierarchy
+2017-10-12 13:53:22[][main] INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] Loading XML bean definitions from class path resource [module/client-beans.xml]
+2017-10-12 13:53:22[][main] INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] Loading XML bean definitions from class path resource [META-INF/cxf/cxf.xml]
+2017-10-12 13:53:22[][main] INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] Loading XML bean definitions from class path resource [META-INF/cxf/cxf-extension-soap.xml]
+2017-10-12 13:53:22[][main] INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] Loading XML bean definitions from class path resource [META-INF/cxf/cxf-extension-http-binding.xml]
+2017-10-12 13:53:22[][main] INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] Loading XML bean definitions from class path resource [META-INF/cxf/cxf-extension-xml.xml]
+2017-10-12 13:53:22[][main] INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] Loading XML bean definitions from class path resource [META-INF/cxf/cxf-servlet.xml]
+2017-10-12 13:53:23[][main] INFO [org.springframework.beans.factory.support.DefaultListableBeanFactory] Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@34e93999: defining beans [cxf,org.apache.cxf.bus.spring.BusWiringBeanFactoryPostProcessor,org.apache.cxf.bus.spring.Jsr250BeanPostProcessor,org.apache.cxf.bus.spring.BusExtensionPostProcessor,org.apache.cxf.binding.soap.SoapBindingFactory,org.apache.cxf.binding.soap.SoapTransportFactory,org.apache.cxf.binding.soap.customEditorConfigurer,org.apache.cxf.binding.http.HttpBindingFactory,org.apache.cxf.binding.xml.XMLBindingFactory,*.*,commonClientFactory,commonClient]; root of factory hierarchy
+2017-10-12 14:11:54[][main] INFO [com.hlj.Log4jTest] info
+2017-10-12 14:11:54[][main] ERROR [com.hlj.Log4jTest] error
+2017-10-12 14:11:54[][main] WARN [com.hlj.Log4jTest] warn

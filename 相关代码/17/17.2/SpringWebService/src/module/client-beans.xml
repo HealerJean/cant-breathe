@@ -39,6 +39,9 @@
 		<property name="serviceClass" value="com.hlj.webservice.CommonWSInter" />
 		<property name="address" value="http://localhost:8080/SpringProject/services/CommonService" />
  	<!--<property name="address" value="http://10.3.181.48:8080/dsp_oa/services/CommonService" /> -->
+ 		<!-- <property name="outInterceptors"> </property>-->
+ 			
+ 		
  	</bean>
  	
     <bean id="commonClient" class="com.hlj.webservice.CommonWSInter"
