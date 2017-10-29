@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" output="target/classes" path="src/main/java">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry excluding="**" kind="src" output="target/classes" path="src/main/resources">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" output="target/test-classes" path="src/test/java">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/J2SE-1.5">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/activemq-broker-5.12.1.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/activemq-client-5.12.1.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/activemq-console-5.12.1.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/activemq-jaas-5.12.1.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/activemq-kahadb-store-5.12.1.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/activemq-openwire-legacy-5.12.1.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/activemq-protobuf-1.1.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/activemq-rar.txt"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/activemq-spring-5.12.1.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/activemq-web-5.12.1.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/geronimo-j2ee-management_1.1_spec-1.0.1.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/geronimo-jms_1.1_spec-1.1.1.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/geronimo-jta_1.0.1B_spec-1.0.1.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/hawtbuf-1.11.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/jcl-over-slf4j-1.7.10.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/mysql-connector-java-5.1.20-bin.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/slf4j-api-1.7.10.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/web/core-3.1.1.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/web/geronimo-servlet_3.0_spec-1.0.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/web/jdom-1.0.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/web/jetty-all-8.1.16.v20140903.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/web/jolokia-core-1.3.2.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/web/json-simple-1.1.1.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/web/jsp-2.1-glassfish-2.1.v20100127.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/web/jsp-api-2.1-glassfish-2.1.v20100127.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/web/rome-1.0.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/web/spring-web-3.2.11.RELEASE.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/web/spring-webmvc-3.2.11.RELEASE.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/camel/activemq-camel-5.12.1.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/camel/camel-core-2.15.3.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/camel/camel-jms-2.15.3.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/camel/camel-spring-2.15.3.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/optional/activeio-core-3.1.4.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/optional/activemq-amqp-5.12.1.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/optional/activemq-http-5.12.1.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/optional/activemq-jdbc-store-5.12.1.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/optional/activemq-jms-pool-5.12.1.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/optional/activemq-leveldb-store-5.12.1.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/optional/activemq-log4j-appender-5.12.1.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/optional/activemq-mqtt-5.12.1.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/optional/activemq-partition-5.12.1.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/optional/activemq-pool-5.12.1.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/optional/activemq-runtime-config-5.12.1.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/optional/activemq-shiro-5.12.1.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/optional/activemq-stomp-5.12.1.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/optional/commons-beanutils-1.8.3.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/optional/commons-codec-1.6.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/optional/commons-collections-3.2.1.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/optional/commons-dbcp2-2.1.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/optional/commons-lang-2.6.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/optional/commons-net-3.3.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/optional/commons-pool2-2.4.2.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/optional/geronimo-j2ee-connector_1.5_spec-2.0.0.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/optional/guava-12.0.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/optional/hawtbuf-proto-1.11.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/optional/hawtdispatch-1.21.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/optional/hawtdispatch-scala-2.11-1.21.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/optional/hawtdispatch-transport-1.21.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/optional/hawtjni-runtime-1.9.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/optional/httpclient-4.2.5.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/optional/httpcore-4.2.4.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/optional/insight-log-core-1.2.0.Beta4.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/optional/insight-log4j-1.2.0.Beta4.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/optional/jackson-annotations-2.4.3.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/optional/jackson-core-2.4.3.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/optional/jackson-databind-2.4.3.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/optional/jasypt-1.9.2.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/optional/jasypt-spring31-1.9.2.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/optional/jaxb2-basics-runtime-0.6.4.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/optional/jettison-1.3.7.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/optional/jmdns-3.4.1.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/optional/leveldb-0.6.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/optional/leveldb-api-0.6.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/optional/leveldbjni-1.8.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/optional/log4j-1.2.17.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/optional/org.apache.servicemix.bundles.josql-1.5_5.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/optional/org.linkedin.util-core-1.4.0.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/optional/org.linkedin.zookeeper-impl-1.4.0.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/optional/proton-j-0.9.1.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/optional/scala-library-2.11.0.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/optional/shiro-core-1.2.2.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/optional/shiro-spring-1.2.2.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/optional/slf4j-log4j12-1.7.10.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/optional/snappy-0.2.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/optional/snappy-java-1.1.0.1.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/optional/spring-aop-3.2.11.RELEASE.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/optional/spring-beans-3.2.11.RELEASE.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/optional/spring-context-3.2.11.RELEASE.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/optional/spring-core-3.2.11.RELEASE.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/optional/spring-expression-3.2.11.RELEASE.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/optional/spring-jms-3.2.11.RELEASE.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/optional/spring-oxm-3.2.11.RELEASE.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/optional/spring-tx-3.2.11.RELEASE.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/optional/velocity-1.7.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/optional/xbean-spring-3.18.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/optional/xpp3-1.1.4c.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/optional/xstream-1.4.7.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/optional/zookeeper-3.4.6.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/extra/mqtt-client-1.12.jar"/>
+	<classpathentry kind="output" path="target/classes"/>
+</classpath>
