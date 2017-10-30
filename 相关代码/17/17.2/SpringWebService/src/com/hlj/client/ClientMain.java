@@ -20,14 +20,26 @@ public class ClientMain {
 		
 		CommonWSInter client = (CommonWSInter) context.getBean("commonClient");
 		
-		Map<String,String>  map = new HashMap<String,String> ();
-		
-		map.put("name", "zhang");
-		map.put("xml", "xml");
-		map.put("age", "34");
-		
+
 	//	String a = client.receiveOARequestFromTransfer("zhang");
-		client.sendMap(map);
-	//	System.out.println(a); 
+
+		/**
+		 * 测试得到map类型的webservice ,不需要像之前自己的webservice的转化也能够成功
+		 */
+		/*
+		Map<String ,Object> map = client.getReturnMap("HealerJean");
+		String mapString = (String)map.get("name");
+		System.out.println(mapString); 
+		*/
+		
+		/**
+		 * 测试传入的参数为map
+		 */
+		Map<String ,Object> mapParam = new HashMap<String, Object>();
+		mapParam.put("name", "mapParam");
+		mapParam.put("name", "HealerJean");
+		String reString = client.setMapParam(mapParam);
+		System.out.println("客户端调用 setMapParam "+reString);
+		
 	}
 }

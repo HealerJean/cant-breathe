@@ -44,7 +44,7 @@ public class MyInInterceptor extends AbstractPhaseInterceptor<Message> {
             //¡­¡­¡­¡­¡­¡­¡­¡­´¦Àí´úÂë¡­¡­¡­¡­¡­¡­¡­¡­ 
 
             
-            String xml = IOUtils.toString(is);  
+          //  String xml = IOUtils.toString(is);  
                 
             if(is != null) 
                 message.setContent(InputStream.class, is); 

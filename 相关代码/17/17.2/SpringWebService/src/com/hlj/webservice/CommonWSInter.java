@@ -1,12 +1,12 @@
 package com.hlj.webservice;
 
-import java.util.List;
 import java.util.Map;
 
 import javax.jws.WebParam;
-import javax.jws.WebResult;
 import javax.jws.WebService;
-import javax.xml.ws.RequestWrapper;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+
+import com.hlj.util.MapAdapter;
 
 
 
@@ -17,6 +17,11 @@ public interface CommonWSInter {
    public String receiveOARequestFromTransfer(@WebParam(name = "name") String name);
 
 	
-   
-	public Map<String ,String> sendMap(Map<String ,String> map) ;
+   //测试传入的参数为map类型
+	public String setMapParam(@XmlJavaTypeAdapter(MapAdapter.class)Map<String ,Object> map) ;
+	
+	//测试取得webservice结果为Map
+	public @XmlJavaTypeAdapter(MapAdapter.class)Map<String ,Object> getReturnMap(String name);
+
+	
 }

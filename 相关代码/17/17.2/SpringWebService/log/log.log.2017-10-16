@@ -1,0 +1,3 @@
+2017-10-16 11:05:44[][main] INFO [com.hlj.Log4jTest] info
+2017-10-16 11:05:44[][main] ERROR [com.hlj.Log4jTest] error
+2017-10-16 11:05:44[][main] WARN [com.hlj.Log4jTest] warn
