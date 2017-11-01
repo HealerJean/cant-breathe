@@ -1,26 +1,43 @@
 package com.hlj.mail.bean;
 
+import java.util.Map;
+
 public class MailBean {
 	    private String from;    
 	    private String fromName;    
 	    private String[] toEmails;    
 	    private String subject;  
-	    private String context;
-	    
-	    
-	    
+	    private String text;
+	    private Map<String,Object> attachment;
+	    private Map<String,Object> imageAttachment;
+
+	     
 		public MailBean() {
 		}
 
 
+	
+
+
+
+
 		public MailBean(String from, String fromName, String[] toEmails,
-				String subject, String context) {
+				String subject, String text, Map<String, Object> attachment,
+				Map<String, Object> imageAttachment) {
+			super();
 			this.from = from;
 			this.fromName = fromName;
 			this.toEmails = toEmails;
 			this.subject = subject;
-			this.context = context;
+			this.text = text;
+			this.attachment = attachment;
+			this.imageAttachment = imageAttachment;
 		}
+
+
+
+
+
 
 
 		public String getFrom() {
@@ -63,14 +80,41 @@ public class MailBean {
 		}
 
 
-		public String getContext() {
-			return context;
+		public String getText() {
+			return text;
 		}
 
 
-		public void setContext(String context) {
-			this.context = context;
-		}  
+		public void setText(String text) {
+			this.text = text;
+		}
+
+
+		public Map<String, Object> getAttachment() {
+			return attachment;
+		}
+
+
+
+
+		public void setAttachment(Map<String, Object> attachment) {
+			this.attachment = attachment;
+		}
+
+
+
+
+		public Map<String, Object> getImageAttachment() {
+			return imageAttachment;
+		}
+
+
+
+
+		public void setImageAttachment(Map<String, Object> imageAttachment) {
+			this.imageAttachment = imageAttachment;
+		}
+
 	    
 	    
 }
