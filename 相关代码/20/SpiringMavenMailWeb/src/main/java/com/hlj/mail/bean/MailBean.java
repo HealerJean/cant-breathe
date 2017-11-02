@@ -3,23 +3,17 @@ package com.hlj.mail.bean;
 import java.util.Map;
 
 public class MailBean {
-	    private String from;    
-	    private String fromName;    
-	    private String[] toEmails;    
-	    private String subject;  
-	    private String text;
-	    private Map<String,Object> attachment;
-	    private Map<String,Object> imageAttachment;
+	    private String from;  //发送者邮箱   
+	    private String fromName;    //收件箱列表显示标题
+	    private String[] toEmails;  //接受者邮箱，设置数组，可以同时发送给多个人  
+	    private String subject;    //邮件主题
+	    private String text;		//邮件内容
+	    private Map<String,Object> attachment; //附件
+	    private Map<String,Object> imageAttachment; //链接中的图片
 
 	     
 		public MailBean() {
 		}
-
-
-	
-
-
-
 
 		public MailBean(String from, String fromName, String[] toEmails,
 				String subject, String text, Map<String, Object> attachment,

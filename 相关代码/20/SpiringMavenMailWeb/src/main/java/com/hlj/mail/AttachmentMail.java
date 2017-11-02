@@ -56,18 +56,7 @@ public class AttachmentMail {
 			mailSenderService.sendMail(mailBean);  
 	      
 		
-		
-		
 	
-	/*	// true 表示启动HTML格式的邮件
-		messageHelper.setText(
-				"<html><head></head><body><h1>hello!!spring image html mail</h1>"
-					+"<a href=http://www.baidu.com>百度</a>"	+ "</body></html>", true);
-	
-		//附件名字任意
-		messageHelper.addAttachment("a.jpg", img);//添加到附件
-
-		sender.send(mailMessage);*/
 		System.out.println("邮件发送成功...");
 
 	}

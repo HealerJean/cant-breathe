@@ -22,33 +22,29 @@
         <!-- 查看SimpleMailMessage源码还可以注入标题,内容等 -->  
     </bean>  
     
-     <!-- 邮件发送器 163  -->
+     <!-- 邮件发送器 163，qq，sohu  -->
     <!-- 申明JavaMailSenderImpl对象 -->  
     <bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">  
         <property name="host" value="${mail.host}" />  
         <property name="username" value="${mail.username}" />  
         <property name="password" value="${mail.password}" /> 
         <property name="defaultEncoding" value="UTF-8" /> 
-        <property name="protocol" ><value>smtps</value></property>  
-      <!--   <property name="port" value="25" />默认提供端口支持，并且默认知道端口是多少，无需指定  --> 
-       <property name="javaMailProperties">  
+        <property name="protocol" value="smtp"/> 
+       <!--<property name="port" value="25" />  --><!-- 默认提供端口支持，默认是25 --> 
+        <property name="javaMailProperties">  
             <props>  
-                <!-- 设置认证开关 -->  
-                <prop key="mail.smtp.auth">true</prop>  
                 <!-- 启动调试开关 -->  
                 <prop key="mail.debug">true</prop>  
-                <!-- 设置发送延时 -->
-                <prop key="mail.smtp.timeout">0</prop>
-                <prop key="mail.smtp.auth">${mail.smtp.auth}</prop>    
+                 <!-- 验证身份， 设置认证开关 ，默认false，这里设置为true-->  
+                <prop key="mail.smtp.auth">${mail.smtp.auth}</prop>   
+                 <!-- 设置发送延时 -->
                 <prop key="mail.smtp.timeout">${mail.smtp.timeout}</prop>  
-                <!-- 验证身份 -->  
-               <prop key="mail.smtps.auth">true</prop>  
-               <prop key="mail.smtp.ssl.enable">true</prop>  
-               <prop key="mail.transport.protocol">smtps</prop>  
+               <!--  <prop key="mail.smtp.port">25</prop>  相关属性也可以设置在这里 -->
+                <!-- <prop key="mail.transport.protocol">smtp</prop>  同上面设置上面的 protocol 要装入session的协议  -->
             </props>  
         </property>  
     </bean>  
-    
+   
     
       <!--  邮件发送器 gmail -->     
     <!-- <bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">      

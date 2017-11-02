@@ -19,6 +19,7 @@ import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.stereotype.Service;  
 
 import com.hlj.mail.bean.MailBean;
+
 @Service  
 public class MailSenderService {  
 	//利用系统的配置文件生成，可以直接使用
