@@ -18,7 +18,7 @@ public class SingleMailSend {
 	static MailSender sender = (MailSender) context.getBean("mailSender");
 	static SimpleMailMessage mailMessage = (SimpleMailMessage) context.getBean("mailMessage");
 	public static void main(String args[]) throws MessagingException {		
-		mailMessage.setSubject("你好");
+		mailMessage.setSubject("subject 标题");
 		mailMessage.setText("这个是一个通过Spring框架来发送邮件的小程序");
 		mailMessage.setTo("mxzdhealer@163.com");
 		sender.send(mailMessage);

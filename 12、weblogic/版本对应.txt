@@ -1,2 +1,3 @@
 jdk 1.6 weblogic 10.3.6/11g 中科软安装
 
+jdk 1.8 weblogic 12g
