@@ -15,6 +15,8 @@ import com.hlj.client.CommonWSInter;
 import com.hlj.client.CommonWSInterService;
 import com.hlj.client.MapConvertor;
 import com.hlj.client.MapEntry;
+import com.hlj.client.SetMapParam;
+import com.hlj.client.SetMapParamResponse;
 import com.hlj.util.StringObjectMapAdapter;
 
 /** 
@@ -28,38 +30,32 @@ public class Main {
 	public static void main(String[] args) throws InstantiationException, IllegalAccessException, SecurityException, NoSuchFieldException {
 		//setAndgetStringWs();
 		//getMapWs();
-		setMapParamWs();
-
+	//	setMapParamWs();
+		setMapParamWsTwo();
 	}
 	
 	
 	private static void setMapParamWsTwo(){
 
-	/*ICommonWS ics =null;
-	JaxWsProxyFactoryBean factory = new JaxWsProxyFactoryBean();
-	factory.setServiceClass(ICommonWS.class);
-	factory.setAddress("http://192.168.2.56:8080/dsp/services/CommonService?wsdl");
-	ics = factory.create(ICommonWS.class);
-	ReceiveOARequestFromTransferParam parameters =new ReceiveOARequestFromTransferParam();
-	MapConvertor value =new MapConvertor();
-	MapEntry entry =new MapEntry();
-	entry.setKey("xml");
-	entry.setValue(FileUtils.readFileToString(new File("C:\\Users\\komenj\\Desktop\\NJB01201_20160627145344976_ZYNJ.xml")));
-	value.getEntry().add(entry);
-	
-	
-		MapEntry file =new MapEntry();
-		file.setKey("filecontent");
-		file.setValue(FileUtils.readFileToByteArray(new File("E:\\java\\dtcp_xin\\WebRoot\\businessfiles\\recv\\zynj\\20160419\\20160419151037279\\file\\RS1000000ToST11111_NJF02001_20160419_229.txt")));
-		value.getEntry().add(file);
-	
-	parameters.setRequests(value);
-	
-	ReceiveOARequestFromTransferResponse eaRequestFromTransferResponse =		ics.receiveOARequestFromTransfer(parameters);
-	if(eaRequestFromTransferResponse.getResult().getExtInfo().getEntry().get(0).getKey().equals("xml")){
-		System.out.println(new String((byte[])  eaRequestFromTransferResponse.getResult().getExtInfo().getEntry().get(0).getValue())); 
-	}*/
-	
+				
+			CommonWSInter ics =null;
+			JaxWsProxyFactoryBean factory = new JaxWsProxyFactoryBean();
+			factory.setServiceClass(CommonWSInter.class);
+			factory.setAddress("http://localhost:8080/SpringWebService/services/CommonService?wsdl");
+			
+			ics = factory.create(CommonWSInter.class);
+			
+		
+			MapConvertor value =new MapConvertor();
+			MapEntry entry =new MapEntry();
+			entry.setKey("nameField");
+			entry.setValue("HealerJean");
+			value.getList().add(entry);
+			
+			
+			String  str =	ics.setMapParam(value)	;
+		
+			 System.out.println(str);
 	}
 	/**
 	 * 3、
@@ -91,7 +87,6 @@ public class Main {
 		
 		System.out.println("客户端调用 setMapParam "+reString);
 	
-	//	commonWSInter.setMapParam(arg0);
 	}
 
 	/**
