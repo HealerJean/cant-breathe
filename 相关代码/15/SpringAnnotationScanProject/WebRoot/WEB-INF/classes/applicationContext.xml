@@ -34,8 +34,9 @@
  
  
 <!-- com.hlj.Tow.Async -->
- 	<import resource="classpath:/applicationContext-async.xml"/>
+ 	<!-- <import resource="classpath:/applicationContext-two-simpleAsync.xml"/> -->
  
+  	<import resource="classpath:/applicationContext-three-shedule.xml"/>
  
  
 </beans>
