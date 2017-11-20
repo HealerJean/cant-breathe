@@ -33,9 +33,4 @@
     <context:component-scan base-package="com.hlj.springAnnotationTestSuccess" />
  
  
-<!-- com.hlj.Tow.Async -->
- 	<import resource="classpath:/applicationContext-async.xml"/>
- 
- 
- 
 </beans>
