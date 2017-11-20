@@ -29,6 +29,7 @@ public class SetMapParamSender  extends WsSender<SetMapParam>{
 
 	@Override
 	public QName getOperationQName() {
+		//命名空间 和 方法的名字，注意首字母小写
 		return new QName(getWsDestInfo().getWsDestEO().getNamespace(), "setMapParam");
 	}
 	
