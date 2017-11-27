@@ -1,0 +1,73 @@
+2017/09/21 15:23:45 [notice] 7044#9596: signal process started
+2017/09/21 15:23:45 [error] 7044#9596: CreateFile() "D:\ProgramFies\Tools\nginx-1.13.4\nginx-1.13.4/logs/nginx.pid" failed (2: The system cannot find the file specified)
+2017/09/21 15:25:32 [notice] 6964#8324: signal process started
+2017/09/21 15:25:37 [notice] 7816#2836: signal process started
+2017/09/21 15:35:10 [notice] 8696#7888: signal process started
+2017/09/21 15:35:11 [notice] 9284#1012: signal process started
+2017/09/21 15:35:57 [notice] 10212#5592: signal process started
+2017/09/21 15:35:58 [notice] 9732#10208: signal process started
+2017/09/21 15:36:36 [notice] 7440#1992: signal process started
+2017/09/21 15:36:37 [notice] 9084#9704: signal process started
+2017/09/21 15:44:21 [notice] 7228#7300: signal process started
+2017/09/21 15:45:37 [emerg] 9464#8660: bind() to 0.0.0.0:80 failed (10013: An attempt was made to access a socket in a way forbidden by its access permissions)
+2017/09/21 15:55:19 [emerg] 8868#8772: bind() to 0.0.0.0:80 failed (10013: An attempt was made to access a socket in a way forbidden by its access permissions)
+2017/09/21 15:55:44 [emerg] 8676#9352: bind() to 0.0.0.0:80 failed (10013: An attempt was made to access a socket in a way forbidden by its access permissions)
+2017/09/21 15:56:34 [emerg] 3308#9176: bind() to 0.0.0.0:80 failed (10013: An attempt was made to access a socket in a way forbidden by its access permissions)
+2017/09/21 15:57:04 [notice] 10040#9956: signal process started
+2017/09/21 15:57:04 [error] 10040#9956: invalid PID number "" in "D:\ProgramFies\Tools\nginx-1.13.4\nginx-1.13.4/logs/nginx.pid"
+2017/09/21 15:57:09 [notice] 9340#1068: signal process started
+2017/09/21 15:57:09 [error] 9340#1068: invalid PID number "" in "D:\ProgramFies\Tools\nginx-1.13.4\nginx-1.13.4/logs/nginx.pid"
+2017/09/21 15:57:27 [notice] 8396#7716: signal process started
+2017/09/21 15:57:27 [error] 8396#7716: invalid PID number "" in "D:\ProgramFies\Tools\nginx-1.13.4\nginx-1.13.4/logs/nginx.pid"
+2017/09/21 15:57:39 [notice] 8520#8464: signal process started
+2017/09/21 15:57:43 [notice] 8020#8744: signal process started
+2017/09/21 15:58:53 [notice] 8340#8920: signal process started
+2017/09/21 15:59:20 [notice] 8532#8500: signal process started
+2017/09/21 15:59:22 [notice] 9248#9340: signal process started
+2017/09/21 16:00:01 [notice] 9240#804: signal process started
+2017/09/21 16:00:02 [notice] 3532#7172: signal process started
+2017/09/21 16:07:19 [notice] 9088#7428: signal process started
+2017/09/21 16:07:19 [notice] 9044#9600: signal process started
+2017/09/21 16:09:05 [notice] 7216#5968: signal process started
+2017/09/21 16:09:06 [notice] 8200#7256: signal process started
+2017/09/21 16:11:33 [notice] 7504#4376: signal process started
+2017/09/21 16:11:38 [notice] 9292#8372: signal process started
+2017/09/21 16:11:41 [notice] 7904#9368: signal process started
+2017/09/22 09:36:48 [emerg] 10524#10528: "upstream" directive is not allowed here in D:\ProgramFies\Tools\nginx-1.13.4\nginx-1.13.4/conf/nginx.conf:94
+2017/09/22 09:37:21 [notice] 10488#4852: signal process started
+2017/09/22 14:10:26 [emerg] 7504#8816: "upstream" directive is not allowed here in D:\ProgramFies\Tools\nginx-1.13.4\nginx-1.13.4/conf/nginx.conf:95
+2017/09/22 14:10:30 [emerg] 7252#8948: "upstream" directive is not allowed here in D:\ProgramFies\Tools\nginx-1.13.4\nginx-1.13.4/conf/nginx.conf:95
+2017/09/22 15:41:49 [emerg] 768#10648: "upstream" directive is not allowed here in D:\ProgramFies\Tools\nginx-1.13.4\nginx-1.13.4/conf/nginx.conf:95
+2017/09/22 15:42:17 [notice] 9364#6352: signal process started
+2017/09/22 15:42:17 [error] 9364#6352: invalid PID number "" in "D:\ProgramFies\Tools\nginx-1.13.4\nginx-1.13.4/logs/nginx.pid"
+2017/09/22 15:42:29 [notice] 8512#10548: signal process started
+2017/09/22 15:42:34 [notice] 9532#10832: signal process started
+2017/09/22 15:44:07 [notice] 1960#7852: signal process started
+2017/09/22 15:44:10 [notice] 9612#8740: signal process started
+2017/09/22 15:45:02 [notice] 6756#9840: signal process started
+2017/09/22 15:45:03 [notice] 3992#10536: signal process started
+2017/09/22 16:08:10 [emerg] 9332#768: invalid host in upstream "http://10.3.181.60:8080/dsp_oa/" in D:\ProgramFies\Tools\nginx-1.13.4\nginx-1.13.4/conf/nginx.conf:39
+2017/09/22 16:12:03 [notice] 7584#9804: signal process started
+2017/09/22 16:14:36 [emerg] 8936#7848: invalid host in upstream "10.3.181.60/dsp_oa" in D:\ProgramFies\Tools\nginx-1.13.4\nginx-1.13.4/conf/nginx.conf:39
+2017/09/22 16:16:21 [emerg] 10960#8868: bind() to 0.0.0.0:80 failed (10013: An attempt was made to access a socket in a way forbidden by its access permissions)
+2017/09/22 16:16:30 [emerg] 7964#9416: bind() to 0.0.0.0:80 failed (10013: An attempt was made to access a socket in a way forbidden by its access permissions)
+2017/09/22 16:16:32 [emerg] 10256#1964: bind() to 0.0.0.0:80 failed (10013: An attempt was made to access a socket in a way forbidden by its access permissions)
+2017/09/22 16:16:55 [notice] 8772#11196: signal process started
+2017/09/22 16:16:55 [error] 8772#11196: invalid PID number "" in "D:\ProgramFies\Tools\nginx-1.13.4\nginx-1.13.4/logs/nginx.pid"
+2017/09/22 16:17:01 [notice] 9784#8128: signal process started
+2017/09/22 16:17:01 [error] 9784#8128: invalid PID number "" in "D:\ProgramFies\Tools\nginx-1.13.4\nginx-1.13.4/logs/nginx.pid"
+2017/09/22 16:18:21 [emerg] 11140#7504: bind() to 0.0.0.0:80 failed (10013: An attempt was made to access a socket in a way forbidden by its access permissions)
+2017/09/22 16:18:27 [notice] 10196#4460: signal process started
+2017/09/22 16:18:27 [error] 10196#4460: invalid PID number "" in "D:\ProgramFies\Tools\nginx-1.13.4\nginx-1.13.4/logs/nginx.pid"
+2017/09/22 16:18:33 [notice] 7256#9804: signal process started
+2017/09/22 16:18:33 [error] 7256#9804: invalid PID number "" in "D:\ProgramFies\Tools\nginx-1.13.4\nginx-1.13.4/logs/nginx.pid"
+2017/09/22 16:18:48 [notice] 9840#9204: signal process started
+2017/09/22 16:18:48 [error] 9840#9204: invalid PID number "" in "D:\ProgramFies\Tools\nginx-1.13.4\nginx-1.13.4/logs/nginx.pid"
+2017/09/22 16:57:47 [emerg] 9732#10876: invalid port in upstream "10.3.181.60:" in D:\ProgramFies\Tools\nginx-1.13.4\nginx-1.13.4/conf/nginx.conf:39
+2017/09/22 16:58:05 [emerg] 9268#8048: bind() to 0.0.0.0:80 failed (10013: An attempt was made to access a socket in a way forbidden by its access permissions)
+2017/09/22 16:59:01 [notice] 8768#11152: signal process started
+2017/09/22 16:59:27 [notice] 11204#11164: signal process started
+2017/11/27 10:43:56 [emerg] 10236#10232: "proxy_pass" directive is not allowed here in D:\ProgramFies\Tools\nginx-1.13.4\nginx-1.13.4/conf/nginx.conf:54
+2017/11/27 10:44:21 [emerg] 9448#4608: "proxy_pass" directive is not allowed here in D:\ProgramFies\Tools\nginx-1.13.4\nginx-1.13.4/conf/nginx.conf:47
+2017/11/27 10:45:36 [notice] 5308#8320: signal process started
+2017/11/27 10:45:44 [notice] 10088#7504: signal process started

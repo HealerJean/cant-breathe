@@ -1,0 +1,144 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 1739856 bytes for Chunk::new
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   In 32 bit mode, the process size limit was hit
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Use 64 bit Java on a 64 bit OS
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (allocation.cpp:317), pid=8060, tid=5160
+#
+# JRE version: 6.0_43-b01
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (20.14-b01 mixed mode windows-amd64 compressed oops)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00000000068ae800):  JavaThread "C2 CompilerThread0" daemon [_thread_in_native, id=5160, stack(0x0000000006f80000,0x0000000007080000)]
+
+Stack: [0x0000000006f80000,0x0000000007080000]
+
+Current CompileTask:
+C2:   5912 192  !   org.apache.catalina.loader.WebappClassLoader.findResourceInternal(Ljava/lang/String;Ljava/lang/String;)Lorg/apache/catalina/loader/ResourceEntry; (1260 bytes)
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x0000000007c40800 JavaThread "GC Daemon" daemon [_thread_blocked, id=7048, stack(0x0000000008f50000,0x0000000009050000)]
+  0x00000000025fe000 JavaThread "Low Memory Detector" daemon [_thread_blocked, id=1160, stack(0x0000000007180000,0x0000000007280000)]
+  0x00000000068b4000 JavaThread "C2 CompilerThread1" daemon [_thread_blocked, id=6452, stack(0x0000000007080000,0x0000000007180000)]
+=>0x00000000068ae800 JavaThread "C2 CompilerThread0" daemon [_thread_in_native, id=5160, stack(0x0000000006f80000,0x0000000007080000)]
+  0x00000000025f5800 JavaThread "JDWP Command Reader" daemon [_thread_in_native, id=15528, stack(0x0000000006e80000,0x0000000006f80000)]
+  0x00000000025f2800 JavaThread "JDWP Event Helper Thread" daemon [_thread_blocked, id=10020, stack(0x0000000006d80000,0x0000000006e80000)]
+  0x00000000025ef000 JavaThread "JDWP Transport Listener: dt_socket" daemon [_thread_blocked, id=14636, stack(0x0000000006c80000,0x0000000006d80000)]
+  0x00000000025db000 JavaThread "Attach Listener" daemon [_thread_blocked, id=14000, stack(0x0000000006b80000,0x0000000006c80000)]
+  0x00000000025d7800 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=12068, stack(0x0000000006a80000,0x0000000006b80000)]
+  0x00000000025c0800 JavaThread "Finalizer" daemon [_thread_blocked, id=1404, stack(0x0000000006780000,0x0000000006880000)]
+  0x00000000025bd000 JavaThread "Reference Handler" daemon [_thread_blocked, id=15268, stack(0x0000000006680000,0x0000000006780000)]
+  0x00000000001ed000 JavaThread "main" [_thread_in_Java, id=16840, stack(0x0000000002400000,0x0000000002500000)]
+
+Other Threads:
+  0x00000000025b7000 VMThread [stack: 0x0000000006580000,0x0000000006680000] [id=11784]
+  0x00000000068ca800 WatcherThread [stack: 0x0000000007280000,0x0000000007380000] [id=7380]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap
+ PSYoungGen      total 305856K, used 62972K [0x00000000eaab0000, 0x0000000100000000, 0x0000000100000000)
+  eden space 262208K, 24% used [0x00000000eaab0000,0x00000000ee82f2c0,0x00000000faac0000)
+  from space 43648K, 0% used [0x00000000faac0000,0x00000000faac0000,0x00000000fd560000)
+  to   space 43648K, 0% used [0x00000000fd560000,0x00000000fd560000,0x0000000100000000)
+ PSOldGen        total 699072K, used 1487K [0x00000000c0000000, 0x00000000eaab0000, 0x00000000eaab0000)
+  object space 699072K, 0% used [0x00000000c0000000,0x00000000c0173e18,0x00000000eaab0000)
+ PSPermGen       total 21248K, used 15660K [0x00000000a0000000, 0x00000000a14c0000, 0x00000000c0000000)
+  object space 21248K, 73% used [0x00000000a0000000,0x00000000a0f4b298,0x00000000a14c0000)
+
+Code Cache  [0x0000000002600000, 0x0000000002870000, 0x0000000005600000)
+ total_blobs=461 nmethods=199 adapters=223 free_code_cache=49170368 largest_free_block=8512
+
+Dynamic libraries:
+0x0000000000400000 - 0x000000000042f000 	C:\Program Files\Java\jdk1.6.0_43\bin\javaw.exe
+0x00007ff8f7f10000 - 0x00007ff8f80d1000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ff8f5310000 - 0x00007ff8f53bd000 	C:\WINDOWS\system32\KERNEL32.DLL
+0x00007ff8f4810000 - 0x00007ff8f49f8000 	C:\WINDOWS\system32\KERNELBASE.dll
+0x00007ff8f5470000 - 0x00007ff8f5517000 	C:\WINDOWS\system32\ADVAPI32.dll
+0x00007ff8f74c0000 - 0x00007ff8f755d000 	C:\WINDOWS\system32\msvcrt.dll
+0x00007ff8f7560000 - 0x00007ff8f75bb000 	C:\WINDOWS\system32\sechost.dll
+0x00007ff8f5ce0000 - 0x00007ff8f5dfc000 	C:\WINDOWS\system32\RPCRT4.dll
+0x00007ff8f7360000 - 0x00007ff8f74b6000 	C:\WINDOWS\system32\USER32.dll
+0x00007ff8f7d60000 - 0x00007ff8f7ee6000 	C:\WINDOWS\system32\GDI32.dll
+0x00007ff8f7b20000 - 0x00007ff8f7b5b000 	C:\WINDOWS\system32\IMM32.DLL
+0x000000006d8c0000 - 0x000000006e07c000 	C:\Program Files\Java\jdk1.6.0_43\jre\bin\server\jvm.dll
+0x00007ff8f2cb0000 - 0x00007ff8f2cd3000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ff8f2c80000 - 0x00007ff8f2cac000 	C:\WINDOWS\SYSTEM32\WINMMBASE.dll
+0x00007ff8f5230000 - 0x00007ff8f5273000 	C:\WINDOWS\system32\cfgmgr32.dll
+0x000000006d830000 - 0x000000006d83e000 	C:\Program Files\Java\jdk1.6.0_43\jre\bin\verify.dll
+0x000000006d450000 - 0x000000006d477000 	C:\Program Files\Java\jdk1.6.0_43\jre\bin\java.dll
+0x000000006d4c0000 - 0x000000006d4f4000 	C:\Program Files\Java\jdk1.6.0_43\jre\bin\jdwp.dll
+0x000000006d6e0000 - 0x000000006d6e8000 	C:\Program Files\Java\jdk1.6.0_43\jre\bin\npt.dll
+0x000000006d880000 - 0x000000006d892000 	C:\Program Files\Java\jdk1.6.0_43\jre\bin\zip.dll
+0x000000006d310000 - 0x000000006d319000 	C:\Program Files\Java\jdk1.6.0_43\jre\bin\dt_socket.dll
+0x00007ff8f7cf0000 - 0x00007ff8f7d5b000 	C:\WINDOWS\system32\WS2_32.dll
+0x00007ff8e48c0000 - 0x00007ff8e48d6000 	C:\WINDOWS\system32\napinsp.dll
+0x00007ff8e48e0000 - 0x00007ff8e48fa000 	C:\WINDOWS\system32\pnrpnsp.dll
+0x00007ff8f24d0000 - 0x00007ff8f24e8000 	C:\WINDOWS\system32\NLAapi.dll
+0x00007ff8f3e60000 - 0x00007ff8f3ebc000 	C:\WINDOWS\System32\mswsock.dll
+0x00007ff8f2f50000 - 0x00007ff8f2ffa000 	C:\WINDOWS\SYSTEM32\DNSAPI.dll
+0x00007ff8f7b60000 - 0x00007ff8f7b68000 	C:\WINDOWS\system32\NSI.dll
+0x00007ff8e4900000 - 0x00007ff8e490d000 	C:\WINDOWS\System32\winrnr.dll
+0x00007ff8e4a30000 - 0x00007ff8e4a45000 	C:\WINDOWS\System32\wshbth.dll
+0x00007ff8eab00000 - 0x00007ff8eab67000 	C:\WINDOWS\System32\fwpuclnt.dll
+0x00007ff8f4130000 - 0x00007ff8f4159000 	C:\WINDOWS\SYSTEM32\bcrypt.dll
+0x00007ff8ea9f0000 - 0x00007ff8ea9fa000 	C:\Windows\System32\rasadhlp.dll
+0x000000006d5f0000 - 0x000000006d5fa000 	C:\Program Files\Java\jdk1.6.0_43\jre\bin\management.dll
+0x0000000010000000 - 0x0000000010125000 	D:\channel\tomcat6\bin\tcnative-1.dll
+0x00007ff8f7ce0000 - 0x00007ff8f7ce8000 	C:\WINDOWS\system32\PSAPI.DLL
+0x00007ff8f75c0000 - 0x00007ff8f7612000 	C:\WINDOWS\system32\SHLWAPI.dll
+0x00007ff8f5750000 - 0x00007ff8f59cd000 	C:\WINDOWS\system32\combase.dll
+0x00007ff8f4a00000 - 0x00007ff8f4a6a000 	C:\WINDOWS\system32\bcryptPrimitives.dll
+0x00007ff8f3f10000 - 0x00007ff8f3f27000 	C:\WINDOWS\SYSTEM32\CRYPTSP.dll
+0x00007ff8f3b20000 - 0x00007ff8f3b54000 	C:\WINDOWS\system32\rsaenh.dll
+0x00007ff8f4030000 - 0x00007ff8f403b000 	C:\WINDOWS\SYSTEM32\CRYPTBASE.dll
+0x000000006d800000 - 0x000000006d80b000 	C:\Program Files\Java\jdk1.6.0_43\jre\bin\sunmscapi.dll
+0x00007ff8f4640000 - 0x00007ff8f4807000 	C:\WINDOWS\system32\CRYPT32.dll
+0x00007ff8f45b0000 - 0x00007ff8f45c0000 	C:\WINDOWS\system32\MSASN1.dll
+
+VM Arguments:
+jvm_args: -agentlib:jdwp=transport=dt_socket,suspend=y,address=localhost:63835 -Dcatalina.home=D:\channel\tomcat6 -Dcatalina.base=D:\channel\tomcat6 -Djava.endorsed.dirs=D:\channel\tomcat6/common/endorsed -Djava.io.tmpdir=D:\channel\tomcat6\temp -Djava.library.path=C:\Program Files\Java\jdk1.6.0_43\bin;D:\channel\tomcat6\bin -Dsun.io.useCanonCaches=false -Xmx1024m -Xms1024m -XX:MaxPermSize=512m 
+java_command: org.apache.catalina.startup.Bootstrap start
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Java\jdk1.6.0_43
+CLASSPATH=.;C:\Program Files\Java\jdk1.6.0_43\lib\dt.jar;C:\Program Files\Java\jdk1.6.0_43\lib\tools.jar
+PATH=C:\Program Files\Java\jdk1.6.0_43\jre\bin;D:\Oracle\client\bin;D:\Oracle\bin;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\Java\jdk1.6.0_43\bin;C:\Program Files\TortoiseSVN\bin;E:\mysql-5.6.24-win32\bin
+USERNAME=39054
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 61 Stepping 4, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 8 , 64 bit Build 9200 
+
+CPU:total 4 (2 cores per cpu, 2 threads per core) family 6 model 61 stepping 4, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, ht
+
+Memory: 4k page, physical 4109536k(342624k free), swap 15252828k(6384k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (20.14-b01) for windows-amd64 JRE (1.6.0_43-b01), built on Mar  1 2013 01:52:33 by "java_re" with MS VC++ 8.0 (VS2005)
+
+time: Fri Feb 10 08:19:11 2017
+elapsed time: 5 seconds
+
