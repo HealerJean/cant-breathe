@@ -1,0 +1,11 @@
+<!DOCTYPE weblogic-web-app PUBLIC "-//BEA Systems, Inc.//DTD Web Application 8.1//EN" "http://www.bea.com/servers/wls810/dtd/weblogic  
+810-web-jar.dtd">  
+<weblogic-web-app>  
+    <context-root>/</context-root>  
+    <charset-params>  
+      <input-charset>  
+        <resource-path>/*</resource-path>  
+        <java-charset-name>GBK</java-charset-name>  
+      </input-charset>  
+    </charset-params>  
+</weblogic-web-app>
