@@ -31,7 +31,7 @@ public class DemoInfoServiceImpl implements DemoInfoService {
     public static final String DEMO_CACHE_NAME = "demo";
 
     /**
-     * 保存数据.
+     * 保存数据，防止是更新的操作，所以将之前的删除
      * @param demoInfo
      */
     @CacheEvict(value=DEMO_CACHE_NAME,key=CACHE_KEY)
@@ -76,6 +76,7 @@ public class DemoInfoServiceImpl implements DemoInfoService {
         }
         demoInfo.setName(updated.getName());
         demoInfo.setPwd(updated.getPwd());
+        demoInfoRepository.save(demoInfo);
         return demoInfo;
     }
 

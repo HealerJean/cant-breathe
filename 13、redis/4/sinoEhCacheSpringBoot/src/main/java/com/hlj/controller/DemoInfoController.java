@@ -22,11 +22,12 @@ public class DemoInfoController {
     @Resource
     private DemoInfoService demoInfoService;
 
-    @RequestMapping("/test")
+    @RequestMapping("/save")
     public String test(){
 
-        //存入两条数据.
+        //存入数据.
         DemoInfo demoInfo = new DemoInfo();
+        demoInfo.setId(18);
         demoInfo.setName("张三");
         demoInfo.setPwd("123456");
         DemoInfo demoInfo2 = demoInfoService.save(demoInfo);
@@ -36,23 +37,18 @@ public class DemoInfoController {
         //走缓存.
         System.out.println(demoInfoService.findById(demoInfo2.getId()));
 
+        return "ok";
+    }
 
-        demoInfo = new DemoInfo();
-        demoInfo.setName("李四");
-        demoInfo.setPwd("123456");
-        DemoInfo demoInfo3 = demoInfoService.save(demoInfo);
-
-        //不走缓存.
-        System.out.println(demoInfoService.findById(demoInfo3.getId()));
-        //走缓存.
-        System.out.println(demoInfoService.findById(demoInfo3.getId()));
+    @RequestMapping("/update")
+    public String update(long id ){
 
         System.out.println("============修改数据=====================");
         //修改数据.
         DemoInfo updated = new DemoInfo();
         updated.setName("李四-updated");
         updated.setPwd("123456");
-        updated.setId(demoInfo3.getId());
+        updated.setId(id);
         try {
             System.out.println(demoInfoService.update(updated));
         } catch (NotFoundException e) {
@@ -61,7 +57,6 @@ public class DemoInfoController {
 
         //不走缓存.
         System.out.println(demoInfoService.findById(updated.getId()));
-
         return "ok";
     }
 
@@ -70,4 +65,12 @@ public class DemoInfoController {
         demoInfoService.delete(id);
         return "ok";
     }
+
+    @RequestMapping("/findById")
+    public String findById(long id ){
+        System.out.println(demoInfoService.findById(id));
+
+        return "ok";
+    }
+
 }
