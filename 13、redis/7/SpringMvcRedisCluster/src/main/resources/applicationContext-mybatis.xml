@@ -15,7 +15,6 @@
 
 
 
-    <context:annotation-config />
  
     
  <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
