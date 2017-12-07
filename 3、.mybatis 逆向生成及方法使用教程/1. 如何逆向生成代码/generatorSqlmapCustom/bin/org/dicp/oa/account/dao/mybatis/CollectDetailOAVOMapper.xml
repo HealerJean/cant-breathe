@@ -1,0 +1,1211 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.dicp.oa.account.dao.mybatis.CollectDetailOAVOMapper" >
+  <resultMap id="BaseResultMap" type="org.dicp.oa.account.model.entity.CollectDetailOAVO" >
+    <id column="PK_COLLECTDETAIL" property="pkCollectdetail" jdbcType="VARCHAR" />
+    <result column="COLLECTSN" property="collectsn" jdbcType="VARCHAR" />
+    <result column="PK_PLAN" property="pkPlan" jdbcType="VARCHAR" />
+    <result column="NETDATE" property="netdate" jdbcType="CHAR" />
+    <result column="PK_INVST" property="pkInvst" jdbcType="VARCHAR" />
+    <result column="UNITNET" property="unitnet" jdbcType="DECIMAL" />
+    <result column="NEWMONEYBUY" property="newmoneybuy" jdbcType="DECIMAL" />
+    <result column="NEWMONEYBUYMONEY" property="newmoneybuymoney" jdbcType="DECIMAL" />
+    <result column="IVSTREDSELL" property="ivstredsell" jdbcType="DECIMAL" />
+    <result column="IVSTREDSELLMONEY" property="ivstredsellmoney" jdbcType="DECIMAL" />
+    <result column="THISUNIT" property="thisunit" jdbcType="DECIMAL" />
+    <result column="THISMONEY" property="thismoney" jdbcType="DECIMAL" />
+    <result column="BEFOREUNIT" property="beforeunit" jdbcType="DECIMAL" />
+    <result column="BEFOREMONEY" property="beforemoney" jdbcType="DECIMAL" />
+    <result column="AFTERUNIT" property="afterunit" jdbcType="DECIMAL" />
+    <result column="AFTERMONEY" property="aftermoney" jdbcType="DECIMAL" />
+    <result column="TS" property="ts" jdbcType="TIMESTAMP" />
+    <result column="UNIFIEDPLANLICID" property="unifiedplanlicid" jdbcType="VARCHAR" />
+    <result column="SUMLEVEL" property="sumlevel" jdbcType="VARCHAR" />
+    <result column="PRICEDAY" property="priceday" jdbcType="VARCHAR" />
+    <result column="BEGASSETVAL" property="begassetval" jdbcType="DECIMAL" />
+    <result column="APPRECIATION" property="appreciation" jdbcType="DECIMAL" />
+    <result column="TOTALBUYVOL" property="totalbuyvol" jdbcType="DECIMAL" />
+    <result column="TOTALBUYAMT" property="totalbuyamt" jdbcType="DECIMAL" />
+    <result column="CONTRIBUYVOL" property="contribuyvol" jdbcType="DECIMAL" />
+    <result column="CONTRIBUYAMT" property="contribuyamt" jdbcType="DECIMAL" />
+    <result column="NOINVESTBUYVOL" property="noinvestbuyvol" jdbcType="DECIMAL" />
+    <result column="NOINVESTBUYSUM" property="noinvestbuysum" jdbcType="DECIMAL" />
+    <result column="SWITCHBUYVOL" property="switchbuyvol" jdbcType="DECIMAL" />
+    <result column="SWITCHBUYSUM" property="switchbuysum" jdbcType="DECIMAL" />
+    <result column="OTHERBUYVOL" property="otherbuyvol" jdbcType="DECIMAL" />
+    <result column="OTHERBUYSUM" property="otherbuysum" jdbcType="DECIMAL" />
+    <result column="TOTALSALEVOL" property="totalsalevol" jdbcType="DECIMAL" />
+    <result column="TOTALSALESUM" property="totalsalesum" jdbcType="DECIMAL" />
+    <result column="PAYMENTSALEVOL" property="paymentsalevol" jdbcType="DECIMAL" />
+    <result column="PAYMENTSALESUM" property="paymentsalesum" jdbcType="DECIMAL" />
+    <result column="TRANSSALEVOL" property="transsalevol" jdbcType="DECIMAL" />
+    <result column="TRANSSALESUM" property="transsalesum" jdbcType="DECIMAL" />
+    <result column="SWITCHSALEVOL" property="switchsalevol" jdbcType="DECIMAL" />
+    <result column="SWITCHSALESUM" property="switchsalesum" jdbcType="DECIMAL" />
+    <result column="NOINVESTSALEVOL" property="noinvestsalevol" jdbcType="DECIMAL" />
+    <result column="NOINVESTSALESUM" property="noinvestsalesum" jdbcType="DECIMAL" />
+    <result column="OTHERSALEVOL" property="othersalevol" jdbcType="DECIMAL" />
+    <result column="OTHERSALESUM" property="othersalesum" jdbcType="DECIMAL" />
+    <result column="PERIODINVESTVOL" property="periodinvestvol" jdbcType="DECIMAL" />
+    <result column="PERIODINVESTSUM" property="periodinvestsum" jdbcType="DECIMAL" />
+    <result column="FINALASSETVAL" property="finalassetval" jdbcType="DECIMAL" />
+    <result column="CURRENCY" property="currency" jdbcType="VARCHAR" />
+    <result column="PRINTDAY" property="printday" jdbcType="VARCHAR" />
+    <result column="MEMO" property="memo" jdbcType="VARCHAR" />
+    <result column="SUMTYPE" property="sumtype" jdbcType="VARCHAR" />
+    <result column="BEGASSETVOL" property="begassetvol" jdbcType="DECIMAL" />
+    <result column="PLANID" property="planid" jdbcType="VARCHAR" />
+    <result column="PLANLICID" property="planlicid" jdbcType="VARCHAR" />
+    <result column="PLANNAME" property="planname" jdbcType="VARCHAR" />
+    <result column="PORTFOLIOID" property="portfolioid" jdbcType="VARCHAR" />
+    <result column="PORTFOLIONAME" property="portfolioname" jdbcType="VARCHAR" />
+    <result column="WORKFLOWNO" property="workflowno" jdbcType="VARCHAR" />
+    <result column="COLUMN1" property="column1" jdbcType="VARCHAR" />
+    <result column="COLUMN2" property="column2" jdbcType="VARCHAR" />
+    <result column="COLUMN3" property="column3" jdbcType="VARCHAR" />
+    <result column="COLUMN4" property="column4" jdbcType="VARCHAR" />
+    <result column="COLUMN5" property="column5" jdbcType="VARCHAR" />
+    <result column="COLUMN6" property="column6" jdbcType="VARCHAR" />
+    <result column="COLUMN7" property="column7" jdbcType="VARCHAR" />
+    <result column="COLUMN8" property="column8" jdbcType="VARCHAR" />
+    <result column="COLUMN9" property="column9" jdbcType="VARCHAR" />
+    <result column="COLUMN10" property="column10" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    PK_COLLECTDETAIL, COLLECTSN, PK_PLAN, NETDATE, PK_INVST, UNITNET, NEWMONEYBUY, NEWMONEYBUYMONEY, 
+    IVSTREDSELL, IVSTREDSELLMONEY, THISUNIT, THISMONEY, BEFOREUNIT, BEFOREMONEY, AFTERUNIT, 
+    AFTERMONEY, TS, UNIFIEDPLANLICID, SUMLEVEL, PRICEDAY, BEGASSETVAL, APPRECIATION, 
+    TOTALBUYVOL, TOTALBUYAMT, CONTRIBUYVOL, CONTRIBUYAMT, NOINVESTBUYVOL, NOINVESTBUYSUM, 
+    SWITCHBUYVOL, SWITCHBUYSUM, OTHERBUYVOL, OTHERBUYSUM, TOTALSALEVOL, TOTALSALESUM, 
+    PAYMENTSALEVOL, PAYMENTSALESUM, TRANSSALEVOL, TRANSSALESUM, SWITCHSALEVOL, SWITCHSALESUM, 
+    NOINVESTSALEVOL, NOINVESTSALESUM, OTHERSALEVOL, OTHERSALESUM, PERIODINVESTVOL, PERIODINVESTSUM, 
+    FINALASSETVAL, CURRENCY, PRINTDAY, MEMO, SUMTYPE, BEGASSETVOL, PLANID, PLANLICID, 
+    PLANNAME, PORTFOLIOID, PORTFOLIONAME, WORKFLOWNO, COLUMN1, COLUMN2, COLUMN3, COLUMN4, 
+    COLUMN5, COLUMN6, COLUMN7, COLUMN8, COLUMN9, COLUMN10
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="org.dicp.oa.account.model.entity.CollectDetailOAVOCriteria" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from CSIP_OA_COLLECTDETAIL
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from CSIP_OA_COLLECTDETAIL
+    where PK_COLLECTDETAIL = #{pkCollectdetail,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from CSIP_OA_COLLECTDETAIL
+    where PK_COLLECTDETAIL = #{pkCollectdetail,jdbcType=VARCHAR}
+  </delete>
+  <delete id="deleteByExample" parameterType="org.dicp.oa.account.model.entity.CollectDetailOAVOCriteria" >
+    delete from CSIP_OA_COLLECTDETAIL
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="org.dicp.oa.account.model.entity.CollectDetailOAVO" >
+    insert into CSIP_OA_COLLECTDETAIL (PK_COLLECTDETAIL, COLLECTSN, PK_PLAN, 
+      NETDATE, PK_INVST, UNITNET, 
+      NEWMONEYBUY, NEWMONEYBUYMONEY, IVSTREDSELL, 
+      IVSTREDSELLMONEY, THISUNIT, THISMONEY, 
+      BEFOREUNIT, BEFOREMONEY, AFTERUNIT, 
+      AFTERMONEY, TS, UNIFIEDPLANLICID, 
+      SUMLEVEL, PRICEDAY, BEGASSETVAL, 
+      APPRECIATION, TOTALBUYVOL, TOTALBUYAMT, 
+      CONTRIBUYVOL, CONTRIBUYAMT, NOINVESTBUYVOL, 
+      NOINVESTBUYSUM, SWITCHBUYVOL, SWITCHBUYSUM, 
+      OTHERBUYVOL, OTHERBUYSUM, TOTALSALEVOL, 
+      TOTALSALESUM, PAYMENTSALEVOL, PAYMENTSALESUM, 
+      TRANSSALEVOL, TRANSSALESUM, SWITCHSALEVOL, 
+      SWITCHSALESUM, NOINVESTSALEVOL, NOINVESTSALESUM, 
+      OTHERSALEVOL, OTHERSALESUM, PERIODINVESTVOL, 
+      PERIODINVESTSUM, FINALASSETVAL, CURRENCY, 
+      PRINTDAY, MEMO, SUMTYPE, 
+      BEGASSETVOL, PLANID, PLANLICID, 
+      PLANNAME, PORTFOLIOID, PORTFOLIONAME, 
+      WORKFLOWNO, COLUMN1, COLUMN2, 
+      COLUMN3, COLUMN4, COLUMN5, 
+      COLUMN6, COLUMN7, COLUMN8, 
+      COLUMN9, COLUMN10)
+    values (#{pkCollectdetail,jdbcType=VARCHAR}, #{collectsn,jdbcType=VARCHAR}, #{pkPlan,jdbcType=VARCHAR}, 
+      #{netdate,jdbcType=CHAR}, #{pkInvst,jdbcType=VARCHAR}, #{unitnet,jdbcType=DECIMAL}, 
+      #{newmoneybuy,jdbcType=DECIMAL}, #{newmoneybuymoney,jdbcType=DECIMAL}, #{ivstredsell,jdbcType=DECIMAL}, 
+      #{ivstredsellmoney,jdbcType=DECIMAL}, #{thisunit,jdbcType=DECIMAL}, #{thismoney,jdbcType=DECIMAL}, 
+      #{beforeunit,jdbcType=DECIMAL}, #{beforemoney,jdbcType=DECIMAL}, #{afterunit,jdbcType=DECIMAL}, 
+      #{aftermoney,jdbcType=DECIMAL}, #{ts,jdbcType=TIMESTAMP}, #{unifiedplanlicid,jdbcType=VARCHAR}, 
+      #{sumlevel,jdbcType=VARCHAR}, #{priceday,jdbcType=VARCHAR}, #{begassetval,jdbcType=DECIMAL}, 
+      #{appreciation,jdbcType=DECIMAL}, #{totalbuyvol,jdbcType=DECIMAL}, #{totalbuyamt,jdbcType=DECIMAL}, 
+      #{contribuyvol,jdbcType=DECIMAL}, #{contribuyamt,jdbcType=DECIMAL}, #{noinvestbuyvol,jdbcType=DECIMAL}, 
+      #{noinvestbuysum,jdbcType=DECIMAL}, #{switchbuyvol,jdbcType=DECIMAL}, #{switchbuysum,jdbcType=DECIMAL}, 
+      #{otherbuyvol,jdbcType=DECIMAL}, #{otherbuysum,jdbcType=DECIMAL}, #{totalsalevol,jdbcType=DECIMAL}, 
+      #{totalsalesum,jdbcType=DECIMAL}, #{paymentsalevol,jdbcType=DECIMAL}, #{paymentsalesum,jdbcType=DECIMAL}, 
+      #{transsalevol,jdbcType=DECIMAL}, #{transsalesum,jdbcType=DECIMAL}, #{switchsalevol,jdbcType=DECIMAL}, 
+      #{switchsalesum,jdbcType=DECIMAL}, #{noinvestsalevol,jdbcType=DECIMAL}, #{noinvestsalesum,jdbcType=DECIMAL}, 
+      #{othersalevol,jdbcType=DECIMAL}, #{othersalesum,jdbcType=DECIMAL}, #{periodinvestvol,jdbcType=DECIMAL}, 
+      #{periodinvestsum,jdbcType=DECIMAL}, #{finalassetval,jdbcType=DECIMAL}, #{currency,jdbcType=VARCHAR}, 
+      #{printday,jdbcType=VARCHAR}, #{memo,jdbcType=VARCHAR}, #{sumtype,jdbcType=VARCHAR}, 
+      #{begassetvol,jdbcType=DECIMAL}, #{planid,jdbcType=VARCHAR}, #{planlicid,jdbcType=VARCHAR}, 
+      #{planname,jdbcType=VARCHAR}, #{portfolioid,jdbcType=VARCHAR}, #{portfolioname,jdbcType=VARCHAR}, 
+      #{workflowno,jdbcType=VARCHAR}, #{column1,jdbcType=VARCHAR}, #{column2,jdbcType=VARCHAR}, 
+      #{column3,jdbcType=VARCHAR}, #{column4,jdbcType=VARCHAR}, #{column5,jdbcType=VARCHAR}, 
+      #{column6,jdbcType=VARCHAR}, #{column7,jdbcType=VARCHAR}, #{column8,jdbcType=VARCHAR}, 
+      #{column9,jdbcType=VARCHAR}, #{column10,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="org.dicp.oa.account.model.entity.CollectDetailOAVO" >
+    insert into CSIP_OA_COLLECTDETAIL
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="pkCollectdetail != null" >
+        PK_COLLECTDETAIL,
+      </if>
+      <if test="collectsn != null" >
+        COLLECTSN,
+      </if>
+      <if test="pkPlan != null" >
+        PK_PLAN,
+      </if>
+      <if test="netdate != null" >
+        NETDATE,
+      </if>
+      <if test="pkInvst != null" >
+        PK_INVST,
+      </if>
+      <if test="unitnet != null" >
+        UNITNET,
+      </if>
+      <if test="newmoneybuy != null" >
+        NEWMONEYBUY,
+      </if>
+      <if test="newmoneybuymoney != null" >
+        NEWMONEYBUYMONEY,
+      </if>
+      <if test="ivstredsell != null" >
+        IVSTREDSELL,
+      </if>
+      <if test="ivstredsellmoney != null" >
+        IVSTREDSELLMONEY,
+      </if>
+      <if test="thisunit != null" >
+        THISUNIT,
+      </if>
+      <if test="thismoney != null" >
+        THISMONEY,
+      </if>
+      <if test="beforeunit != null" >
+        BEFOREUNIT,
+      </if>
+      <if test="beforemoney != null" >
+        BEFOREMONEY,
+      </if>
+      <if test="afterunit != null" >
+        AFTERUNIT,
+      </if>
+      <if test="aftermoney != null" >
+        AFTERMONEY,
+      </if>
+      <if test="ts != null" >
+        TS,
+      </if>
+      <if test="unifiedplanlicid != null" >
+        UNIFIEDPLANLICID,
+      </if>
+      <if test="sumlevel != null" >
+        SUMLEVEL,
+      </if>
+      <if test="priceday != null" >
+        PRICEDAY,
+      </if>
+      <if test="begassetval != null" >
+        BEGASSETVAL,
+      </if>
+      <if test="appreciation != null" >
+        APPRECIATION,
+      </if>
+      <if test="totalbuyvol != null" >
+        TOTALBUYVOL,
+      </if>
+      <if test="totalbuyamt != null" >
+        TOTALBUYAMT,
+      </if>
+      <if test="contribuyvol != null" >
+        CONTRIBUYVOL,
+      </if>
+      <if test="contribuyamt != null" >
+        CONTRIBUYAMT,
+      </if>
+      <if test="noinvestbuyvol != null" >
+        NOINVESTBUYVOL,
+      </if>
+      <if test="noinvestbuysum != null" >
+        NOINVESTBUYSUM,
+      </if>
+      <if test="switchbuyvol != null" >
+        SWITCHBUYVOL,
+      </if>
+      <if test="switchbuysum != null" >
+        SWITCHBUYSUM,
+      </if>
+      <if test="otherbuyvol != null" >
+        OTHERBUYVOL,
+      </if>
+      <if test="otherbuysum != null" >
+        OTHERBUYSUM,
+      </if>
+      <if test="totalsalevol != null" >
+        TOTALSALEVOL,
+      </if>
+      <if test="totalsalesum != null" >
+        TOTALSALESUM,
+      </if>
+      <if test="paymentsalevol != null" >
+        PAYMENTSALEVOL,
+      </if>
+      <if test="paymentsalesum != null" >
+        PAYMENTSALESUM,
+      </if>
+      <if test="transsalevol != null" >
+        TRANSSALEVOL,
+      </if>
+      <if test="transsalesum != null" >
+        TRANSSALESUM,
+      </if>
+      <if test="switchsalevol != null" >
+        SWITCHSALEVOL,
+      </if>
+      <if test="switchsalesum != null" >
+        SWITCHSALESUM,
+      </if>
+      <if test="noinvestsalevol != null" >
+        NOINVESTSALEVOL,
+      </if>
+      <if test="noinvestsalesum != null" >
+        NOINVESTSALESUM,
+      </if>
+      <if test="othersalevol != null" >
+        OTHERSALEVOL,
+      </if>
+      <if test="othersalesum != null" >
+        OTHERSALESUM,
+      </if>
+      <if test="periodinvestvol != null" >
+        PERIODINVESTVOL,
+      </if>
+      <if test="periodinvestsum != null" >
+        PERIODINVESTSUM,
+      </if>
+      <if test="finalassetval != null" >
+        FINALASSETVAL,
+      </if>
+      <if test="currency != null" >
+        CURRENCY,
+      </if>
+      <if test="printday != null" >
+        PRINTDAY,
+      </if>
+      <if test="memo != null" >
+        MEMO,
+      </if>
+      <if test="sumtype != null" >
+        SUMTYPE,
+      </if>
+      <if test="begassetvol != null" >
+        BEGASSETVOL,
+      </if>
+      <if test="planid != null" >
+        PLANID,
+      </if>
+      <if test="planlicid != null" >
+        PLANLICID,
+      </if>
+      <if test="planname != null" >
+        PLANNAME,
+      </if>
+      <if test="portfolioid != null" >
+        PORTFOLIOID,
+      </if>
+      <if test="portfolioname != null" >
+        PORTFOLIONAME,
+      </if>
+      <if test="workflowno != null" >
+        WORKFLOWNO,
+      </if>
+      <if test="column1 != null" >
+        COLUMN1,
+      </if>
+      <if test="column2 != null" >
+        COLUMN2,
+      </if>
+      <if test="column3 != null" >
+        COLUMN3,
+      </if>
+      <if test="column4 != null" >
+        COLUMN4,
+      </if>
+      <if test="column5 != null" >
+        COLUMN5,
+      </if>
+      <if test="column6 != null" >
+        COLUMN6,
+      </if>
+      <if test="column7 != null" >
+        COLUMN7,
+      </if>
+      <if test="column8 != null" >
+        COLUMN8,
+      </if>
+      <if test="column9 != null" >
+        COLUMN9,
+      </if>
+      <if test="column10 != null" >
+        COLUMN10,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="pkCollectdetail != null" >
+        #{pkCollectdetail,jdbcType=VARCHAR},
+      </if>
+      <if test="collectsn != null" >
+        #{collectsn,jdbcType=VARCHAR},
+      </if>
+      <if test="pkPlan != null" >
+        #{pkPlan,jdbcType=VARCHAR},
+      </if>
+      <if test="netdate != null" >
+        #{netdate,jdbcType=CHAR},
+      </if>
+      <if test="pkInvst != null" >
+        #{pkInvst,jdbcType=VARCHAR},
+      </if>
+      <if test="unitnet != null" >
+        #{unitnet,jdbcType=DECIMAL},
+      </if>
+      <if test="newmoneybuy != null" >
+        #{newmoneybuy,jdbcType=DECIMAL},
+      </if>
+      <if test="newmoneybuymoney != null" >
+        #{newmoneybuymoney,jdbcType=DECIMAL},
+      </if>
+      <if test="ivstredsell != null" >
+        #{ivstredsell,jdbcType=DECIMAL},
+      </if>
+      <if test="ivstredsellmoney != null" >
+        #{ivstredsellmoney,jdbcType=DECIMAL},
+      </if>
+      <if test="thisunit != null" >
+        #{thisunit,jdbcType=DECIMAL},
+      </if>
+      <if test="thismoney != null" >
+        #{thismoney,jdbcType=DECIMAL},
+      </if>
+      <if test="beforeunit != null" >
+        #{beforeunit,jdbcType=DECIMAL},
+      </if>
+      <if test="beforemoney != null" >
+        #{beforemoney,jdbcType=DECIMAL},
+      </if>
+      <if test="afterunit != null" >
+        #{afterunit,jdbcType=DECIMAL},
+      </if>
+      <if test="aftermoney != null" >
+        #{aftermoney,jdbcType=DECIMAL},
+      </if>
+      <if test="ts != null" >
+        #{ts,jdbcType=TIMESTAMP},
+      </if>
+      <if test="unifiedplanlicid != null" >
+        #{unifiedplanlicid,jdbcType=VARCHAR},
+      </if>
+      <if test="sumlevel != null" >
+        #{sumlevel,jdbcType=VARCHAR},
+      </if>
+      <if test="priceday != null" >
+        #{priceday,jdbcType=VARCHAR},
+      </if>
+      <if test="begassetval != null" >
+        #{begassetval,jdbcType=DECIMAL},
+      </if>
+      <if test="appreciation != null" >
+        #{appreciation,jdbcType=DECIMAL},
+      </if>
+      <if test="totalbuyvol != null" >
+        #{totalbuyvol,jdbcType=DECIMAL},
+      </if>
+      <if test="totalbuyamt != null" >
+        #{totalbuyamt,jdbcType=DECIMAL},
+      </if>
+      <if test="contribuyvol != null" >
+        #{contribuyvol,jdbcType=DECIMAL},
+      </if>
+      <if test="contribuyamt != null" >
+        #{contribuyamt,jdbcType=DECIMAL},
+      </if>
+      <if test="noinvestbuyvol != null" >
+        #{noinvestbuyvol,jdbcType=DECIMAL},
+      </if>
+      <if test="noinvestbuysum != null" >
+        #{noinvestbuysum,jdbcType=DECIMAL},
+      </if>
+      <if test="switchbuyvol != null" >
+        #{switchbuyvol,jdbcType=DECIMAL},
+      </if>
+      <if test="switchbuysum != null" >
+        #{switchbuysum,jdbcType=DECIMAL},
+      </if>
+      <if test="otherbuyvol != null" >
+        #{otherbuyvol,jdbcType=DECIMAL},
+      </if>
+      <if test="otherbuysum != null" >
+        #{otherbuysum,jdbcType=DECIMAL},
+      </if>
+      <if test="totalsalevol != null" >
+        #{totalsalevol,jdbcType=DECIMAL},
+      </if>
+      <if test="totalsalesum != null" >
+        #{totalsalesum,jdbcType=DECIMAL},
+      </if>
+      <if test="paymentsalevol != null" >
+        #{paymentsalevol,jdbcType=DECIMAL},
+      </if>
+      <if test="paymentsalesum != null" >
+        #{paymentsalesum,jdbcType=DECIMAL},
+      </if>
+      <if test="transsalevol != null" >
+        #{transsalevol,jdbcType=DECIMAL},
+      </if>
+      <if test="transsalesum != null" >
+        #{transsalesum,jdbcType=DECIMAL},
+      </if>
+      <if test="switchsalevol != null" >
+        #{switchsalevol,jdbcType=DECIMAL},
+      </if>
+      <if test="switchsalesum != null" >
+        #{switchsalesum,jdbcType=DECIMAL},
+      </if>
+      <if test="noinvestsalevol != null" >
+        #{noinvestsalevol,jdbcType=DECIMAL},
+      </if>
+      <if test="noinvestsalesum != null" >
+        #{noinvestsalesum,jdbcType=DECIMAL},
+      </if>
+      <if test="othersalevol != null" >
+        #{othersalevol,jdbcType=DECIMAL},
+      </if>
+      <if test="othersalesum != null" >
+        #{othersalesum,jdbcType=DECIMAL},
+      </if>
+      <if test="periodinvestvol != null" >
+        #{periodinvestvol,jdbcType=DECIMAL},
+      </if>
+      <if test="periodinvestsum != null" >
+        #{periodinvestsum,jdbcType=DECIMAL},
+      </if>
+      <if test="finalassetval != null" >
+        #{finalassetval,jdbcType=DECIMAL},
+      </if>
+      <if test="currency != null" >
+        #{currency,jdbcType=VARCHAR},
+      </if>
+      <if test="printday != null" >
+        #{printday,jdbcType=VARCHAR},
+      </if>
+      <if test="memo != null" >
+        #{memo,jdbcType=VARCHAR},
+      </if>
+      <if test="sumtype != null" >
+        #{sumtype,jdbcType=VARCHAR},
+      </if>
+      <if test="begassetvol != null" >
+        #{begassetvol,jdbcType=DECIMAL},
+      </if>
+      <if test="planid != null" >
+        #{planid,jdbcType=VARCHAR},
+      </if>
+      <if test="planlicid != null" >
+        #{planlicid,jdbcType=VARCHAR},
+      </if>
+      <if test="planname != null" >
+        #{planname,jdbcType=VARCHAR},
+      </if>
+      <if test="portfolioid != null" >
+        #{portfolioid,jdbcType=VARCHAR},
+      </if>
+      <if test="portfolioname != null" >
+        #{portfolioname,jdbcType=VARCHAR},
+      </if>
+      <if test="workflowno != null" >
+        #{workflowno,jdbcType=VARCHAR},
+      </if>
+      <if test="column1 != null" >
+        #{column1,jdbcType=VARCHAR},
+      </if>
+      <if test="column2 != null" >
+        #{column2,jdbcType=VARCHAR},
+      </if>
+      <if test="column3 != null" >
+        #{column3,jdbcType=VARCHAR},
+      </if>
+      <if test="column4 != null" >
+        #{column4,jdbcType=VARCHAR},
+      </if>
+      <if test="column5 != null" >
+        #{column5,jdbcType=VARCHAR},
+      </if>
+      <if test="column6 != null" >
+        #{column6,jdbcType=VARCHAR},
+      </if>
+      <if test="column7 != null" >
+        #{column7,jdbcType=VARCHAR},
+      </if>
+      <if test="column8 != null" >
+        #{column8,jdbcType=VARCHAR},
+      </if>
+      <if test="column9 != null" >
+        #{column9,jdbcType=VARCHAR},
+      </if>
+      <if test="column10 != null" >
+        #{column10,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="org.dicp.oa.account.model.entity.CollectDetailOAVOCriteria" resultType="java.lang.Integer" >
+    select count(*) from CSIP_OA_COLLECTDETAIL
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update CSIP_OA_COLLECTDETAIL
+    <set >
+      <if test="record.pkCollectdetail != null" >
+        PK_COLLECTDETAIL = #{record.pkCollectdetail,jdbcType=VARCHAR},
+      </if>
+      <if test="record.collectsn != null" >
+        COLLECTSN = #{record.collectsn,jdbcType=VARCHAR},
+      </if>
+      <if test="record.pkPlan != null" >
+        PK_PLAN = #{record.pkPlan,jdbcType=VARCHAR},
+      </if>
+      <if test="record.netdate != null" >
+        NETDATE = #{record.netdate,jdbcType=CHAR},
+      </if>
+      <if test="record.pkInvst != null" >
+        PK_INVST = #{record.pkInvst,jdbcType=VARCHAR},
+      </if>
+      <if test="record.unitnet != null" >
+        UNITNET = #{record.unitnet,jdbcType=DECIMAL},
+      </if>
+      <if test="record.newmoneybuy != null" >
+        NEWMONEYBUY = #{record.newmoneybuy,jdbcType=DECIMAL},
+      </if>
+      <if test="record.newmoneybuymoney != null" >
+        NEWMONEYBUYMONEY = #{record.newmoneybuymoney,jdbcType=DECIMAL},
+      </if>
+      <if test="record.ivstredsell != null" >
+        IVSTREDSELL = #{record.ivstredsell,jdbcType=DECIMAL},
+      </if>
+      <if test="record.ivstredsellmoney != null" >
+        IVSTREDSELLMONEY = #{record.ivstredsellmoney,jdbcType=DECIMAL},
+      </if>
+      <if test="record.thisunit != null" >
+        THISUNIT = #{record.thisunit,jdbcType=DECIMAL},
+      </if>
+      <if test="record.thismoney != null" >
+        THISMONEY = #{record.thismoney,jdbcType=DECIMAL},
+      </if>
+      <if test="record.beforeunit != null" >
+        BEFOREUNIT = #{record.beforeunit,jdbcType=DECIMAL},
+      </if>
+      <if test="record.beforemoney != null" >
+        BEFOREMONEY = #{record.beforemoney,jdbcType=DECIMAL},
+      </if>
+      <if test="record.afterunit != null" >
+        AFTERUNIT = #{record.afterunit,jdbcType=DECIMAL},
+      </if>
+      <if test="record.aftermoney != null" >
+        AFTERMONEY = #{record.aftermoney,jdbcType=DECIMAL},
+      </if>
+      <if test="record.ts != null" >
+        TS = #{record.ts,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.unifiedplanlicid != null" >
+        UNIFIEDPLANLICID = #{record.unifiedplanlicid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.sumlevel != null" >
+        SUMLEVEL = #{record.sumlevel,jdbcType=VARCHAR},
+      </if>
+      <if test="record.priceday != null" >
+        PRICEDAY = #{record.priceday,jdbcType=VARCHAR},
+      </if>
+      <if test="record.begassetval != null" >
+        BEGASSETVAL = #{record.begassetval,jdbcType=DECIMAL},
+      </if>
+      <if test="record.appreciation != null" >
+        APPRECIATION = #{record.appreciation,jdbcType=DECIMAL},
+      </if>
+      <if test="record.totalbuyvol != null" >
+        TOTALBUYVOL = #{record.totalbuyvol,jdbcType=DECIMAL},
+      </if>
+      <if test="record.totalbuyamt != null" >
+        TOTALBUYAMT = #{record.totalbuyamt,jdbcType=DECIMAL},
+      </if>
+      <if test="record.contribuyvol != null" >
+        CONTRIBUYVOL = #{record.contribuyvol,jdbcType=DECIMAL},
+      </if>
+      <if test="record.contribuyamt != null" >
+        CONTRIBUYAMT = #{record.contribuyamt,jdbcType=DECIMAL},
+      </if>
+      <if test="record.noinvestbuyvol != null" >
+        NOINVESTBUYVOL = #{record.noinvestbuyvol,jdbcType=DECIMAL},
+      </if>
+      <if test="record.noinvestbuysum != null" >
+        NOINVESTBUYSUM = #{record.noinvestbuysum,jdbcType=DECIMAL},
+      </if>
+      <if test="record.switchbuyvol != null" >
+        SWITCHBUYVOL = #{record.switchbuyvol,jdbcType=DECIMAL},
+      </if>
+      <if test="record.switchbuysum != null" >
+        SWITCHBUYSUM = #{record.switchbuysum,jdbcType=DECIMAL},
+      </if>
+      <if test="record.otherbuyvol != null" >
+        OTHERBUYVOL = #{record.otherbuyvol,jdbcType=DECIMAL},
+      </if>
+      <if test="record.otherbuysum != null" >
+        OTHERBUYSUM = #{record.otherbuysum,jdbcType=DECIMAL},
+      </if>
+      <if test="record.totalsalevol != null" >
+        TOTALSALEVOL = #{record.totalsalevol,jdbcType=DECIMAL},
+      </if>
+      <if test="record.totalsalesum != null" >
+        TOTALSALESUM = #{record.totalsalesum,jdbcType=DECIMAL},
+      </if>
+      <if test="record.paymentsalevol != null" >
+        PAYMENTSALEVOL = #{record.paymentsalevol,jdbcType=DECIMAL},
+      </if>
+      <if test="record.paymentsalesum != null" >
+        PAYMENTSALESUM = #{record.paymentsalesum,jdbcType=DECIMAL},
+      </if>
+      <if test="record.transsalevol != null" >
+        TRANSSALEVOL = #{record.transsalevol,jdbcType=DECIMAL},
+      </if>
+      <if test="record.transsalesum != null" >
+        TRANSSALESUM = #{record.transsalesum,jdbcType=DECIMAL},
+      </if>
+      <if test="record.switchsalevol != null" >
+        SWITCHSALEVOL = #{record.switchsalevol,jdbcType=DECIMAL},
+      </if>
+      <if test="record.switchsalesum != null" >
+        SWITCHSALESUM = #{record.switchsalesum,jdbcType=DECIMAL},
+      </if>
+      <if test="record.noinvestsalevol != null" >
+        NOINVESTSALEVOL = #{record.noinvestsalevol,jdbcType=DECIMAL},
+      </if>
+      <if test="record.noinvestsalesum != null" >
+        NOINVESTSALESUM = #{record.noinvestsalesum,jdbcType=DECIMAL},
+      </if>
+      <if test="record.othersalevol != null" >
+        OTHERSALEVOL = #{record.othersalevol,jdbcType=DECIMAL},
+      </if>
+      <if test="record.othersalesum != null" >
+        OTHERSALESUM = #{record.othersalesum,jdbcType=DECIMAL},
+      </if>
+      <if test="record.periodinvestvol != null" >
+        PERIODINVESTVOL = #{record.periodinvestvol,jdbcType=DECIMAL},
+      </if>
+      <if test="record.periodinvestsum != null" >
+        PERIODINVESTSUM = #{record.periodinvestsum,jdbcType=DECIMAL},
+      </if>
+      <if test="record.finalassetval != null" >
+        FINALASSETVAL = #{record.finalassetval,jdbcType=DECIMAL},
+      </if>
+      <if test="record.currency != null" >
+        CURRENCY = #{record.currency,jdbcType=VARCHAR},
+      </if>
+      <if test="record.printday != null" >
+        PRINTDAY = #{record.printday,jdbcType=VARCHAR},
+      </if>
+      <if test="record.memo != null" >
+        MEMO = #{record.memo,jdbcType=VARCHAR},
+      </if>
+      <if test="record.sumtype != null" >
+        SUMTYPE = #{record.sumtype,jdbcType=VARCHAR},
+      </if>
+      <if test="record.begassetvol != null" >
+        BEGASSETVOL = #{record.begassetvol,jdbcType=DECIMAL},
+      </if>
+      <if test="record.planid != null" >
+        PLANID = #{record.planid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.planlicid != null" >
+        PLANLICID = #{record.planlicid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.planname != null" >
+        PLANNAME = #{record.planname,jdbcType=VARCHAR},
+      </if>
+      <if test="record.portfolioid != null" >
+        PORTFOLIOID = #{record.portfolioid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.portfolioname != null" >
+        PORTFOLIONAME = #{record.portfolioname,jdbcType=VARCHAR},
+      </if>
+      <if test="record.workflowno != null" >
+        WORKFLOWNO = #{record.workflowno,jdbcType=VARCHAR},
+      </if>
+      <if test="record.column1 != null" >
+        COLUMN1 = #{record.column1,jdbcType=VARCHAR},
+      </if>
+      <if test="record.column2 != null" >
+        COLUMN2 = #{record.column2,jdbcType=VARCHAR},
+      </if>
+      <if test="record.column3 != null" >
+        COLUMN3 = #{record.column3,jdbcType=VARCHAR},
+      </if>
+      <if test="record.column4 != null" >
+        COLUMN4 = #{record.column4,jdbcType=VARCHAR},
+      </if>
+      <if test="record.column5 != null" >
+        COLUMN5 = #{record.column5,jdbcType=VARCHAR},
+      </if>
+      <if test="record.column6 != null" >
+        COLUMN6 = #{record.column6,jdbcType=VARCHAR},
+      </if>
+      <if test="record.column7 != null" >
+        COLUMN7 = #{record.column7,jdbcType=VARCHAR},
+      </if>
+      <if test="record.column8 != null" >
+        COLUMN8 = #{record.column8,jdbcType=VARCHAR},
+      </if>
+      <if test="record.column9 != null" >
+        COLUMN9 = #{record.column9,jdbcType=VARCHAR},
+      </if>
+      <if test="record.column10 != null" >
+        COLUMN10 = #{record.column10,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update CSIP_OA_COLLECTDETAIL
+    set PK_COLLECTDETAIL = #{record.pkCollectdetail,jdbcType=VARCHAR},
+      COLLECTSN = #{record.collectsn,jdbcType=VARCHAR},
+      PK_PLAN = #{record.pkPlan,jdbcType=VARCHAR},
+      NETDATE = #{record.netdate,jdbcType=CHAR},
+      PK_INVST = #{record.pkInvst,jdbcType=VARCHAR},
+      UNITNET = #{record.unitnet,jdbcType=DECIMAL},
+      NEWMONEYBUY = #{record.newmoneybuy,jdbcType=DECIMAL},
+      NEWMONEYBUYMONEY = #{record.newmoneybuymoney,jdbcType=DECIMAL},
+      IVSTREDSELL = #{record.ivstredsell,jdbcType=DECIMAL},
+      IVSTREDSELLMONEY = #{record.ivstredsellmoney,jdbcType=DECIMAL},
+      THISUNIT = #{record.thisunit,jdbcType=DECIMAL},
+      THISMONEY = #{record.thismoney,jdbcType=DECIMAL},
+      BEFOREUNIT = #{record.beforeunit,jdbcType=DECIMAL},
+      BEFOREMONEY = #{record.beforemoney,jdbcType=DECIMAL},
+      AFTERUNIT = #{record.afterunit,jdbcType=DECIMAL},
+      AFTERMONEY = #{record.aftermoney,jdbcType=DECIMAL},
+      TS = #{record.ts,jdbcType=TIMESTAMP},
+      UNIFIEDPLANLICID = #{record.unifiedplanlicid,jdbcType=VARCHAR},
+      SUMLEVEL = #{record.sumlevel,jdbcType=VARCHAR},
+      PRICEDAY = #{record.priceday,jdbcType=VARCHAR},
+      BEGASSETVAL = #{record.begassetval,jdbcType=DECIMAL},
+      APPRECIATION = #{record.appreciation,jdbcType=DECIMAL},
+      TOTALBUYVOL = #{record.totalbuyvol,jdbcType=DECIMAL},
+      TOTALBUYAMT = #{record.totalbuyamt,jdbcType=DECIMAL},
+      CONTRIBUYVOL = #{record.contribuyvol,jdbcType=DECIMAL},
+      CONTRIBUYAMT = #{record.contribuyamt,jdbcType=DECIMAL},
+      NOINVESTBUYVOL = #{record.noinvestbuyvol,jdbcType=DECIMAL},
+      NOINVESTBUYSUM = #{record.noinvestbuysum,jdbcType=DECIMAL},
+      SWITCHBUYVOL = #{record.switchbuyvol,jdbcType=DECIMAL},
+      SWITCHBUYSUM = #{record.switchbuysum,jdbcType=DECIMAL},
+      OTHERBUYVOL = #{record.otherbuyvol,jdbcType=DECIMAL},
+      OTHERBUYSUM = #{record.otherbuysum,jdbcType=DECIMAL},
+      TOTALSALEVOL = #{record.totalsalevol,jdbcType=DECIMAL},
+      TOTALSALESUM = #{record.totalsalesum,jdbcType=DECIMAL},
+      PAYMENTSALEVOL = #{record.paymentsalevol,jdbcType=DECIMAL},
+      PAYMENTSALESUM = #{record.paymentsalesum,jdbcType=DECIMAL},
+      TRANSSALEVOL = #{record.transsalevol,jdbcType=DECIMAL},
+      TRANSSALESUM = #{record.transsalesum,jdbcType=DECIMAL},
+      SWITCHSALEVOL = #{record.switchsalevol,jdbcType=DECIMAL},
+      SWITCHSALESUM = #{record.switchsalesum,jdbcType=DECIMAL},
+      NOINVESTSALEVOL = #{record.noinvestsalevol,jdbcType=DECIMAL},
+      NOINVESTSALESUM = #{record.noinvestsalesum,jdbcType=DECIMAL},
+      OTHERSALEVOL = #{record.othersalevol,jdbcType=DECIMAL},
+      OTHERSALESUM = #{record.othersalesum,jdbcType=DECIMAL},
+      PERIODINVESTVOL = #{record.periodinvestvol,jdbcType=DECIMAL},
+      PERIODINVESTSUM = #{record.periodinvestsum,jdbcType=DECIMAL},
+      FINALASSETVAL = #{record.finalassetval,jdbcType=DECIMAL},
+      CURRENCY = #{record.currency,jdbcType=VARCHAR},
+      PRINTDAY = #{record.printday,jdbcType=VARCHAR},
+      MEMO = #{record.memo,jdbcType=VARCHAR},
+      SUMTYPE = #{record.sumtype,jdbcType=VARCHAR},
+      BEGASSETVOL = #{record.begassetvol,jdbcType=DECIMAL},
+      PLANID = #{record.planid,jdbcType=VARCHAR},
+      PLANLICID = #{record.planlicid,jdbcType=VARCHAR},
+      PLANNAME = #{record.planname,jdbcType=VARCHAR},
+      PORTFOLIOID = #{record.portfolioid,jdbcType=VARCHAR},
+      PORTFOLIONAME = #{record.portfolioname,jdbcType=VARCHAR},
+      WORKFLOWNO = #{record.workflowno,jdbcType=VARCHAR},
+      COLUMN1 = #{record.column1,jdbcType=VARCHAR},
+      COLUMN2 = #{record.column2,jdbcType=VARCHAR},
+      COLUMN3 = #{record.column3,jdbcType=VARCHAR},
+      COLUMN4 = #{record.column4,jdbcType=VARCHAR},
+      COLUMN5 = #{record.column5,jdbcType=VARCHAR},
+      COLUMN6 = #{record.column6,jdbcType=VARCHAR},
+      COLUMN7 = #{record.column7,jdbcType=VARCHAR},
+      COLUMN8 = #{record.column8,jdbcType=VARCHAR},
+      COLUMN9 = #{record.column9,jdbcType=VARCHAR},
+      COLUMN10 = #{record.column10,jdbcType=VARCHAR}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="org.dicp.oa.account.model.entity.CollectDetailOAVO" >
+    update CSIP_OA_COLLECTDETAIL
+    <set >
+      <if test="collectsn != null" >
+        COLLECTSN = #{collectsn,jdbcType=VARCHAR},
+      </if>
+      <if test="pkPlan != null" >
+        PK_PLAN = #{pkPlan,jdbcType=VARCHAR},
+      </if>
+      <if test="netdate != null" >
+        NETDATE = #{netdate,jdbcType=CHAR},
+      </if>
+      <if test="pkInvst != null" >
+        PK_INVST = #{pkInvst,jdbcType=VARCHAR},
+      </if>
+      <if test="unitnet != null" >
+        UNITNET = #{unitnet,jdbcType=DECIMAL},
+      </if>
+      <if test="newmoneybuy != null" >
+        NEWMONEYBUY = #{newmoneybuy,jdbcType=DECIMAL},
+      </if>
+      <if test="newmoneybuymoney != null" >
+        NEWMONEYBUYMONEY = #{newmoneybuymoney,jdbcType=DECIMAL},
+      </if>
+      <if test="ivstredsell != null" >
+        IVSTREDSELL = #{ivstredsell,jdbcType=DECIMAL},
+      </if>
+      <if test="ivstredsellmoney != null" >
+        IVSTREDSELLMONEY = #{ivstredsellmoney,jdbcType=DECIMAL},
+      </if>
+      <if test="thisunit != null" >
+        THISUNIT = #{thisunit,jdbcType=DECIMAL},
+      </if>
+      <if test="thismoney != null" >
+        THISMONEY = #{thismoney,jdbcType=DECIMAL},
+      </if>
+      <if test="beforeunit != null" >
+        BEFOREUNIT = #{beforeunit,jdbcType=DECIMAL},
+      </if>
+      <if test="beforemoney != null" >
+        BEFOREMONEY = #{beforemoney,jdbcType=DECIMAL},
+      </if>
+      <if test="afterunit != null" >
+        AFTERUNIT = #{afterunit,jdbcType=DECIMAL},
+      </if>
+      <if test="aftermoney != null" >
+        AFTERMONEY = #{aftermoney,jdbcType=DECIMAL},
+      </if>
+      <if test="ts != null" >
+        TS = #{ts,jdbcType=TIMESTAMP},
+      </if>
+      <if test="unifiedplanlicid != null" >
+        UNIFIEDPLANLICID = #{unifiedplanlicid,jdbcType=VARCHAR},
+      </if>
+      <if test="sumlevel != null" >
+        SUMLEVEL = #{sumlevel,jdbcType=VARCHAR},
+      </if>
+      <if test="priceday != null" >
+        PRICEDAY = #{priceday,jdbcType=VARCHAR},
+      </if>
+      <if test="begassetval != null" >
+        BEGASSETVAL = #{begassetval,jdbcType=DECIMAL},
+      </if>
+      <if test="appreciation != null" >
+        APPRECIATION = #{appreciation,jdbcType=DECIMAL},
+      </if>
+      <if test="totalbuyvol != null" >
+        TOTALBUYVOL = #{totalbuyvol,jdbcType=DECIMAL},
+      </if>
+      <if test="totalbuyamt != null" >
+        TOTALBUYAMT = #{totalbuyamt,jdbcType=DECIMAL},
+      </if>
+      <if test="contribuyvol != null" >
+        CONTRIBUYVOL = #{contribuyvol,jdbcType=DECIMAL},
+      </if>
+      <if test="contribuyamt != null" >
+        CONTRIBUYAMT = #{contribuyamt,jdbcType=DECIMAL},
+      </if>
+      <if test="noinvestbuyvol != null" >
+        NOINVESTBUYVOL = #{noinvestbuyvol,jdbcType=DECIMAL},
+      </if>
+      <if test="noinvestbuysum != null" >
+        NOINVESTBUYSUM = #{noinvestbuysum,jdbcType=DECIMAL},
+      </if>
+      <if test="switchbuyvol != null" >
+        SWITCHBUYVOL = #{switchbuyvol,jdbcType=DECIMAL},
+      </if>
+      <if test="switchbuysum != null" >
+        SWITCHBUYSUM = #{switchbuysum,jdbcType=DECIMAL},
+      </if>
+      <if test="otherbuyvol != null" >
+        OTHERBUYVOL = #{otherbuyvol,jdbcType=DECIMAL},
+      </if>
+      <if test="otherbuysum != null" >
+        OTHERBUYSUM = #{otherbuysum,jdbcType=DECIMAL},
+      </if>
+      <if test="totalsalevol != null" >
+        TOTALSALEVOL = #{totalsalevol,jdbcType=DECIMAL},
+      </if>
+      <if test="totalsalesum != null" >
+        TOTALSALESUM = #{totalsalesum,jdbcType=DECIMAL},
+      </if>
+      <if test="paymentsalevol != null" >
+        PAYMENTSALEVOL = #{paymentsalevol,jdbcType=DECIMAL},
+      </if>
+      <if test="paymentsalesum != null" >
+        PAYMENTSALESUM = #{paymentsalesum,jdbcType=DECIMAL},
+      </if>
+      <if test="transsalevol != null" >
+        TRANSSALEVOL = #{transsalevol,jdbcType=DECIMAL},
+      </if>
+      <if test="transsalesum != null" >
+        TRANSSALESUM = #{transsalesum,jdbcType=DECIMAL},
+      </if>
+      <if test="switchsalevol != null" >
+        SWITCHSALEVOL = #{switchsalevol,jdbcType=DECIMAL},
+      </if>
+      <if test="switchsalesum != null" >
+        SWITCHSALESUM = #{switchsalesum,jdbcType=DECIMAL},
+      </if>
+      <if test="noinvestsalevol != null" >
+        NOINVESTSALEVOL = #{noinvestsalevol,jdbcType=DECIMAL},
+      </if>
+      <if test="noinvestsalesum != null" >
+        NOINVESTSALESUM = #{noinvestsalesum,jdbcType=DECIMAL},
+      </if>
+      <if test="othersalevol != null" >
+        OTHERSALEVOL = #{othersalevol,jdbcType=DECIMAL},
+      </if>
+      <if test="othersalesum != null" >
+        OTHERSALESUM = #{othersalesum,jdbcType=DECIMAL},
+      </if>
+      <if test="periodinvestvol != null" >
+        PERIODINVESTVOL = #{periodinvestvol,jdbcType=DECIMAL},
+      </if>
+      <if test="periodinvestsum != null" >
+        PERIODINVESTSUM = #{periodinvestsum,jdbcType=DECIMAL},
+      </if>
+      <if test="finalassetval != null" >
+        FINALASSETVAL = #{finalassetval,jdbcType=DECIMAL},
+      </if>
+      <if test="currency != null" >
+        CURRENCY = #{currency,jdbcType=VARCHAR},
+      </if>
+      <if test="printday != null" >
+        PRINTDAY = #{printday,jdbcType=VARCHAR},
+      </if>
+      <if test="memo != null" >
+        MEMO = #{memo,jdbcType=VARCHAR},
+      </if>
+      <if test="sumtype != null" >
+        SUMTYPE = #{sumtype,jdbcType=VARCHAR},
+      </if>
+      <if test="begassetvol != null" >
+        BEGASSETVOL = #{begassetvol,jdbcType=DECIMAL},
+      </if>
+      <if test="planid != null" >
+        PLANID = #{planid,jdbcType=VARCHAR},
+      </if>
+      <if test="planlicid != null" >
+        PLANLICID = #{planlicid,jdbcType=VARCHAR},
+      </if>
+      <if test="planname != null" >
+        PLANNAME = #{planname,jdbcType=VARCHAR},
+      </if>
+      <if test="portfolioid != null" >
+        PORTFOLIOID = #{portfolioid,jdbcType=VARCHAR},
+      </if>
+      <if test="portfolioname != null" >
+        PORTFOLIONAME = #{portfolioname,jdbcType=VARCHAR},
+      </if>
+      <if test="workflowno != null" >
+        WORKFLOWNO = #{workflowno,jdbcType=VARCHAR},
+      </if>
+      <if test="column1 != null" >
+        COLUMN1 = #{column1,jdbcType=VARCHAR},
+      </if>
+      <if test="column2 != null" >
+        COLUMN2 = #{column2,jdbcType=VARCHAR},
+      </if>
+      <if test="column3 != null" >
+        COLUMN3 = #{column3,jdbcType=VARCHAR},
+      </if>
+      <if test="column4 != null" >
+        COLUMN4 = #{column4,jdbcType=VARCHAR},
+      </if>
+      <if test="column5 != null" >
+        COLUMN5 = #{column5,jdbcType=VARCHAR},
+      </if>
+      <if test="column6 != null" >
+        COLUMN6 = #{column6,jdbcType=VARCHAR},
+      </if>
+      <if test="column7 != null" >
+        COLUMN7 = #{column7,jdbcType=VARCHAR},
+      </if>
+      <if test="column8 != null" >
+        COLUMN8 = #{column8,jdbcType=VARCHAR},
+      </if>
+      <if test="column9 != null" >
+        COLUMN9 = #{column9,jdbcType=VARCHAR},
+      </if>
+      <if test="column10 != null" >
+        COLUMN10 = #{column10,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where PK_COLLECTDETAIL = #{pkCollectdetail,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="org.dicp.oa.account.model.entity.CollectDetailOAVO" >
+    update CSIP_OA_COLLECTDETAIL
+    set COLLECTSN = #{collectsn,jdbcType=VARCHAR},
+      PK_PLAN = #{pkPlan,jdbcType=VARCHAR},
+      NETDATE = #{netdate,jdbcType=CHAR},
+      PK_INVST = #{pkInvst,jdbcType=VARCHAR},
+      UNITNET = #{unitnet,jdbcType=DECIMAL},
+      NEWMONEYBUY = #{newmoneybuy,jdbcType=DECIMAL},
+      NEWMONEYBUYMONEY = #{newmoneybuymoney,jdbcType=DECIMAL},
+      IVSTREDSELL = #{ivstredsell,jdbcType=DECIMAL},
+      IVSTREDSELLMONEY = #{ivstredsellmoney,jdbcType=DECIMAL},
+      THISUNIT = #{thisunit,jdbcType=DECIMAL},
+      THISMONEY = #{thismoney,jdbcType=DECIMAL},
+      BEFOREUNIT = #{beforeunit,jdbcType=DECIMAL},
+      BEFOREMONEY = #{beforemoney,jdbcType=DECIMAL},
+      AFTERUNIT = #{afterunit,jdbcType=DECIMAL},
+      AFTERMONEY = #{aftermoney,jdbcType=DECIMAL},
+      TS = #{ts,jdbcType=TIMESTAMP},
+      UNIFIEDPLANLICID = #{unifiedplanlicid,jdbcType=VARCHAR},
+      SUMLEVEL = #{sumlevel,jdbcType=VARCHAR},
+      PRICEDAY = #{priceday,jdbcType=VARCHAR},
+      BEGASSETVAL = #{begassetval,jdbcType=DECIMAL},
+      APPRECIATION = #{appreciation,jdbcType=DECIMAL},
+      TOTALBUYVOL = #{totalbuyvol,jdbcType=DECIMAL},
+      TOTALBUYAMT = #{totalbuyamt,jdbcType=DECIMAL},
+      CONTRIBUYVOL = #{contribuyvol,jdbcType=DECIMAL},
+      CONTRIBUYAMT = #{contribuyamt,jdbcType=DECIMAL},
+      NOINVESTBUYVOL = #{noinvestbuyvol,jdbcType=DECIMAL},
+      NOINVESTBUYSUM = #{noinvestbuysum,jdbcType=DECIMAL},
+      SWITCHBUYVOL = #{switchbuyvol,jdbcType=DECIMAL},
+      SWITCHBUYSUM = #{switchbuysum,jdbcType=DECIMAL},
+      OTHERBUYVOL = #{otherbuyvol,jdbcType=DECIMAL},
+      OTHERBUYSUM = #{otherbuysum,jdbcType=DECIMAL},
+      TOTALSALEVOL = #{totalsalevol,jdbcType=DECIMAL},
+      TOTALSALESUM = #{totalsalesum,jdbcType=DECIMAL},
+      PAYMENTSALEVOL = #{paymentsalevol,jdbcType=DECIMAL},
+      PAYMENTSALESUM = #{paymentsalesum,jdbcType=DECIMAL},
+      TRANSSALEVOL = #{transsalevol,jdbcType=DECIMAL},
+      TRANSSALESUM = #{transsalesum,jdbcType=DECIMAL},
+      SWITCHSALEVOL = #{switchsalevol,jdbcType=DECIMAL},
+      SWITCHSALESUM = #{switchsalesum,jdbcType=DECIMAL},
+      NOINVESTSALEVOL = #{noinvestsalevol,jdbcType=DECIMAL},
+      NOINVESTSALESUM = #{noinvestsalesum,jdbcType=DECIMAL},
+      OTHERSALEVOL = #{othersalevol,jdbcType=DECIMAL},
+      OTHERSALESUM = #{othersalesum,jdbcType=DECIMAL},
+      PERIODINVESTVOL = #{periodinvestvol,jdbcType=DECIMAL},
+      PERIODINVESTSUM = #{periodinvestsum,jdbcType=DECIMAL},
+      FINALASSETVAL = #{finalassetval,jdbcType=DECIMAL},
+      CURRENCY = #{currency,jdbcType=VARCHAR},
+      PRINTDAY = #{printday,jdbcType=VARCHAR},
+      MEMO = #{memo,jdbcType=VARCHAR},
+      SUMTYPE = #{sumtype,jdbcType=VARCHAR},
+      BEGASSETVOL = #{begassetvol,jdbcType=DECIMAL},
+      PLANID = #{planid,jdbcType=VARCHAR},
+      PLANLICID = #{planlicid,jdbcType=VARCHAR},
+      PLANNAME = #{planname,jdbcType=VARCHAR},
+      PORTFOLIOID = #{portfolioid,jdbcType=VARCHAR},
+      PORTFOLIONAME = #{portfolioname,jdbcType=VARCHAR},
+      WORKFLOWNO = #{workflowno,jdbcType=VARCHAR},
+      COLUMN1 = #{column1,jdbcType=VARCHAR},
+      COLUMN2 = #{column2,jdbcType=VARCHAR},
+      COLUMN3 = #{column3,jdbcType=VARCHAR},
+      COLUMN4 = #{column4,jdbcType=VARCHAR},
+      COLUMN5 = #{column5,jdbcType=VARCHAR},
+      COLUMN6 = #{column6,jdbcType=VARCHAR},
+      COLUMN7 = #{column7,jdbcType=VARCHAR},
+      COLUMN8 = #{column8,jdbcType=VARCHAR},
+      COLUMN9 = #{column9,jdbcType=VARCHAR},
+      COLUMN10 = #{column10,jdbcType=VARCHAR}
+    where PK_COLLECTDETAIL = #{pkCollectdetail,jdbcType=VARCHAR}
+  </update>
+   <select id="countByCollectSN" parameterType="java.lang.String" resultType="java.lang.Integer" >
+  	select count(1) from CSIP_OA_COLLECTDETAIL where CollectSN=#{collectSN,jdbcType=VARCHAR}
+  </select>
+  
+</mapper>

@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.dicp.oa.account.dao.mybatis.TmpManagerOAVOMapper" >
+  <resultMap id="BaseResultMap" type="org.dicp.oa.account.model.entity.TmpManagerOAVO" >
+    <result column="PLANID" property="planid" jdbcType="VARCHAR" />
+    <result column="MANAGERCODE" property="managercode" jdbcType="VARCHAR" />
+    <result column="MANAGERNAME" property="managername" jdbcType="VARCHAR" />
+    <result column="INSTITUTIONORGID" property="institutionorgid" jdbcType="VARCHAR" />
+    <result column="CIFID" property="cifid" jdbcType="VARCHAR" />
+    <result column="STANDARDCODE" property="standardcode" jdbcType="VARCHAR" />
+    <result column="MNGRTACTP" property="mngrtactp" jdbcType="VARCHAR" />
+    <result column="MNGRACTPTEL" property="mngractptel" jdbcType="VARCHAR" />
+    <result column="MNGRACTPFAX" property="mngractpfax" jdbcType="VARCHAR" />
+    <result column="MNGRACTPADDR" property="mngractpaddr" jdbcType="VARCHAR" />
+    <result column="MNGRACTPEMAIL" property="mngractpemail" jdbcType="VARCHAR" />
+    <result column="STATUS" property="status" jdbcType="CHAR" />
+    <result column="LICENSETYPE" property="licensetype" jdbcType="VARCHAR" />
+    <result column="CERTIFICATETYPE" property="certificatetype" jdbcType="VARCHAR" />
+    <result column="CERTIFICATENUM" property="certificatenum" jdbcType="VARCHAR" />
+    <result column="SUBINSTPOSTCODE" property="subinstpostcode" jdbcType="VARCHAR" />
+    <result column="SUBINSTID" property="subinstid" jdbcType="VARCHAR" />
+    <result column="SOCIALCREDITCODE" property="socialcreditcode" jdbcType="VARCHAR" />
+    <result column="SUBINSTADDR" property="subinstaddr" jdbcType="VARCHAR" />
+    <result column="LASTUPDDATE" property="lastupddate" jdbcType="VARCHAR" />
+    <result column="INSTITUTIONID" property="institutionid" jdbcType="VARCHAR" />
+    <result column="INSTITUTIONNAME" property="institutionname" jdbcType="VARCHAR" />
+    <result column="INSTITUTIONTYPE" property="institutiontype" jdbcType="VARCHAR" />
+    <result column="TS" property="ts" jdbcType="TIMESTAMP" />
+    <result column="PLANLICID" property="planlicid" jdbcType="VARCHAR" />
+    <result column="PLANNAME" property="planname" jdbcType="VARCHAR" />
+    <result column="MEMO" property="memo" jdbcType="VARCHAR" />
+    <result column="WORKFLOWNO" property="workflowno" jdbcType="VARCHAR" />
+    <result column="COLUMN1" property="column1" jdbcType="VARCHAR" />
+    <result column="COLUMN2" property="column2" jdbcType="VARCHAR" />
+    <result column="COLUMN3" property="column3" jdbcType="VARCHAR" />
+    <result column="COLUMN4" property="column4" jdbcType="VARCHAR" />
+    <result column="COLUMN5" property="column5" jdbcType="VARCHAR" />
+    <result column="COLUMN6" property="column6" jdbcType="VARCHAR" />
+    <result column="COLUMN7" property="column7" jdbcType="VARCHAR" />
+    <result column="COLUMN8" property="column8" jdbcType="VARCHAR" />
+    <result column="COLUMN9" property="column9" jdbcType="VARCHAR" />
+    <result column="COLUMN10" property="column10" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    PLANID, MANAGERCODE, MANAGERNAME, INSTITUTIONORGID, CIFID, STANDARDCODE, MNGRTACTP, 
+    MNGRACTPTEL, MNGRACTPFAX, MNGRACTPADDR, MNGRACTPEMAIL, STATUS, LICENSETYPE, CERTIFICATETYPE, 
+    CERTIFICATENUM, SUBINSTPOSTCODE, SUBINSTID, SOCIALCREDITCODE, SUBINSTADDR, LASTUPDDATE, 
+    INSTITUTIONID, INSTITUTIONNAME, INSTITUTIONTYPE, TS, PLANLICID, PLANNAME, MEMO, WORKFLOWNO, 
+    COLUMN1, COLUMN2, COLUMN3, COLUMN4, COLUMN5, COLUMN6, COLUMN7, COLUMN8, COLUMN9, 
+    COLUMN10
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="org.dicp.oa.account.model.entity.TmpManagerOAVOCriteria" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from TMP_OA_MANAGER
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <delete id="deleteByExample" parameterType="org.dicp.oa.account.model.entity.TmpManagerOAVOCriteria" >
+    delete from TMP_OA_MANAGER
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="org.dicp.oa.account.model.entity.TmpManagerOAVO" >
+    insert into TMP_OA_MANAGER (PLANID, MANAGERCODE, MANAGERNAME, 
+      INSTITUTIONORGID, CIFID, STANDARDCODE, 
+      MNGRTACTP, MNGRACTPTEL, MNGRACTPFAX, 
+      MNGRACTPADDR, MNGRACTPEMAIL, STATUS, 
+      LICENSETYPE, CERTIFICATETYPE, CERTIFICATENUM, 
+      SUBINSTPOSTCODE, SUBINSTID, SOCIALCREDITCODE, 
+      SUBINSTADDR, LASTUPDDATE, INSTITUTIONID, 
+      INSTITUTIONNAME, INSTITUTIONTYPE, TS, 
+      PLANLICID, PLANNAME, MEMO, 
+      WORKFLOWNO, COLUMN1, COLUMN2, 
+      COLUMN3, COLUMN4, COLUMN5, 
+      COLUMN6, COLUMN7, COLUMN8, 
+      COLUMN9, COLUMN10)
+    values (#{planid,jdbcType=VARCHAR}, #{managercode,jdbcType=VARCHAR}, #{managername,jdbcType=VARCHAR}, 
+      #{institutionorgid,jdbcType=VARCHAR}, #{cifid,jdbcType=VARCHAR}, #{standardcode,jdbcType=VARCHAR}, 
+      #{mngrtactp,jdbcType=VARCHAR}, #{mngractptel,jdbcType=VARCHAR}, #{mngractpfax,jdbcType=VARCHAR}, 
+      #{mngractpaddr,jdbcType=VARCHAR}, #{mngractpemail,jdbcType=VARCHAR}, #{status,jdbcType=CHAR}, 
+      #{licensetype,jdbcType=VARCHAR}, #{certificatetype,jdbcType=VARCHAR}, #{certificatenum,jdbcType=VARCHAR}, 
+      #{subinstpostcode,jdbcType=VARCHAR}, #{subinstid,jdbcType=VARCHAR}, #{socialcreditcode,jdbcType=VARCHAR}, 
+      #{subinstaddr,jdbcType=VARCHAR}, #{lastupddate,jdbcType=VARCHAR}, #{institutionid,jdbcType=VARCHAR}, 
+      #{institutionname,jdbcType=VARCHAR}, #{institutiontype,jdbcType=VARCHAR}, #{ts,jdbcType=TIMESTAMP}, 
+      #{planlicid,jdbcType=VARCHAR}, #{planname,jdbcType=VARCHAR}, #{memo,jdbcType=VARCHAR}, 
+      #{workflowno,jdbcType=VARCHAR}, #{column1,jdbcType=VARCHAR}, #{column2,jdbcType=VARCHAR}, 
+      #{column3,jdbcType=VARCHAR}, #{column4,jdbcType=VARCHAR}, #{column5,jdbcType=VARCHAR}, 
+      #{column6,jdbcType=VARCHAR}, #{column7,jdbcType=VARCHAR}, #{column8,jdbcType=VARCHAR}, 
+      #{column9,jdbcType=VARCHAR}, #{column10,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="org.dicp.oa.account.model.entity.TmpManagerOAVO" >
+    insert into TMP_OA_MANAGER
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="planid != null" >
+        PLANID,
+      </if>
+      <if test="managercode != null" >
+        MANAGERCODE,
+      </if>
+      <if test="managername != null" >
+        MANAGERNAME,
+      </if>
+      <if test="institutionorgid != null" >
+        INSTITUTIONORGID,
+      </if>
+      <if test="cifid != null" >
+        CIFID,
+      </if>
+      <if test="standardcode != null" >
+        STANDARDCODE,
+      </if>
+      <if test="mngrtactp != null" >
+        MNGRTACTP,
+      </if>
+      <if test="mngractptel != null" >
+        MNGRACTPTEL,
+      </if>
+      <if test="mngractpfax != null" >
+        MNGRACTPFAX,
+      </if>
+      <if test="mngractpaddr != null" >
+        MNGRACTPADDR,
+      </if>
+      <if test="mngractpemail != null" >
+        MNGRACTPEMAIL,
+      </if>
+      <if test="status != null" >
+        STATUS,
+      </if>
+      <if test="licensetype != null" >
+        LICENSETYPE,
+      </if>
+      <if test="certificatetype != null" >
+        CERTIFICATETYPE,
+      </if>
+      <if test="certificatenum != null" >
+        CERTIFICATENUM,
+      </if>
+      <if test="subinstpostcode != null" >
+        SUBINSTPOSTCODE,
+      </if>
+      <if test="subinstid != null" >
+        SUBINSTID,
+      </if>
+      <if test="socialcreditcode != null" >
+        SOCIALCREDITCODE,
+      </if>
+      <if test="subinstaddr != null" >
+        SUBINSTADDR,
+      </if>
+      <if test="lastupddate != null" >
+        LASTUPDDATE,
+      </if>
+      <if test="institutionid != null" >
+        INSTITUTIONID,
+      </if>
+      <if test="institutionname != null" >
+        INSTITUTIONNAME,
+      </if>
+      <if test="institutiontype != null" >
+        INSTITUTIONTYPE,
+      </if>
+      <if test="ts != null" >
+        TS,
+      </if>
+      <if test="planlicid != null" >
+        PLANLICID,
+      </if>
+      <if test="planname != null" >
+        PLANNAME,
+      </if>
+      <if test="memo != null" >
+        MEMO,
+      </if>
+      <if test="workflowno != null" >
+        WORKFLOWNO,
+      </if>
+      <if test="column1 != null" >
+        COLUMN1,
+      </if>
+      <if test="column2 != null" >
+        COLUMN2,
+      </if>
+      <if test="column3 != null" >
+        COLUMN3,
+      </if>
+      <if test="column4 != null" >
+        COLUMN4,
+      </if>
+      <if test="column5 != null" >
+        COLUMN5,
+      </if>
+      <if test="column6 != null" >
+        COLUMN6,
+      </if>
+      <if test="column7 != null" >
+        COLUMN7,
+      </if>
+      <if test="column8 != null" >
+        COLUMN8,
+      </if>
+      <if test="column9 != null" >
+        COLUMN9,
+      </if>
+      <if test="column10 != null" >
+        COLUMN10,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="planid != null" >
+        #{planid,jdbcType=VARCHAR},
+      </if>
+      <if test="managercode != null" >
+        #{managercode,jdbcType=VARCHAR},
+      </if>
+      <if test="managername != null" >
+        #{managername,jdbcType=VARCHAR},
+      </if>
+      <if test="institutionorgid != null" >
+        #{institutionorgid,jdbcType=VARCHAR},
+      </if>
+      <if test="cifid != null" >
+        #{cifid,jdbcType=VARCHAR},
+      </if>
+      <if test="standardcode != null" >
+        #{standardcode,jdbcType=VARCHAR},
+      </if>
+      <if test="mngrtactp != null" >
+        #{mngrtactp,jdbcType=VARCHAR},
+      </if>
+      <if test="mngractptel != null" >
+        #{mngractptel,jdbcType=VARCHAR},
+      </if>
+      <if test="mngractpfax != null" >
+        #{mngractpfax,jdbcType=VARCHAR},
+      </if>
+      <if test="mngractpaddr != null" >
+        #{mngractpaddr,jdbcType=VARCHAR},
+      </if>
+      <if test="mngractpemail != null" >
+        #{mngractpemail,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=CHAR},
+      </if>
+      <if test="licensetype != null" >
+        #{licensetype,jdbcType=VARCHAR},
+      </if>
+      <if test="certificatetype != null" >
+        #{certificatetype,jdbcType=VARCHAR},
+      </if>
+      <if test="certificatenum != null" >
+        #{certificatenum,jdbcType=VARCHAR},
+      </if>
+      <if test="subinstpostcode != null" >
+        #{subinstpostcode,jdbcType=VARCHAR},
+      </if>
+      <if test="subinstid != null" >
+        #{subinstid,jdbcType=VARCHAR},
+      </if>
+      <if test="socialcreditcode != null" >
+        #{socialcreditcode,jdbcType=VARCHAR},
+      </if>
+      <if test="subinstaddr != null" >
+        #{subinstaddr,jdbcType=VARCHAR},
+      </if>
+      <if test="lastupddate != null" >
+        #{lastupddate,jdbcType=VARCHAR},
+      </if>
+      <if test="institutionid != null" >
+        #{institutionid,jdbcType=VARCHAR},
+      </if>
+      <if test="institutionname != null" >
+        #{institutionname,jdbcType=VARCHAR},
+      </if>
+      <if test="institutiontype != null" >
+        #{institutiontype,jdbcType=VARCHAR},
+      </if>
+      <if test="ts != null" >
+        #{ts,jdbcType=TIMESTAMP},
+      </if>
+      <if test="planlicid != null" >
+        #{planlicid,jdbcType=VARCHAR},
+      </if>
+      <if test="planname != null" >
+        #{planname,jdbcType=VARCHAR},
+      </if>
+      <if test="memo != null" >
+        #{memo,jdbcType=VARCHAR},
+      </if>
+      <if test="workflowno != null" >
+        #{workflowno,jdbcType=VARCHAR},
+      </if>
+      <if test="column1 != null" >
+        #{column1,jdbcType=VARCHAR},
+      </if>
+      <if test="column2 != null" >
+        #{column2,jdbcType=VARCHAR},
+      </if>
+      <if test="column3 != null" >
+        #{column3,jdbcType=VARCHAR},
+      </if>
+      <if test="column4 != null" >
+        #{column4,jdbcType=VARCHAR},
+      </if>
+      <if test="column5 != null" >
+        #{column5,jdbcType=VARCHAR},
+      </if>
+      <if test="column6 != null" >
+        #{column6,jdbcType=VARCHAR},
+      </if>
+      <if test="column7 != null" >
+        #{column7,jdbcType=VARCHAR},
+      </if>
+      <if test="column8 != null" >
+        #{column8,jdbcType=VARCHAR},
+      </if>
+      <if test="column9 != null" >
+        #{column9,jdbcType=VARCHAR},
+      </if>
+      <if test="column10 != null" >
+        #{column10,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="org.dicp.oa.account.model.entity.TmpManagerOAVOCriteria" resultType="java.lang.Integer" >
+    select count(*) from TMP_OA_MANAGER
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update TMP_OA_MANAGER
+    <set >
+      <if test="record.planid != null" >
+        PLANID = #{record.planid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.managercode != null" >
+        MANAGERCODE = #{record.managercode,jdbcType=VARCHAR},
+      </if>
+      <if test="record.managername != null" >
+        MANAGERNAME = #{record.managername,jdbcType=VARCHAR},
+      </if>
+      <if test="record.institutionorgid != null" >
+        INSTITUTIONORGID = #{record.institutionorgid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cifid != null" >
+        CIFID = #{record.cifid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.standardcode != null" >
+        STANDARDCODE = #{record.standardcode,jdbcType=VARCHAR},
+      </if>
+      <if test="record.mngrtactp != null" >
+        MNGRTACTP = #{record.mngrtactp,jdbcType=VARCHAR},
+      </if>
+      <if test="record.mngractptel != null" >
+        MNGRACTPTEL = #{record.mngractptel,jdbcType=VARCHAR},
+      </if>
+      <if test="record.mngractpfax != null" >
+        MNGRACTPFAX = #{record.mngractpfax,jdbcType=VARCHAR},
+      </if>
+      <if test="record.mngractpaddr != null" >
+        MNGRACTPADDR = #{record.mngractpaddr,jdbcType=VARCHAR},
+      </if>
+      <if test="record.mngractpemail != null" >
+        MNGRACTPEMAIL = #{record.mngractpemail,jdbcType=VARCHAR},
+      </if>
+      <if test="record.status != null" >
+        STATUS = #{record.status,jdbcType=CHAR},
+      </if>
+      <if test="record.licensetype != null" >
+        LICENSETYPE = #{record.licensetype,jdbcType=VARCHAR},
+      </if>
+      <if test="record.certificatetype != null" >
+        CERTIFICATETYPE = #{record.certificatetype,jdbcType=VARCHAR},
+      </if>
+      <if test="record.certificatenum != null" >
+        CERTIFICATENUM = #{record.certificatenum,jdbcType=VARCHAR},
+      </if>
+      <if test="record.subinstpostcode != null" >
+        SUBINSTPOSTCODE = #{record.subinstpostcode,jdbcType=VARCHAR},
+      </if>
+      <if test="record.subinstid != null" >
+        SUBINSTID = #{record.subinstid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.socialcreditcode != null" >
+        SOCIALCREDITCODE = #{record.socialcreditcode,jdbcType=VARCHAR},
+      </if>
+      <if test="record.subinstaddr != null" >
+        SUBINSTADDR = #{record.subinstaddr,jdbcType=VARCHAR},
+      </if>
+      <if test="record.lastupddate != null" >
+        LASTUPDDATE = #{record.lastupddate,jdbcType=VARCHAR},
+      </if>
+      <if test="record.institutionid != null" >
+        INSTITUTIONID = #{record.institutionid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.institutionname != null" >
+        INSTITUTIONNAME = #{record.institutionname,jdbcType=VARCHAR},
+      </if>
+      <if test="record.institutiontype != null" >
+        INSTITUTIONTYPE = #{record.institutiontype,jdbcType=VARCHAR},
+      </if>
+      <if test="record.ts != null" >
+        TS = #{record.ts,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.planlicid != null" >
+        PLANLICID = #{record.planlicid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.planname != null" >
+        PLANNAME = #{record.planname,jdbcType=VARCHAR},
+      </if>
+      <if test="record.memo != null" >
+        MEMO = #{record.memo,jdbcType=VARCHAR},
+      </if>
+      <if test="record.workflowno != null" >
+        WORKFLOWNO = #{record.workflowno,jdbcType=VARCHAR},
+      </if>
+      <if test="record.column1 != null" >
+        COLUMN1 = #{record.column1,jdbcType=VARCHAR},
+      </if>
+      <if test="record.column2 != null" >
+        COLUMN2 = #{record.column2,jdbcType=VARCHAR},
+      </if>
+      <if test="record.column3 != null" >
+        COLUMN3 = #{record.column3,jdbcType=VARCHAR},
+      </if>
+      <if test="record.column4 != null" >
+        COLUMN4 = #{record.column4,jdbcType=VARCHAR},
+      </if>
+      <if test="record.column5 != null" >
+        COLUMN5 = #{record.column5,jdbcType=VARCHAR},
+      </if>
+      <if test="record.column6 != null" >
+        COLUMN6 = #{record.column6,jdbcType=VARCHAR},
+      </if>
+      <if test="record.column7 != null" >
+        COLUMN7 = #{record.column7,jdbcType=VARCHAR},
+      </if>
+      <if test="record.column8 != null" >
+        COLUMN8 = #{record.column8,jdbcType=VARCHAR},
+      </if>
+      <if test="record.column9 != null" >
+        COLUMN9 = #{record.column9,jdbcType=VARCHAR},
+      </if>
+      <if test="record.column10 != null" >
+        COLUMN10 = #{record.column10,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update TMP_OA_MANAGER
+    set PLANID = #{record.planid,jdbcType=VARCHAR},
+      MANAGERCODE = #{record.managercode,jdbcType=VARCHAR},
+      MANAGERNAME = #{record.managername,jdbcType=VARCHAR},
+      INSTITUTIONORGID = #{record.institutionorgid,jdbcType=VARCHAR},
+      CIFID = #{record.cifid,jdbcType=VARCHAR},
+      STANDARDCODE = #{record.standardcode,jdbcType=VARCHAR},
+      MNGRTACTP = #{record.mngrtactp,jdbcType=VARCHAR},
+      MNGRACTPTEL = #{record.mngractptel,jdbcType=VARCHAR},
+      MNGRACTPFAX = #{record.mngractpfax,jdbcType=VARCHAR},
+      MNGRACTPADDR = #{record.mngractpaddr,jdbcType=VARCHAR},
+      MNGRACTPEMAIL = #{record.mngractpemail,jdbcType=VARCHAR},
+      STATUS = #{record.status,jdbcType=CHAR},
+      LICENSETYPE = #{record.licensetype,jdbcType=VARCHAR},
+      CERTIFICATETYPE = #{record.certificatetype,jdbcType=VARCHAR},
+      CERTIFICATENUM = #{record.certificatenum,jdbcType=VARCHAR},
+      SUBINSTPOSTCODE = #{record.subinstpostcode,jdbcType=VARCHAR},
+      SUBINSTID = #{record.subinstid,jdbcType=VARCHAR},
+      SOCIALCREDITCODE = #{record.socialcreditcode,jdbcType=VARCHAR},
+      SUBINSTADDR = #{record.subinstaddr,jdbcType=VARCHAR},
+      LASTUPDDATE = #{record.lastupddate,jdbcType=VARCHAR},
+      INSTITUTIONID = #{record.institutionid,jdbcType=VARCHAR},
+      INSTITUTIONNAME = #{record.institutionname,jdbcType=VARCHAR},
+      INSTITUTIONTYPE = #{record.institutiontype,jdbcType=VARCHAR},
+      TS = #{record.ts,jdbcType=TIMESTAMP},
+      PLANLICID = #{record.planlicid,jdbcType=VARCHAR},
+      PLANNAME = #{record.planname,jdbcType=VARCHAR},
+      MEMO = #{record.memo,jdbcType=VARCHAR},
+      WORKFLOWNO = #{record.workflowno,jdbcType=VARCHAR},
+      COLUMN1 = #{record.column1,jdbcType=VARCHAR},
+      COLUMN2 = #{record.column2,jdbcType=VARCHAR},
+      COLUMN3 = #{record.column3,jdbcType=VARCHAR},
+      COLUMN4 = #{record.column4,jdbcType=VARCHAR},
+      COLUMN5 = #{record.column5,jdbcType=VARCHAR},
+      COLUMN6 = #{record.column6,jdbcType=VARCHAR},
+      COLUMN7 = #{record.column7,jdbcType=VARCHAR},
+      COLUMN8 = #{record.column8,jdbcType=VARCHAR},
+      COLUMN9 = #{record.column9,jdbcType=VARCHAR},
+      COLUMN10 = #{record.column10,jdbcType=VARCHAR}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+</mapper>

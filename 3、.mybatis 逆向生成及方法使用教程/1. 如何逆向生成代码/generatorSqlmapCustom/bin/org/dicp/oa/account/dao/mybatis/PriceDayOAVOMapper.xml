@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.dicp.oa.account.dao.mybatis.PriceDayOAVOMapper" >
+  <resultMap id="BaseResultMap" type="org.dicp.oa.account.model.entity.PriceDayOAVO" >
+    <id column="PK_PRICEDAY" property="pkPriceday" jdbcType="VARCHAR" />
+    <result column="PK_PLAN" property="pkPlan" jdbcType="CHAR" />
+    <result column="PRICEYEAR" property="priceyear" jdbcType="VARCHAR" />
+    <result column="PRICEDATE" property="pricedate" jdbcType="DATE" />
+    <result column="LASTUPDDATE" property="lastupddate" jdbcType="VARCHAR" />
+    <result column="YEAR" property="year" jdbcType="VARCHAR" />
+    <result column="STATUS" property="status" jdbcType="CHAR" />
+    <result column="MEMO" property="memo" jdbcType="VARCHAR" />
+    <result column="TS" property="ts" jdbcType="TIMESTAMP" />
+    <result column="PLANLICID" property="planlicid" jdbcType="VARCHAR" />
+    <result column="PLANNAME" property="planname" jdbcType="VARCHAR" />
+    <result column="ACCOUNTPLANID" property="accountplanid" jdbcType="VARCHAR" />
+    <result column="PLANID" property="planid" jdbcType="VARCHAR" />
+    <result column="WORKFLOWNO" property="workflowno" jdbcType="VARCHAR" />
+    <result column="COLUMN1" property="column1" jdbcType="VARCHAR" />
+    <result column="COLUMN2" property="column2" jdbcType="VARCHAR" />
+    <result column="COLUMN3" property="column3" jdbcType="VARCHAR" />
+    <result column="COLUMN4" property="column4" jdbcType="VARCHAR" />
+    <result column="COLUMN5" property="column5" jdbcType="VARCHAR" />
+    <result column="COLUMN7" property="column7" jdbcType="VARCHAR" />
+    <result column="COLUMN8" property="column8" jdbcType="VARCHAR" />
+    <result column="COLUMN9" property="column9" jdbcType="VARCHAR" />
+    <result column="COLUMN10" property="column10" jdbcType="VARCHAR" />
+    <result column="COLUMN6" property="column6" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    PK_PRICEDAY, PK_PLAN, PRICEYEAR, PRICEDATE, LASTUPDDATE, YEAR, STATUS, MEMO, TS, 
+    PLANLICID, PLANNAME, ACCOUNTPLANID, PLANID, WORKFLOWNO, COLUMN1, COLUMN2, COLUMN3, 
+    COLUMN4, COLUMN5, COLUMN7, COLUMN8, COLUMN9, COLUMN10, COLUMN6
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="org.dicp.oa.account.model.entity.PriceDayOAVOCriteria" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from CSIP_OA_PRICEDAY
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from CSIP_OA_PRICEDAY
+    where PK_PRICEDAY = #{pkPriceday,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from CSIP_OA_PRICEDAY
+    where PK_PRICEDAY = #{pkPriceday,jdbcType=VARCHAR}
+  </delete>
+  <delete id="deleteByExample" parameterType="org.dicp.oa.account.model.entity.PriceDayOAVOCriteria" >
+    delete from CSIP_OA_PRICEDAY
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="org.dicp.oa.account.model.entity.PriceDayOAVO" >
+    insert into CSIP_OA_PRICEDAY (PK_PRICEDAY, PK_PLAN, PRICEYEAR, 
+      PRICEDATE, LASTUPDDATE, YEAR, 
+      STATUS, MEMO, TS, PLANLICID, 
+      PLANNAME, ACCOUNTPLANID, PLANID, 
+      WORKFLOWNO, COLUMN1, COLUMN2, 
+      COLUMN3, COLUMN4, COLUMN5, 
+      COLUMN7, COLUMN8, COLUMN9, 
+      COLUMN10, COLUMN6)
+    values (sys_guid(), #{pkPlan,jdbcType=CHAR}, #{priceyear,jdbcType=VARCHAR}, 
+      #{pricedate,jdbcType=DATE}, #{lastupddate,jdbcType=VARCHAR}, #{year,jdbcType=VARCHAR}, 
+      #{status,jdbcType=CHAR}, #{memo,jdbcType=VARCHAR}, #{ts,jdbcType=TIMESTAMP}, #{planlicid,jdbcType=VARCHAR}, 
+      #{planname,jdbcType=VARCHAR}, #{accountplanid,jdbcType=VARCHAR}, #{planid,jdbcType=VARCHAR}, 
+      #{workflowno,jdbcType=VARCHAR}, #{column1,jdbcType=VARCHAR}, #{column2,jdbcType=VARCHAR}, 
+      #{column3,jdbcType=VARCHAR}, #{column4,jdbcType=VARCHAR}, #{column5,jdbcType=VARCHAR}, 
+      #{column7,jdbcType=VARCHAR}, #{column8,jdbcType=VARCHAR}, #{column9,jdbcType=VARCHAR}, 
+      #{column10,jdbcType=VARCHAR}, #{column6,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="org.dicp.oa.account.model.entity.PriceDayOAVO" >
+    insert into CSIP_OA_PRICEDAY
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="pkPriceday != null" >
+        PK_PRICEDAY,
+      </if>
+      <if test="pkPlan != null" >
+        PK_PLAN,
+      </if>
+      <if test="priceyear != null" >
+        PRICEYEAR,
+      </if>
+      <if test="pricedate != null" >
+        PRICEDATE,
+      </if>
+      <if test="lastupddate != null" >
+        LASTUPDDATE,
+      </if>
+      <if test="year != null" >
+        YEAR,
+      </if>
+      <if test="status != null" >
+        STATUS,
+      </if>
+      <if test="memo != null" >
+        MEMO,
+      </if>
+      <if test="ts != null" >
+        TS,
+      </if>
+      <if test="planlicid != null" >
+        PLANLICID,
+      </if>
+      <if test="planname != null" >
+        PLANNAME,
+      </if>
+      <if test="accountplanid != null" >
+        ACCOUNTPLANID,
+      </if>
+      <if test="planid != null" >
+        PLANID,
+      </if>
+      <if test="workflowno != null" >
+        WORKFLOWNO,
+      </if>
+      <if test="column1 != null" >
+        COLUMN1,
+      </if>
+      <if test="column2 != null" >
+        COLUMN2,
+      </if>
+      <if test="column3 != null" >
+        COLUMN3,
+      </if>
+      <if test="column4 != null" >
+        COLUMN4,
+      </if>
+      <if test="column5 != null" >
+        COLUMN5,
+      </if>
+      <if test="column7 != null" >
+        COLUMN7,
+      </if>
+      <if test="column8 != null" >
+        COLUMN8,
+      </if>
+      <if test="column9 != null" >
+        COLUMN9,
+      </if>
+      <if test="column10 != null" >
+        COLUMN10,
+      </if>
+      <if test="column6 != null" >
+        COLUMN6,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="pkPriceday != null" >
+        #{pkPriceday,jdbcType=VARCHAR},
+      </if>
+      <if test="pkPlan != null" >
+        #{pkPlan,jdbcType=CHAR},
+      </if>
+      <if test="priceyear != null" >
+        #{priceyear,jdbcType=VARCHAR},
+      </if>
+      <if test="pricedate != null" >
+        #{pricedate,jdbcType=DATE},
+      </if>
+      <if test="lastupddate != null" >
+        #{lastupddate,jdbcType=VARCHAR},
+      </if>
+      <if test="year != null" >
+        #{year,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=CHAR},
+      </if>
+      <if test="memo != null" >
+        #{memo,jdbcType=VARCHAR},
+      </if>
+      <if test="ts != null" >
+        #{ts,jdbcType=TIMESTAMP},
+      </if>
+      <if test="planlicid != null" >
+        #{planlicid,jdbcType=VARCHAR},
+      </if>
+      <if test="planname != null" >
+        #{planname,jdbcType=VARCHAR},
+      </if>
+      <if test="accountplanid != null" >
+        #{accountplanid,jdbcType=VARCHAR},
+      </if>
+      <if test="planid != null" >
+        #{planid,jdbcType=VARCHAR},
+      </if>
+      <if test="workflowno != null" >
+        #{workflowno,jdbcType=VARCHAR},
+      </if>
+      <if test="column1 != null" >
+        #{column1,jdbcType=VARCHAR},
+      </if>
+      <if test="column2 != null" >
+        #{column2,jdbcType=VARCHAR},
+      </if>
+      <if test="column3 != null" >
+        #{column3,jdbcType=VARCHAR},
+      </if>
+      <if test="column4 != null" >
+        #{column4,jdbcType=VARCHAR},
+      </if>
+      <if test="column5 != null" >
+        #{column5,jdbcType=VARCHAR},
+      </if>
+      <if test="column7 != null" >
+        #{column7,jdbcType=VARCHAR},
+      </if>
+      <if test="column8 != null" >
+        #{column8,jdbcType=VARCHAR},
+      </if>
+      <if test="column9 != null" >
+        #{column9,jdbcType=VARCHAR},
+      </if>
+      <if test="column10 != null" >
+        #{column10,jdbcType=VARCHAR},
+      </if>
+      <if test="column6 != null" >
+        #{column6,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="org.dicp.oa.account.model.entity.PriceDayOAVOCriteria" resultType="java.lang.Integer" >
+    select count(*) from CSIP_OA_PRICEDAY
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update CSIP_OA_PRICEDAY
+    <set >
+      <if test="record.pkPriceday != null" >
+        PK_PRICEDAY = #{record.pkPriceday,jdbcType=VARCHAR},
+      </if>
+      <if test="record.pkPlan != null" >
+        PK_PLAN = #{record.pkPlan,jdbcType=CHAR},
+      </if>
+      <if test="record.priceyear != null" >
+        PRICEYEAR = #{record.priceyear,jdbcType=VARCHAR},
+      </if>
+      <if test="record.pricedate != null" >
+        PRICEDATE = #{record.pricedate,jdbcType=DATE},
+      </if>
+      <if test="record.lastupddate != null" >
+        LASTUPDDATE = #{record.lastupddate,jdbcType=VARCHAR},
+      </if>
+      <if test="record.year != null" >
+        YEAR = #{record.year,jdbcType=VARCHAR},
+      </if>
+      <if test="record.status != null" >
+        STATUS = #{record.status,jdbcType=CHAR},
+      </if>
+      <if test="record.memo != null" >
+        MEMO = #{record.memo,jdbcType=VARCHAR},
+      </if>
+      <if test="record.ts != null" >
+        TS = #{record.ts,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.planlicid != null" >
+        PLANLICID = #{record.planlicid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.planname != null" >
+        PLANNAME = #{record.planname,jdbcType=VARCHAR},
+      </if>
+      <if test="record.accountplanid != null" >
+        ACCOUNTPLANID = #{record.accountplanid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.planid != null" >
+        PLANID = #{record.planid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.workflowno != null" >
+        WORKFLOWNO = #{record.workflowno,jdbcType=VARCHAR},
+      </if>
+      <if test="record.column1 != null" >
+        COLUMN1 = #{record.column1,jdbcType=VARCHAR},
+      </if>
+      <if test="record.column2 != null" >
+        COLUMN2 = #{record.column2,jdbcType=VARCHAR},
+      </if>
+      <if test="record.column3 != null" >
+        COLUMN3 = #{record.column3,jdbcType=VARCHAR},
+      </if>
+      <if test="record.column4 != null" >
+        COLUMN4 = #{record.column4,jdbcType=VARCHAR},
+      </if>
+      <if test="record.column5 != null" >
+        COLUMN5 = #{record.column5,jdbcType=VARCHAR},
+      </if>
+      <if test="record.column7 != null" >
+        COLUMN7 = #{record.column7,jdbcType=VARCHAR},
+      </if>
+      <if test="record.column8 != null" >
+        COLUMN8 = #{record.column8,jdbcType=VARCHAR},
+      </if>
+      <if test="record.column9 != null" >
+        COLUMN9 = #{record.column9,jdbcType=VARCHAR},
+      </if>
+      <if test="record.column10 != null" >
+        COLUMN10 = #{record.column10,jdbcType=VARCHAR},
+      </if>
+      <if test="record.column6 != null" >
+        COLUMN6 = #{record.column6,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update CSIP_OA_PRICEDAY
+    set PK_PRICEDAY = #{record.pkPriceday,jdbcType=VARCHAR},
+      PK_PLAN = #{record.pkPlan,jdbcType=CHAR},
+      PRICEYEAR = #{record.priceyear,jdbcType=VARCHAR},
+      PRICEDATE = #{record.pricedate,jdbcType=DATE},
+      LASTUPDDATE = #{record.lastupddate,jdbcType=VARCHAR},
+      YEAR = #{record.year,jdbcType=VARCHAR},
+      STATUS = #{record.status,jdbcType=CHAR},
+      MEMO = #{record.memo,jdbcType=VARCHAR},
+      TS = #{record.ts,jdbcType=TIMESTAMP},
+      PLANLICID = #{record.planlicid,jdbcType=VARCHAR},
+      PLANNAME = #{record.planname,jdbcType=VARCHAR},
+      ACCOUNTPLANID = #{record.accountplanid,jdbcType=VARCHAR},
+      PLANID = #{record.planid,jdbcType=VARCHAR},
+      WORKFLOWNO = #{record.workflowno,jdbcType=VARCHAR},
+      COLUMN1 = #{record.column1,jdbcType=VARCHAR},
+      COLUMN2 = #{record.column2,jdbcType=VARCHAR},
+      COLUMN3 = #{record.column3,jdbcType=VARCHAR},
+      COLUMN4 = #{record.column4,jdbcType=VARCHAR},
+      COLUMN5 = #{record.column5,jdbcType=VARCHAR},
+      COLUMN7 = #{record.column7,jdbcType=VARCHAR},
+      COLUMN8 = #{record.column8,jdbcType=VARCHAR},
+      COLUMN9 = #{record.column9,jdbcType=VARCHAR},
+      COLUMN10 = #{record.column10,jdbcType=VARCHAR},
+      COLUMN6 = #{record.column6,jdbcType=VARCHAR}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="org.dicp.oa.account.model.entity.PriceDayOAVO" >
+    update CSIP_OA_PRICEDAY
+    <set >
+      <if test="pkPlan != null" >
+        PK_PLAN = #{pkPlan,jdbcType=CHAR},
+      </if>
+      <if test="priceyear != null" >
+        PRICEYEAR = #{priceyear,jdbcType=VARCHAR},
+      </if>
+      <if test="pricedate != null" >
+        PRICEDATE = #{pricedate,jdbcType=DATE},
+      </if>
+      <if test="lastupddate != null" >
+        LASTUPDDATE = #{lastupddate,jdbcType=VARCHAR},
+      </if>
+      <if test="year != null" >
+        YEAR = #{year,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        STATUS = #{status,jdbcType=CHAR},
+      </if>
+      <if test="memo != null" >
+        MEMO = #{memo,jdbcType=VARCHAR},
+      </if>
+      <if test="ts != null" >
+        TS = #{ts,jdbcType=TIMESTAMP},
+      </if>
+      <if test="planlicid != null" >
+        PLANLICID = #{planlicid,jdbcType=VARCHAR},
+      </if>
+      <if test="planname != null" >
+        PLANNAME = #{planname,jdbcType=VARCHAR},
+      </if>
+      <if test="accountplanid != null" >
+        ACCOUNTPLANID = #{accountplanid,jdbcType=VARCHAR},
+      </if>
+      <if test="planid != null" >
+        PLANID = #{planid,jdbcType=VARCHAR},
+      </if>
+      <if test="workflowno != null" >
+        WORKFLOWNO = #{workflowno,jdbcType=VARCHAR},
+      </if>
+      <if test="column1 != null" >
+        COLUMN1 = #{column1,jdbcType=VARCHAR},
+      </if>
+      <if test="column2 != null" >
+        COLUMN2 = #{column2,jdbcType=VARCHAR},
+      </if>
+      <if test="column3 != null" >
+        COLUMN3 = #{column3,jdbcType=VARCHAR},
+      </if>
+      <if test="column4 != null" >
+        COLUMN4 = #{column4,jdbcType=VARCHAR},
+      </if>
+      <if test="column5 != null" >
+        COLUMN5 = #{column5,jdbcType=VARCHAR},
+      </if>
+      <if test="column7 != null" >
+        COLUMN7 = #{column7,jdbcType=VARCHAR},
+      </if>
+      <if test="column8 != null" >
+        COLUMN8 = #{column8,jdbcType=VARCHAR},
+      </if>
+      <if test="column9 != null" >
+        COLUMN9 = #{column9,jdbcType=VARCHAR},
+      </if>
+      <if test="column10 != null" >
+        COLUMN10 = #{column10,jdbcType=VARCHAR},
+      </if>
+      <if test="column6 != null" >
+        COLUMN6 = #{column6,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where PK_PRICEDAY = #{pkPriceday,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="org.dicp.oa.account.model.entity.PriceDayOAVO" >
+    update CSIP_OA_PRICEDAY
+    set PK_PLAN = #{pkPlan,jdbcType=CHAR},
+      PRICEYEAR = #{priceyear,jdbcType=VARCHAR},
+      PRICEDATE = #{pricedate,jdbcType=DATE},
+      LASTUPDDATE = #{lastupddate,jdbcType=VARCHAR},
+      YEAR = #{year,jdbcType=VARCHAR},
+      STATUS = #{status,jdbcType=CHAR},
+      MEMO = #{memo,jdbcType=VARCHAR},
+      TS = #{ts,jdbcType=TIMESTAMP},
+      PLANLICID = #{planlicid,jdbcType=VARCHAR},
+      PLANNAME = #{planname,jdbcType=VARCHAR},
+      ACCOUNTPLANID = #{accountplanid,jdbcType=VARCHAR},
+      PLANID = #{planid,jdbcType=VARCHAR},
+      WORKFLOWNO = #{workflowno,jdbcType=VARCHAR},
+      COLUMN1 = #{column1,jdbcType=VARCHAR},
+      COLUMN2 = #{column2,jdbcType=VARCHAR},
+      COLUMN3 = #{column3,jdbcType=VARCHAR},
+      COLUMN4 = #{column4,jdbcType=VARCHAR},
+      COLUMN5 = #{column5,jdbcType=VARCHAR},
+      COLUMN7 = #{column7,jdbcType=VARCHAR},
+      COLUMN8 = #{column8,jdbcType=VARCHAR},
+      COLUMN9 = #{column9,jdbcType=VARCHAR},
+      COLUMN10 = #{column10,jdbcType=VARCHAR},
+      COLUMN6 = #{column6,jdbcType=VARCHAR}
+    where PK_PRICEDAY = #{pkPriceday,jdbcType=VARCHAR}
+  </update>
+</mapper>

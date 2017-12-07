@@ -1,0 +1,931 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.dicp.oa.account.dao.mybatis.PayListOAVOMapper" >
+  <resultMap id="BaseResultMap" type="org.dicp.oa.account.model.entity.PayListOAVO" >
+    <result column="PK_PAYLIST" property="pkPaylist" jdbcType="CHAR" />
+    <result column="PK_TASKFILE" property="pkTaskfile" jdbcType="CHAR" />
+    <result column="IDTYPE" property="idtype" jdbcType="VARCHAR" />
+    <result column="IDNO" property="idno" jdbcType="VARCHAR" />
+    <result column="SSID" property="ssid" jdbcType="VARCHAR" />
+    <result column="PAYDATE" property="paydate" jdbcType="CHAR" />
+    <result column="PAYAMT" property="payamt" jdbcType="DECIMAL" />
+    <result column="APAYDATE" property="apaydate" jdbcType="CHAR" />
+    <result column="BENEBANK" property="benebank" jdbcType="VARCHAR" />
+    <result column="BENEBANKID" property="benebankid" jdbcType="VARCHAR" />
+    <result column="ACCNO" property="accno" jdbcType="VARCHAR" />
+    <result column="BENEBANKBRANCHID" property="benebankbranchid" jdbcType="VARCHAR" />
+    <result column="ACCNAME" property="accname" jdbcType="VARCHAR" />
+    <result column="BENEBANKBRANCH" property="benebankbranch" jdbcType="VARCHAR" />
+    <result column="PAYSUMUNTAX" property="paysumuntax" jdbcType="DECIMAL" />
+    <result column="PAYTAX" property="paytax" jdbcType="DECIMAL" />
+    <result column="PERLISTSTATUS" property="perliststatus" jdbcType="VARCHAR" />
+    <result column="COLLECTSN" property="collectsn" jdbcType="VARCHAR" />
+    <result column="RETRYFLAG" property="retryflag" jdbcType="VARCHAR" />
+    <result column="BENETYPE" property="benetype" jdbcType="VARCHAR" />
+    <result column="TAXPAYSTATUS" property="taxpaystatus" jdbcType="VARCHAR" />
+    <result column="MEMO" property="memo" jdbcType="VARCHAR" />
+    <result column="TS" property="ts" jdbcType="TIMESTAMP" />
+    <result column="NUM" property="num" jdbcType="VARCHAR" />
+    <result column="RECEIVERBANK" property="receiverbank" jdbcType="VARCHAR" />
+    <result column="RECEIVERPROV" property="receiverprov" jdbcType="VARCHAR" />
+    <result column="RECEIVECITY" property="receivecity" jdbcType="VARCHAR" />
+    <result column="PLANID" property="planid" jdbcType="VARCHAR" />
+    <result column="PERSONID" property="personid" jdbcType="VARCHAR" />
+    <result column="SSNUM" property="ssnum" jdbcType="VARCHAR" />
+    <result column="RECEIVENAME" property="receivename" jdbcType="VARCHAR" />
+    <result column="RECEIVEIDTYPE" property="receiveidtype" jdbcType="VARCHAR" />
+    <result column="RECEIVEIDNO" property="receiveidno" jdbcType="VARCHAR" />
+    <result column="STAFFNAME" property="staffname" jdbcType="VARCHAR" />
+    <result column="PAYAFTERSUM" property="payaftersum" jdbcType="VARCHAR" />
+    <result column="CURRENCY" property="currency" jdbcType="VARCHAR" />
+    <result column="TAXABLEAMOUNT" property="taxableamount" jdbcType="DECIMAL" />
+    <result column="BEFORETAXPAYAMT" property="beforetaxpayamt" jdbcType="DECIMAL" />
+    <result column="EXTINFO" property="extinfo" jdbcType="VARCHAR" />
+    <result column="EXTINFO1" property="extinfo1" jdbcType="VARCHAR" />
+    <result column="EXTINFO2" property="extinfo2" jdbcType="VARCHAR" />
+    <result column="EXTINFO3" property="extinfo3" jdbcType="VARCHAR" />
+    <result column="EXTINFO4" property="extinfo4" jdbcType="VARCHAR" />
+    <result column="EXTINFO5" property="extinfo5" jdbcType="VARCHAR" />
+    <result column="EXTINFO6" property="extinfo6" jdbcType="VARCHAR" />
+    <result column="EXTINFO7" property="extinfo7" jdbcType="VARCHAR" />
+    <result column="EXTINFO8" property="extinfo8" jdbcType="VARCHAR" />
+    <result column="EXTINFO9" property="extinfo9" jdbcType="VARCHAR" />
+    <result column="EXTINFO10" property="extinfo10" jdbcType="VARCHAR" />
+    <result column="WORKFLOWNO" property="workflowno" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    PK_PAYLIST, PK_TASKFILE, IDTYPE, IDNO, SSID, PAYDATE, PAYAMT, APAYDATE, BENEBANK, 
+    BENEBANKID, ACCNO, BENEBANKBRANCHID, ACCNAME, BENEBANKBRANCH, PAYSUMUNTAX, PAYTAX, 
+    PERLISTSTATUS, COLLECTSN, RETRYFLAG, BENETYPE, TAXPAYSTATUS, MEMO, TS, NUM, RECEIVERBANK, 
+    RECEIVERPROV, RECEIVECITY, PLANID, PERSONID, SSNUM, RECEIVENAME, RECEIVEIDTYPE, RECEIVEIDNO, 
+    STAFFNAME, PAYAFTERSUM, CURRENCY, TAXABLEAMOUNT, BEFORETAXPAYAMT, EXTINFO, EXTINFO1, 
+    EXTINFO2, EXTINFO3, EXTINFO4, EXTINFO5, EXTINFO6, EXTINFO7, EXTINFO8, EXTINFO9, EXTINFO10, 
+    WORKFLOWNO
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="org.dicp.oa.account.model.entity.PayListOAVOCriteria" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from CSIP_OA_PAYLIST
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <delete id="deleteByExample" parameterType="org.dicp.oa.account.model.entity.PayListOAVOCriteria" >
+    delete from CSIP_OA_PAYLIST
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="org.dicp.oa.account.model.entity.PayListOAVO" >
+    insert into CSIP_OA_PAYLIST (PK_PAYLIST, PK_TASKFILE, IDTYPE, 
+      IDNO, SSID, PAYDATE, PAYAMT, 
+      APAYDATE, BENEBANK, BENEBANKID, 
+      ACCNO, BENEBANKBRANCHID, ACCNAME, 
+      BENEBANKBRANCH, PAYSUMUNTAX, PAYTAX, 
+      PERLISTSTATUS, COLLECTSN, RETRYFLAG, 
+      BENETYPE, TAXPAYSTATUS, MEMO, 
+      TS, NUM, RECEIVERBANK, 
+      RECEIVERPROV, RECEIVECITY, PLANID, 
+      PERSONID, SSNUM, RECEIVENAME, 
+      RECEIVEIDTYPE, RECEIVEIDNO, STAFFNAME, 
+      PAYAFTERSUM, CURRENCY, TAXABLEAMOUNT, 
+      BEFORETAXPAYAMT, EXTINFO, EXTINFO1, 
+      EXTINFO2, EXTINFO3, EXTINFO4, 
+      EXTINFO5, EXTINFO6, EXTINFO7, 
+      EXTINFO8, EXTINFO9, EXTINFO10, 
+      WORKFLOWNO)
+    values (#{pkPaylist,jdbcType=CHAR}, #{pkTaskfile,jdbcType=CHAR}, #{idtype,jdbcType=VARCHAR}, 
+      #{idno,jdbcType=VARCHAR}, #{ssid,jdbcType=VARCHAR}, #{paydate,jdbcType=CHAR}, #{payamt,jdbcType=DECIMAL}, 
+      #{apaydate,jdbcType=CHAR}, #{benebank,jdbcType=VARCHAR}, #{benebankid,jdbcType=VARCHAR}, 
+      #{accno,jdbcType=VARCHAR}, #{benebankbranchid,jdbcType=VARCHAR}, #{accname,jdbcType=VARCHAR}, 
+      #{benebankbranch,jdbcType=VARCHAR}, #{paysumuntax,jdbcType=DECIMAL}, #{paytax,jdbcType=DECIMAL}, 
+      #{perliststatus,jdbcType=VARCHAR}, #{collectsn,jdbcType=VARCHAR}, #{retryflag,jdbcType=VARCHAR}, 
+      #{benetype,jdbcType=VARCHAR}, #{taxpaystatus,jdbcType=VARCHAR}, #{memo,jdbcType=VARCHAR}, 
+      #{ts,jdbcType=TIMESTAMP}, #{num,jdbcType=VARCHAR}, #{receiverbank,jdbcType=VARCHAR}, 
+      #{receiverprov,jdbcType=VARCHAR}, #{receivecity,jdbcType=VARCHAR}, #{planid,jdbcType=VARCHAR}, 
+      #{personid,jdbcType=VARCHAR}, #{ssnum,jdbcType=VARCHAR}, #{receivename,jdbcType=VARCHAR}, 
+      #{receiveidtype,jdbcType=VARCHAR}, #{receiveidno,jdbcType=VARCHAR}, #{staffname,jdbcType=VARCHAR}, 
+      #{payaftersum,jdbcType=VARCHAR}, #{currency,jdbcType=VARCHAR}, #{taxableamount,jdbcType=DECIMAL}, 
+      #{beforetaxpayamt,jdbcType=DECIMAL}, #{extinfo,jdbcType=VARCHAR}, #{extinfo1,jdbcType=VARCHAR}, 
+      #{extinfo2,jdbcType=VARCHAR}, #{extinfo3,jdbcType=VARCHAR}, #{extinfo4,jdbcType=VARCHAR}, 
+      #{extinfo5,jdbcType=VARCHAR}, #{extinfo6,jdbcType=VARCHAR}, #{extinfo7,jdbcType=VARCHAR}, 
+      #{extinfo8,jdbcType=VARCHAR}, #{extinfo9,jdbcType=VARCHAR}, #{extinfo10,jdbcType=VARCHAR}, 
+      #{workflowno,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="org.dicp.oa.account.model.entity.PayListOAVO" >
+    insert into CSIP_OA_PAYLIST
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="pkPaylist != null" >
+        PK_PAYLIST,
+      </if>
+      <if test="pkTaskfile != null" >
+        PK_TASKFILE,
+      </if>
+      <if test="idtype != null" >
+        IDTYPE,
+      </if>
+      <if test="idno != null" >
+        IDNO,
+      </if>
+      <if test="ssid != null" >
+        SSID,
+      </if>
+      <if test="paydate != null" >
+        PAYDATE,
+      </if>
+      <if test="payamt != null" >
+        PAYAMT,
+      </if>
+      <if test="apaydate != null" >
+        APAYDATE,
+      </if>
+      <if test="benebank != null" >
+        BENEBANK,
+      </if>
+      <if test="benebankid != null" >
+        BENEBANKID,
+      </if>
+      <if test="accno != null" >
+        ACCNO,
+      </if>
+      <if test="benebankbranchid != null" >
+        BENEBANKBRANCHID,
+      </if>
+      <if test="accname != null" >
+        ACCNAME,
+      </if>
+      <if test="benebankbranch != null" >
+        BENEBANKBRANCH,
+      </if>
+      <if test="paysumuntax != null" >
+        PAYSUMUNTAX,
+      </if>
+      <if test="paytax != null" >
+        PAYTAX,
+      </if>
+      <if test="perliststatus != null" >
+        PERLISTSTATUS,
+      </if>
+      <if test="collectsn != null" >
+        COLLECTSN,
+      </if>
+      <if test="retryflag != null" >
+        RETRYFLAG,
+      </if>
+      <if test="benetype != null" >
+        BENETYPE,
+      </if>
+      <if test="taxpaystatus != null" >
+        TAXPAYSTATUS,
+      </if>
+      <if test="memo != null" >
+        MEMO,
+      </if>
+      <if test="ts != null" >
+        TS,
+      </if>
+      <if test="num != null" >
+        NUM,
+      </if>
+      <if test="receiverbank != null" >
+        RECEIVERBANK,
+      </if>
+      <if test="receiverprov != null" >
+        RECEIVERPROV,
+      </if>
+      <if test="receivecity != null" >
+        RECEIVECITY,
+      </if>
+      <if test="planid != null" >
+        PLANID,
+      </if>
+      <if test="personid != null" >
+        PERSONID,
+      </if>
+      <if test="ssnum != null" >
+        SSNUM,
+      </if>
+      <if test="receivename != null" >
+        RECEIVENAME,
+      </if>
+      <if test="receiveidtype != null" >
+        RECEIVEIDTYPE,
+      </if>
+      <if test="receiveidno != null" >
+        RECEIVEIDNO,
+      </if>
+      <if test="staffname != null" >
+        STAFFNAME,
+      </if>
+      <if test="payaftersum != null" >
+        PAYAFTERSUM,
+      </if>
+      <if test="currency != null" >
+        CURRENCY,
+      </if>
+      <if test="taxableamount != null" >
+        TAXABLEAMOUNT,
+      </if>
+      <if test="beforetaxpayamt != null" >
+        BEFORETAXPAYAMT,
+      </if>
+      <if test="extinfo != null" >
+        EXTINFO,
+      </if>
+      <if test="extinfo1 != null" >
+        EXTINFO1,
+      </if>
+      <if test="extinfo2 != null" >
+        EXTINFO2,
+      </if>
+      <if test="extinfo3 != null" >
+        EXTINFO3,
+      </if>
+      <if test="extinfo4 != null" >
+        EXTINFO4,
+      </if>
+      <if test="extinfo5 != null" >
+        EXTINFO5,
+      </if>
+      <if test="extinfo6 != null" >
+        EXTINFO6,
+      </if>
+      <if test="extinfo7 != null" >
+        EXTINFO7,
+      </if>
+      <if test="extinfo8 != null" >
+        EXTINFO8,
+      </if>
+      <if test="extinfo9 != null" >
+        EXTINFO9,
+      </if>
+      <if test="extinfo10 != null" >
+        EXTINFO10,
+      </if>
+      <if test="workflowno != null" >
+        WORKFLOWNO,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="pkPaylist != null" >
+        #{pkPaylist,jdbcType=CHAR},
+      </if>
+      <if test="pkTaskfile != null" >
+        #{pkTaskfile,jdbcType=CHAR},
+      </if>
+      <if test="idtype != null" >
+        #{idtype,jdbcType=VARCHAR},
+      </if>
+      <if test="idno != null" >
+        #{idno,jdbcType=VARCHAR},
+      </if>
+      <if test="ssid != null" >
+        #{ssid,jdbcType=VARCHAR},
+      </if>
+      <if test="paydate != null" >
+        #{paydate,jdbcType=CHAR},
+      </if>
+      <if test="payamt != null" >
+        #{payamt,jdbcType=DECIMAL},
+      </if>
+      <if test="apaydate != null" >
+        #{apaydate,jdbcType=CHAR},
+      </if>
+      <if test="benebank != null" >
+        #{benebank,jdbcType=VARCHAR},
+      </if>
+      <if test="benebankid != null" >
+        #{benebankid,jdbcType=VARCHAR},
+      </if>
+      <if test="accno != null" >
+        #{accno,jdbcType=VARCHAR},
+      </if>
+      <if test="benebankbranchid != null" >
+        #{benebankbranchid,jdbcType=VARCHAR},
+      </if>
+      <if test="accname != null" >
+        #{accname,jdbcType=VARCHAR},
+      </if>
+      <if test="benebankbranch != null" >
+        #{benebankbranch,jdbcType=VARCHAR},
+      </if>
+      <if test="paysumuntax != null" >
+        #{paysumuntax,jdbcType=DECIMAL},
+      </if>
+      <if test="paytax != null" >
+        #{paytax,jdbcType=DECIMAL},
+      </if>
+      <if test="perliststatus != null" >
+        #{perliststatus,jdbcType=VARCHAR},
+      </if>
+      <if test="collectsn != null" >
+        #{collectsn,jdbcType=VARCHAR},
+      </if>
+      <if test="retryflag != null" >
+        #{retryflag,jdbcType=VARCHAR},
+      </if>
+      <if test="benetype != null" >
+        #{benetype,jdbcType=VARCHAR},
+      </if>
+      <if test="taxpaystatus != null" >
+        #{taxpaystatus,jdbcType=VARCHAR},
+      </if>
+      <if test="memo != null" >
+        #{memo,jdbcType=VARCHAR},
+      </if>
+      <if test="ts != null" >
+        #{ts,jdbcType=TIMESTAMP},
+      </if>
+      <if test="num != null" >
+        #{num,jdbcType=VARCHAR},
+      </if>
+      <if test="receiverbank != null" >
+        #{receiverbank,jdbcType=VARCHAR},
+      </if>
+      <if test="receiverprov != null" >
+        #{receiverprov,jdbcType=VARCHAR},
+      </if>
+      <if test="receivecity != null" >
+        #{receivecity,jdbcType=VARCHAR},
+      </if>
+      <if test="planid != null" >
+        #{planid,jdbcType=VARCHAR},
+      </if>
+      <if test="personid != null" >
+        #{personid,jdbcType=VARCHAR},
+      </if>
+      <if test="ssnum != null" >
+        #{ssnum,jdbcType=VARCHAR},
+      </if>
+      <if test="receivename != null" >
+        #{receivename,jdbcType=VARCHAR},
+      </if>
+      <if test="receiveidtype != null" >
+        #{receiveidtype,jdbcType=VARCHAR},
+      </if>
+      <if test="receiveidno != null" >
+        #{receiveidno,jdbcType=VARCHAR},
+      </if>
+      <if test="staffname != null" >
+        #{staffname,jdbcType=VARCHAR},
+      </if>
+      <if test="payaftersum != null" >
+        #{payaftersum,jdbcType=VARCHAR},
+      </if>
+      <if test="currency != null" >
+        #{currency,jdbcType=VARCHAR},
+      </if>
+      <if test="taxableamount != null" >
+        #{taxableamount,jdbcType=DECIMAL},
+      </if>
+      <if test="beforetaxpayamt != null" >
+        #{beforetaxpayamt,jdbcType=DECIMAL},
+      </if>
+      <if test="extinfo != null" >
+        #{extinfo,jdbcType=VARCHAR},
+      </if>
+      <if test="extinfo1 != null" >
+        #{extinfo1,jdbcType=VARCHAR},
+      </if>
+      <if test="extinfo2 != null" >
+        #{extinfo2,jdbcType=VARCHAR},
+      </if>
+      <if test="extinfo3 != null" >
+        #{extinfo3,jdbcType=VARCHAR},
+      </if>
+      <if test="extinfo4 != null" >
+        #{extinfo4,jdbcType=VARCHAR},
+      </if>
+      <if test="extinfo5 != null" >
+        #{extinfo5,jdbcType=VARCHAR},
+      </if>
+      <if test="extinfo6 != null" >
+        #{extinfo6,jdbcType=VARCHAR},
+      </if>
+      <if test="extinfo7 != null" >
+        #{extinfo7,jdbcType=VARCHAR},
+      </if>
+      <if test="extinfo8 != null" >
+        #{extinfo8,jdbcType=VARCHAR},
+      </if>
+      <if test="extinfo9 != null" >
+        #{extinfo9,jdbcType=VARCHAR},
+      </if>
+      <if test="extinfo10 != null" >
+        #{extinfo10,jdbcType=VARCHAR},
+      </if>
+      <if test="workflowno != null" >
+        #{workflowno,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="org.dicp.oa.account.model.entity.PayListOAVOCriteria" resultType="java.lang.Integer" >
+    select count(*) from CSIP_OA_PAYLIST
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update CSIP_OA_PAYLIST
+    <set >
+      <if test="record.pkPaylist != null" >
+        PK_PAYLIST = #{record.pkPaylist,jdbcType=CHAR},
+      </if>
+      <if test="record.pkTaskfile != null" >
+        PK_TASKFILE = #{record.pkTaskfile,jdbcType=CHAR},
+      </if>
+      <if test="record.idtype != null" >
+        IDTYPE = #{record.idtype,jdbcType=VARCHAR},
+      </if>
+      <if test="record.idno != null" >
+        IDNO = #{record.idno,jdbcType=VARCHAR},
+      </if>
+      <if test="record.ssid != null" >
+        SSID = #{record.ssid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.paydate != null" >
+        PAYDATE = #{record.paydate,jdbcType=CHAR},
+      </if>
+      <if test="record.payamt != null" >
+        PAYAMT = #{record.payamt,jdbcType=DECIMAL},
+      </if>
+      <if test="record.apaydate != null" >
+        APAYDATE = #{record.apaydate,jdbcType=CHAR},
+      </if>
+      <if test="record.benebank != null" >
+        BENEBANK = #{record.benebank,jdbcType=VARCHAR},
+      </if>
+      <if test="record.benebankid != null" >
+        BENEBANKID = #{record.benebankid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.accno != null" >
+        ACCNO = #{record.accno,jdbcType=VARCHAR},
+      </if>
+      <if test="record.benebankbranchid != null" >
+        BENEBANKBRANCHID = #{record.benebankbranchid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.accname != null" >
+        ACCNAME = #{record.accname,jdbcType=VARCHAR},
+      </if>
+      <if test="record.benebankbranch != null" >
+        BENEBANKBRANCH = #{record.benebankbranch,jdbcType=VARCHAR},
+      </if>
+      <if test="record.paysumuntax != null" >
+        PAYSUMUNTAX = #{record.paysumuntax,jdbcType=DECIMAL},
+      </if>
+      <if test="record.paytax != null" >
+        PAYTAX = #{record.paytax,jdbcType=DECIMAL},
+      </if>
+      <if test="record.perliststatus != null" >
+        PERLISTSTATUS = #{record.perliststatus,jdbcType=VARCHAR},
+      </if>
+      <if test="record.collectsn != null" >
+        COLLECTSN = #{record.collectsn,jdbcType=VARCHAR},
+      </if>
+      <if test="record.retryflag != null" >
+        RETRYFLAG = #{record.retryflag,jdbcType=VARCHAR},
+      </if>
+      <if test="record.benetype != null" >
+        BENETYPE = #{record.benetype,jdbcType=VARCHAR},
+      </if>
+      <if test="record.taxpaystatus != null" >
+        TAXPAYSTATUS = #{record.taxpaystatus,jdbcType=VARCHAR},
+      </if>
+      <if test="record.memo != null" >
+        MEMO = #{record.memo,jdbcType=VARCHAR},
+      </if>
+      <if test="record.ts != null" >
+        TS = #{record.ts,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.num != null" >
+        NUM = #{record.num,jdbcType=VARCHAR},
+      </if>
+      <if test="record.receiverbank != null" >
+        RECEIVERBANK = #{record.receiverbank,jdbcType=VARCHAR},
+      </if>
+      <if test="record.receiverprov != null" >
+        RECEIVERPROV = #{record.receiverprov,jdbcType=VARCHAR},
+      </if>
+      <if test="record.receivecity != null" >
+        RECEIVECITY = #{record.receivecity,jdbcType=VARCHAR},
+      </if>
+      <if test="record.planid != null" >
+        PLANID = #{record.planid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.personid != null" >
+        PERSONID = #{record.personid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.ssnum != null" >
+        SSNUM = #{record.ssnum,jdbcType=VARCHAR},
+      </if>
+      <if test="record.receivename != null" >
+        RECEIVENAME = #{record.receivename,jdbcType=VARCHAR},
+      </if>
+      <if test="record.receiveidtype != null" >
+        RECEIVEIDTYPE = #{record.receiveidtype,jdbcType=VARCHAR},
+      </if>
+      <if test="record.receiveidno != null" >
+        RECEIVEIDNO = #{record.receiveidno,jdbcType=VARCHAR},
+      </if>
+      <if test="record.staffname != null" >
+        STAFFNAME = #{record.staffname,jdbcType=VARCHAR},
+      </if>
+      <if test="record.payaftersum != null" >
+        PAYAFTERSUM = #{record.payaftersum,jdbcType=VARCHAR},
+      </if>
+      <if test="record.currency != null" >
+        CURRENCY = #{record.currency,jdbcType=VARCHAR},
+      </if>
+      <if test="record.taxableamount != null" >
+        TAXABLEAMOUNT = #{record.taxableamount,jdbcType=DECIMAL},
+      </if>
+      <if test="record.beforetaxpayamt != null" >
+        BEFORETAXPAYAMT = #{record.beforetaxpayamt,jdbcType=DECIMAL},
+      </if>
+      <if test="record.extinfo != null" >
+        EXTINFO = #{record.extinfo,jdbcType=VARCHAR},
+      </if>
+      <if test="record.extinfo1 != null" >
+        EXTINFO1 = #{record.extinfo1,jdbcType=VARCHAR},
+      </if>
+      <if test="record.extinfo2 != null" >
+        EXTINFO2 = #{record.extinfo2,jdbcType=VARCHAR},
+      </if>
+      <if test="record.extinfo3 != null" >
+        EXTINFO3 = #{record.extinfo3,jdbcType=VARCHAR},
+      </if>
+      <if test="record.extinfo4 != null" >
+        EXTINFO4 = #{record.extinfo4,jdbcType=VARCHAR},
+      </if>
+      <if test="record.extinfo5 != null" >
+        EXTINFO5 = #{record.extinfo5,jdbcType=VARCHAR},
+      </if>
+      <if test="record.extinfo6 != null" >
+        EXTINFO6 = #{record.extinfo6,jdbcType=VARCHAR},
+      </if>
+      <if test="record.extinfo7 != null" >
+        EXTINFO7 = #{record.extinfo7,jdbcType=VARCHAR},
+      </if>
+      <if test="record.extinfo8 != null" >
+        EXTINFO8 = #{record.extinfo8,jdbcType=VARCHAR},
+      </if>
+      <if test="record.extinfo9 != null" >
+        EXTINFO9 = #{record.extinfo9,jdbcType=VARCHAR},
+      </if>
+      <if test="record.extinfo10 != null" >
+        EXTINFO10 = #{record.extinfo10,jdbcType=VARCHAR},
+      </if>
+      <if test="record.workflowno != null" >
+        WORKFLOWNO = #{record.workflowno,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update CSIP_OA_PAYLIST
+    set PK_PAYLIST = #{record.pkPaylist,jdbcType=CHAR},
+      PK_TASKFILE = #{record.pkTaskfile,jdbcType=CHAR},
+      IDTYPE = #{record.idtype,jdbcType=VARCHAR},
+      IDNO = #{record.idno,jdbcType=VARCHAR},
+      SSID = #{record.ssid,jdbcType=VARCHAR},
+      PAYDATE = #{record.paydate,jdbcType=CHAR},
+      PAYAMT = #{record.payamt,jdbcType=DECIMAL},
+      APAYDATE = #{record.apaydate,jdbcType=CHAR},
+      BENEBANK = #{record.benebank,jdbcType=VARCHAR},
+      BENEBANKID = #{record.benebankid,jdbcType=VARCHAR},
+      ACCNO = #{record.accno,jdbcType=VARCHAR},
+      BENEBANKBRANCHID = #{record.benebankbranchid,jdbcType=VARCHAR},
+      ACCNAME = #{record.accname,jdbcType=VARCHAR},
+      BENEBANKBRANCH = #{record.benebankbranch,jdbcType=VARCHAR},
+      PAYSUMUNTAX = #{record.paysumuntax,jdbcType=DECIMAL},
+      PAYTAX = #{record.paytax,jdbcType=DECIMAL},
+      PERLISTSTATUS = #{record.perliststatus,jdbcType=VARCHAR},
+      COLLECTSN = #{record.collectsn,jdbcType=VARCHAR},
+      RETRYFLAG = #{record.retryflag,jdbcType=VARCHAR},
+      BENETYPE = #{record.benetype,jdbcType=VARCHAR},
+      TAXPAYSTATUS = #{record.taxpaystatus,jdbcType=VARCHAR},
+      MEMO = #{record.memo,jdbcType=VARCHAR},
+      TS = #{record.ts,jdbcType=TIMESTAMP},
+      NUM = #{record.num,jdbcType=VARCHAR},
+      RECEIVERBANK = #{record.receiverbank,jdbcType=VARCHAR},
+      RECEIVERPROV = #{record.receiverprov,jdbcType=VARCHAR},
+      RECEIVECITY = #{record.receivecity,jdbcType=VARCHAR},
+      PLANID = #{record.planid,jdbcType=VARCHAR},
+      PERSONID = #{record.personid,jdbcType=VARCHAR},
+      SSNUM = #{record.ssnum,jdbcType=VARCHAR},
+      RECEIVENAME = #{record.receivename,jdbcType=VARCHAR},
+      RECEIVEIDTYPE = #{record.receiveidtype,jdbcType=VARCHAR},
+      RECEIVEIDNO = #{record.receiveidno,jdbcType=VARCHAR},
+      STAFFNAME = #{record.staffname,jdbcType=VARCHAR},
+      PAYAFTERSUM = #{record.payaftersum,jdbcType=VARCHAR},
+      CURRENCY = #{record.currency,jdbcType=VARCHAR},
+      TAXABLEAMOUNT = #{record.taxableamount,jdbcType=DECIMAL},
+      BEFORETAXPAYAMT = #{record.beforetaxpayamt,jdbcType=DECIMAL},
+      EXTINFO = #{record.extinfo,jdbcType=VARCHAR},
+      EXTINFO1 = #{record.extinfo1,jdbcType=VARCHAR},
+      EXTINFO2 = #{record.extinfo2,jdbcType=VARCHAR},
+      EXTINFO3 = #{record.extinfo3,jdbcType=VARCHAR},
+      EXTINFO4 = #{record.extinfo4,jdbcType=VARCHAR},
+      EXTINFO5 = #{record.extinfo5,jdbcType=VARCHAR},
+      EXTINFO6 = #{record.extinfo6,jdbcType=VARCHAR},
+      EXTINFO7 = #{record.extinfo7,jdbcType=VARCHAR},
+      EXTINFO8 = #{record.extinfo8,jdbcType=VARCHAR},
+      EXTINFO9 = #{record.extinfo9,jdbcType=VARCHAR},
+      EXTINFO10 = #{record.extinfo10,jdbcType=VARCHAR},
+      WORKFLOWNO = #{record.workflowno,jdbcType=VARCHAR}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from CSIP_OA_PAYLIST
+    where PK_PAYLIST = #{pkPaylist,jdbcType=CHAR}
+  </delete>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from CSIP_OA_PAYLIST
+    where PK_PAYLIST = #{pkPaylist,jdbcType=CHAR}
+  </select>
+  <update id="updateByPrimaryKeySelective" parameterType="org.dicp.oa.account.model.entity.PayListOAVO" >
+    update CSIP_OA_PAYLIST
+    <set >
+      <if test="pkTaskfile != null" >
+        PK_TASKFILE = #{pkTaskfile,jdbcType=CHAR},
+      </if>
+      <if test="idtype != null" >
+        IDTYPE = #{idtype,jdbcType=VARCHAR},
+      </if>
+      <if test="idno != null" >
+        IDNO = #{idno,jdbcType=VARCHAR},
+      </if>
+      <if test="ssid != null" >
+        SSID = #{ssid,jdbcType=VARCHAR},
+      </if>
+      <if test="paydate != null" >
+        PAYDATE = #{paydate,jdbcType=CHAR},
+      </if>
+      <if test="payamt != null" >
+        PAYAMT = #{payamt,jdbcType=DECIMAL},
+      </if>
+      <if test="apaydate != null" >
+        APAYDATE = #{apaydate,jdbcType=CHAR},
+      </if>
+      <if test="benebank != null" >
+        BENEBANK = #{benebank,jdbcType=VARCHAR},
+      </if>
+      <if test="benebankid != null" >
+        BENEBANKID = #{benebankid,jdbcType=VARCHAR},
+      </if>
+      <if test="accno != null" >
+        ACCNO = #{accno,jdbcType=VARCHAR},
+      </if>
+      <if test="benebankbranchid != null" >
+        BENEBANKBRANCHID = #{benebankbranchid,jdbcType=VARCHAR},
+      </if>
+      <if test="accname != null" >
+        ACCNAME = #{accname,jdbcType=VARCHAR},
+      </if>
+      <if test="benebankbranch != null" >
+        BENEBANKBRANCH = #{benebankbranch,jdbcType=VARCHAR},
+      </if>
+      <if test="paysumuntax != null" >
+        PAYSUMUNTAX = #{paysumuntax,jdbcType=DECIMAL},
+      </if>
+      <if test="paytax != null" >
+        PAYTAX = #{paytax,jdbcType=DECIMAL},
+      </if>
+      <if test="perliststatus != null" >
+        PERLISTSTATUS = #{perliststatus,jdbcType=VARCHAR},
+      </if>
+      <if test="collectsn != null" >
+        COLLECTSN = #{collectsn,jdbcType=VARCHAR},
+      </if>
+      <if test="retryflag != null" >
+        RETRYFLAG = #{retryflag,jdbcType=VARCHAR},
+      </if>
+      <if test="benetype != null" >
+        BENETYPE = #{benetype,jdbcType=VARCHAR},
+      </if>
+      <if test="taxpaystatus != null" >
+        TAXPAYSTATUS = #{taxpaystatus,jdbcType=VARCHAR},
+      </if>
+      <if test="extinfo != null" >
+        EXTINFO = #{extinfo,jdbcType=VARCHAR},
+      </if>
+      <if test="extinfo1 != null" >
+        EXTINFO1 = #{extinfo1,jdbcType=VARCHAR},
+      </if>
+      <if test="extinfo2 != null" >
+        EXTINFO2 = #{extinfo2,jdbcType=VARCHAR},
+      </if>
+      <if test="extinfo3 != null" >
+        EXTINFO3 = #{extinfo3,jdbcType=VARCHAR},
+      </if>
+      <if test="extinfo4 != null" >
+        EXTINFO4 = #{extinfo4,jdbcType=VARCHAR},
+      </if>
+      <if test="extinfo5 != null" >
+        EXTINFO5 = #{extinfo5,jdbcType=VARCHAR},
+      </if>
+      <if test="extinfo6 != null" >
+        EXTINFO6 = #{extinfo6,jdbcType=VARCHAR},
+      </if>
+      <if test="extinfo7 != null" >
+        EXTINFO7 = #{extinfo7,jdbcType=VARCHAR},
+      </if>
+      <if test="extinfo8 != null" >
+        EXTINFO8 = #{extinfo8,jdbcType=VARCHAR},
+      </if>
+      <if test="extinfo9 != null" >
+        EXTINFO9 = #{extinfo9,jdbcType=VARCHAR},
+      </if>
+      <if test="extinfo10 != null" >
+        EXTINFO10 = #{extinfo10,jdbcType=VARCHAR},
+      </if>
+      <if test="memo != null" >
+        MEMO = #{memo,jdbcType=VARCHAR},
+      </if>
+      <if test="ts != null" >
+        TS = #{ts,jdbcType=TIMESTAMP},
+      </if>
+      <if test="num != null" >
+        NUM = #{num,jdbcType=VARCHAR},
+      </if>
+      <if test="receiverbank != null" >
+        RECEIVERBANK = #{receiverbank,jdbcType=VARCHAR},
+      </if>
+      <if test="receiverprov != null" >
+        RECEIVERPROV = #{receiverprov,jdbcType=VARCHAR},
+      </if>
+      <if test="receivecity != null" >
+        RECEIVECITY = #{receivecity,jdbcType=VARCHAR},
+      </if>
+      <if test="planid != null" >
+        PLANID = #{planid,jdbcType=VARCHAR},
+      </if>
+      <if test="personid != null" >
+        PERSONID = #{personid,jdbcType=VARCHAR},
+      </if>
+      <if test="ssnum != null" >
+        SSNUM = #{ssnum,jdbcType=VARCHAR},
+      </if>
+      <if test="receivename != null" >
+        RECEIVENAME = #{receivename,jdbcType=VARCHAR},
+      </if>
+      <if test="receiveidtype != null" >
+        RECEIVEIDTYPE = #{receiveidtype,jdbcType=VARCHAR},
+      </if>
+      <if test="receiveidno != null" >
+        RECEIVEIDNO = #{receiveidno,jdbcType=VARCHAR},
+      </if>
+      <if test="staffname != null" >
+        STAFFNAME = #{staffname,jdbcType=VARCHAR},
+      </if>
+      <if test="payaftersum != null" >
+        PAYAFTERSUM = #{payaftersum,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where PK_PAYLIST = #{pkPaylist,jdbcType=CHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="org.dicp.oa.account.model.entity.PayListOAVO" >
+    update CSIP_OA_PAYLIST
+    set PK_TASKFILE = #{pkTaskfile,jdbcType=CHAR},
+      IDTYPE = #{idtype,jdbcType=VARCHAR},
+      IDNO = #{idno,jdbcType=VARCHAR},
+      SSID = #{ssid,jdbcType=VARCHAR},
+      PAYDATE = #{paydate,jdbcType=CHAR},
+      PAYAMT = #{payamt,jdbcType=DECIMAL},
+      APAYDATE = #{apaydate,jdbcType=CHAR},
+      BENEBANK = #{benebank,jdbcType=VARCHAR},
+      BENEBANKID = #{benebankid,jdbcType=VARCHAR},
+      ACCNO = #{accno,jdbcType=VARCHAR},
+      BENEBANKBRANCHID = #{benebankbranchid,jdbcType=VARCHAR},
+      ACCNAME = #{accname,jdbcType=VARCHAR},
+      BENEBANKBRANCH = #{benebankbranch,jdbcType=VARCHAR},
+      PAYSUMUNTAX = #{paysumuntax,jdbcType=DECIMAL},
+      PAYTAX = #{paytax,jdbcType=DECIMAL},
+      PERLISTSTATUS = #{perliststatus,jdbcType=VARCHAR},
+      COLLECTSN = #{collectsn,jdbcType=VARCHAR},
+      RETRYFLAG = #{retryflag,jdbcType=VARCHAR},
+      BENETYPE = #{benetype,jdbcType=VARCHAR},
+      TAXPAYSTATUS = #{taxpaystatus,jdbcType=VARCHAR},
+      EXTINFO = #{extinfo,jdbcType=VARCHAR},
+      EXTINFO1 = #{extinfo1,jdbcType=VARCHAR},
+      EXTINFO2 = #{extinfo2,jdbcType=VARCHAR},
+      EXTINFO3 = #{extinfo3,jdbcType=VARCHAR},
+      EXTINFO4 = #{extinfo4,jdbcType=VARCHAR},
+      EXTINFO5 = #{extinfo5,jdbcType=VARCHAR},
+      EXTINFO6 = #{extinfo6,jdbcType=VARCHAR},
+      EXTINFO7 = #{extinfo7,jdbcType=VARCHAR},
+      EXTINFO8 = #{extinfo8,jdbcType=VARCHAR},
+      EXTINFO9 = #{extinfo9,jdbcType=VARCHAR},
+      EXTINFO10 = #{extinfo10,jdbcType=VARCHAR},
+      MEMO = #{memo,jdbcType=VARCHAR},
+      TS = #{ts,jdbcType=TIMESTAMP},
+      NUM = #{num,jdbcType=VARCHAR},
+      RECEIVERBANK = #{receiverbank,jdbcType=VARCHAR},
+      RECEIVERPROV = #{receiverprov,jdbcType=VARCHAR},
+      RECEIVECITY = #{receivecity,jdbcType=VARCHAR},
+      PLANID = #{planid,jdbcType=VARCHAR},
+      PERSONID = #{personid,jdbcType=VARCHAR},
+      SSNUM = #{ssnum,jdbcType=VARCHAR},
+      RECEIVENAME = #{receivename,jdbcType=VARCHAR},
+      RECEIVEIDTYPE = #{receiveidtype,jdbcType=VARCHAR},
+      RECEIVEIDNO = #{receiveidno,jdbcType=VARCHAR},
+      STAFFNAME = #{staffname,jdbcType=VARCHAR},
+      PAYAFTERSUM = #{payaftersum,jdbcType=VARCHAR}
+    where PK_PAYLIST = #{pkPaylist,jdbcType=CHAR}
+  </update>
+   <select id="selectPerListStatus" resultType="java.util.Map">
+	select distinct a.perliststatus
+    from csip_oa_paylist a
+    join csip_oa_taskfile ct 
+      on ct.pk_taskfile = a.pk_taskfile
+    join csip_oa_paylistinfo c
+      on ct.pk_paylistinfo = c.pk_paylistinfo
+	 where c.listno = #{listNo,jdbcType=VARCHAR} 
+  </select>
+  <select id="selectToOrderByListNo" resultMap="BaseResultMap">
+	select a.*
+	  from csip_oa_paylist a
+    join csip_oa_taskfile ct 
+      on ct.pk_taskfile = a.pk_taskfile
+    join csip_oa_paylistinfo c
+      on ct.pk_paylistinfo = c.pk_paylistinfo
+   where not exists (select 1
+            from csip_oa_orderdetial o
+           where o.pk_paylist = a.pk_paylist
+             and o.pk_payorder = #{pkPayorder,jdbcType=CHAR})
+     and c.liststatus in (#{checkListStatus,jdbcType=DECIMAL}, #{payingListStatus,jdbcType=DECIMAL})
+     and a.perliststatus = #{initPerListStatus,jdbcType=VARCHAR}
+     and c.listno = #{listNo,jdbcType=VARCHAR}
+  </select>
+
+</mapper>

@@ -1,0 +1,742 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.dicp.oa.account.dao.mybatis.TmpInvstOAVOMapper" >
+  <resultMap id="BaseResultMap" type="org.dicp.oa.account.model.entity.TmpInvstOAVO" >
+    <result column="PK_INVST" property="pkInvst" jdbcType="VARCHAR" />
+    <result column="PK_PLAN" property="pkPlan" jdbcType="VARCHAR" />
+    <result column="PLANLICID" property="planlicid" jdbcType="VARCHAR" />
+    <result column="PLANNAME" property="planname" jdbcType="VARCHAR" />
+    <result column="ACCOUNTPLANID" property="accountplanid" jdbcType="VARCHAR" />
+    <result column="PLANID" property="planid" jdbcType="VARCHAR" />
+    <result column="PORTFOLIOID" property="portfolioid" jdbcType="VARCHAR" />
+    <result column="INVESTMANTID" property="investmantid" jdbcType="VARCHAR" />
+    <result column="PORTFOLIONAME" property="portfolioname" jdbcType="VARCHAR" />
+    <result column="DEALINGPERIOD" property="dealingperiod" jdbcType="VARCHAR" />
+    <result column="ROUNDING" property="rounding" jdbcType="VARCHAR" />
+    <result column="PORTFOLIOENDDATE" property="portfolioenddate" jdbcType="VARCHAR" />
+    <result column="PORTFOLIOBEGDATE" property="portfoliobegdate" jdbcType="VARCHAR" />
+    <result column="INVESTMANAGER" property="investmanager" jdbcType="VARCHAR" />
+    <result column="CURRENCY" property="currency" jdbcType="VARCHAR" />
+    <result column="RESTRUSTACCNAME" property="restrustaccname" jdbcType="VARCHAR" />
+    <result column="RESTRUSTACCNO" property="restrustaccno" jdbcType="VARCHAR" />
+    <result column="RESCUSTACTBANKID" property="rescustactbankid" jdbcType="VARCHAR" />
+    <result column="RESCUSTODIAN" property="rescustodian" jdbcType="VARCHAR" />
+    <result column="TRUSTACCNAME" property="trustaccname" jdbcType="VARCHAR" />
+    <result column="TRUSTACCNO" property="trustaccno" jdbcType="VARCHAR" />
+    <result column="CUSTACCOUNTBANKID" property="custaccountbankid" jdbcType="VARCHAR" />
+    <result column="CUSTODIAN" property="custodian" jdbcType="VARCHAR" />
+    <result column="CUSTODIANID" property="custodianid" jdbcType="VARCHAR" />
+    <result column="DRAWRATE" property="drawrate" jdbcType="DECIMAL" />
+    <result column="INVESTRATE" property="investrate" jdbcType="DECIMAL" />
+    <result column="CUSTODIANFEE" property="custodianfee" jdbcType="DECIMAL" />
+    <result column="INVESTMENTRATE" property="investmentrate" jdbcType="DECIMAL" />
+    <result column="TRUSTEEFEE" property="trusteefee" jdbcType="DECIMAL" />
+    <result column="CUSTODIANFEEDESC" property="custodianfeedesc" jdbcType="VARCHAR" />
+    <result column="TRUSTEEFEEDESC" property="trusteefeedesc" jdbcType="VARCHAR" />
+    <result column="INVESTRATEDESC" property="investratedesc" jdbcType="VARCHAR" />
+    <result column="PORTFOLIOTYPE" property="portfoliotype" jdbcType="VARCHAR" />
+    <result column="FIXINCMANAGER" property="fixincmanager" jdbcType="VARCHAR" />
+    <result column="STOCKMANAGER" property="stockmanager" jdbcType="VARCHAR" />
+    <result column="LASTUPDDATE" property="lastupddate" jdbcType="VARCHAR" />
+    <result column="FIRSTPRICEDATE" property="firstpricedate" jdbcType="VARCHAR" />
+    <result column="PORTFOLIOSTAT" property="portfoliostat" jdbcType="VARCHAR" />
+    <result column="PORTFOLIOORIPRICE" property="portfoliooriprice" jdbcType="DECIMAL" />
+    <result column="STATUS" property="status" jdbcType="CHAR" />
+    <result column="TS" property="ts" jdbcType="TIMESTAMP" />
+    <result column="MEMO" property="memo" jdbcType="VARCHAR" />
+    <result column="WORKFLOWNO" property="workflowno" jdbcType="VARCHAR" />
+    <result column="COLUMN1" property="column1" jdbcType="VARCHAR" />
+    <result column="COLUMN2" property="column2" jdbcType="VARCHAR" />
+    <result column="COLUMN3" property="column3" jdbcType="VARCHAR" />
+    <result column="COLUMN4" property="column4" jdbcType="VARCHAR" />
+    <result column="COLUMN5" property="column5" jdbcType="VARCHAR" />
+    <result column="COLUMN6" property="column6" jdbcType="VARCHAR" />
+    <result column="COLUMN7" property="column7" jdbcType="VARCHAR" />
+    <result column="COLUMN8" property="column8" jdbcType="VARCHAR" />
+    <result column="COLUMN9" property="column9" jdbcType="VARCHAR" />
+    <result column="COLUMN10" property="column10" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    PK_INVST, PK_PLAN, PLANLICID, PLANNAME, ACCOUNTPLANID, PLANID, PORTFOLIOID, INVESTMANTID, 
+    PORTFOLIONAME, DEALINGPERIOD, ROUNDING, PORTFOLIOENDDATE, PORTFOLIOBEGDATE, INVESTMANAGER, 
+    CURRENCY, RESTRUSTACCNAME, RESTRUSTACCNO, RESCUSTACTBANKID, RESCUSTODIAN, TRUSTACCNAME, 
+    TRUSTACCNO, CUSTACCOUNTBANKID, CUSTODIAN, CUSTODIANID, DRAWRATE, INVESTRATE, CUSTODIANFEE, 
+    INVESTMENTRATE, TRUSTEEFEE, CUSTODIANFEEDESC, TRUSTEEFEEDESC, INVESTRATEDESC, PORTFOLIOTYPE, 
+    FIXINCMANAGER, STOCKMANAGER, LASTUPDDATE, FIRSTPRICEDATE, PORTFOLIOSTAT, PORTFOLIOORIPRICE, 
+    STATUS, TS, MEMO, WORKFLOWNO, COLUMN1, COLUMN2, COLUMN3, COLUMN4, COLUMN5, COLUMN6, 
+    COLUMN7, COLUMN8, COLUMN9, COLUMN10
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="org.dicp.oa.account.model.entity.TmpInvstOAVOCriteria" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from TMP_OA_INVST
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <delete id="deleteByExample" parameterType="org.dicp.oa.account.model.entity.TmpInvstOAVOCriteria" >
+    delete from TMP_OA_INVST
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="org.dicp.oa.account.model.entity.TmpInvstOAVO" >
+    insert into TMP_OA_INVST (PK_INVST, PK_PLAN, PLANLICID, 
+      PLANNAME, ACCOUNTPLANID, PLANID, 
+      PORTFOLIOID, INVESTMANTID, PORTFOLIONAME, 
+      DEALINGPERIOD, ROUNDING, PORTFOLIOENDDATE, 
+      PORTFOLIOBEGDATE, INVESTMANAGER, CURRENCY, 
+      RESTRUSTACCNAME, RESTRUSTACCNO, RESCUSTACTBANKID, 
+      RESCUSTODIAN, TRUSTACCNAME, TRUSTACCNO, 
+      CUSTACCOUNTBANKID, CUSTODIAN, CUSTODIANID, 
+      DRAWRATE, INVESTRATE, CUSTODIANFEE, 
+      INVESTMENTRATE, TRUSTEEFEE, CUSTODIANFEEDESC, 
+      TRUSTEEFEEDESC, INVESTRATEDESC, PORTFOLIOTYPE, 
+      FIXINCMANAGER, STOCKMANAGER, LASTUPDDATE, 
+      FIRSTPRICEDATE, PORTFOLIOSTAT, PORTFOLIOORIPRICE, 
+      STATUS, TS, MEMO, WORKFLOWNO, 
+      COLUMN1, COLUMN2, COLUMN3, 
+      COLUMN4, COLUMN5, COLUMN6, 
+      COLUMN7, COLUMN8, COLUMN9, 
+      COLUMN10)
+    values (#{pkInvst,jdbcType=VARCHAR}, #{pkPlan,jdbcType=VARCHAR}, #{planlicid,jdbcType=VARCHAR}, 
+      #{planname,jdbcType=VARCHAR}, #{accountplanid,jdbcType=VARCHAR}, #{planid,jdbcType=VARCHAR}, 
+      #{portfolioid,jdbcType=VARCHAR}, #{investmantid,jdbcType=VARCHAR}, #{portfolioname,jdbcType=VARCHAR}, 
+      #{dealingperiod,jdbcType=VARCHAR}, #{rounding,jdbcType=VARCHAR}, #{portfolioenddate,jdbcType=VARCHAR}, 
+      #{portfoliobegdate,jdbcType=VARCHAR}, #{investmanager,jdbcType=VARCHAR}, #{currency,jdbcType=VARCHAR}, 
+      #{restrustaccname,jdbcType=VARCHAR}, #{restrustaccno,jdbcType=VARCHAR}, #{rescustactbankid,jdbcType=VARCHAR}, 
+      #{rescustodian,jdbcType=VARCHAR}, #{trustaccname,jdbcType=VARCHAR}, #{trustaccno,jdbcType=VARCHAR}, 
+      #{custaccountbankid,jdbcType=VARCHAR}, #{custodian,jdbcType=VARCHAR}, #{custodianid,jdbcType=VARCHAR}, 
+      #{drawrate,jdbcType=DECIMAL}, #{investrate,jdbcType=DECIMAL}, #{custodianfee,jdbcType=DECIMAL}, 
+      #{investmentrate,jdbcType=DECIMAL}, #{trusteefee,jdbcType=DECIMAL}, #{custodianfeedesc,jdbcType=VARCHAR}, 
+      #{trusteefeedesc,jdbcType=VARCHAR}, #{investratedesc,jdbcType=VARCHAR}, #{portfoliotype,jdbcType=VARCHAR}, 
+      #{fixincmanager,jdbcType=VARCHAR}, #{stockmanager,jdbcType=VARCHAR}, #{lastupddate,jdbcType=VARCHAR}, 
+      #{firstpricedate,jdbcType=VARCHAR}, #{portfoliostat,jdbcType=VARCHAR}, #{portfoliooriprice,jdbcType=DECIMAL}, 
+      #{status,jdbcType=CHAR}, #{ts,jdbcType=TIMESTAMP}, #{memo,jdbcType=VARCHAR}, #{workflowno,jdbcType=VARCHAR}, 
+      #{column1,jdbcType=VARCHAR}, #{column2,jdbcType=VARCHAR}, #{column3,jdbcType=VARCHAR}, 
+      #{column4,jdbcType=VARCHAR}, #{column5,jdbcType=VARCHAR}, #{column6,jdbcType=VARCHAR}, 
+      #{column7,jdbcType=VARCHAR}, #{column8,jdbcType=VARCHAR}, #{column9,jdbcType=VARCHAR}, 
+      #{column10,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="org.dicp.oa.account.model.entity.TmpInvstOAVO" >
+    insert into TMP_OA_INVST
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="pkInvst != null" >
+        PK_INVST,
+      </if>
+      <if test="pkPlan != null" >
+        PK_PLAN,
+      </if>
+      <if test="planlicid != null" >
+        PLANLICID,
+      </if>
+      <if test="planname != null" >
+        PLANNAME,
+      </if>
+      <if test="accountplanid != null" >
+        ACCOUNTPLANID,
+      </if>
+      <if test="planid != null" >
+        PLANID,
+      </if>
+      <if test="portfolioid != null" >
+        PORTFOLIOID,
+      </if>
+      <if test="investmantid != null" >
+        INVESTMANTID,
+      </if>
+      <if test="portfolioname != null" >
+        PORTFOLIONAME,
+      </if>
+      <if test="dealingperiod != null" >
+        DEALINGPERIOD,
+      </if>
+      <if test="rounding != null" >
+        ROUNDING,
+      </if>
+      <if test="portfolioenddate != null" >
+        PORTFOLIOENDDATE,
+      </if>
+      <if test="portfoliobegdate != null" >
+        PORTFOLIOBEGDATE,
+      </if>
+      <if test="investmanager != null" >
+        INVESTMANAGER,
+      </if>
+      <if test="currency != null" >
+        CURRENCY,
+      </if>
+      <if test="restrustaccname != null" >
+        RESTRUSTACCNAME,
+      </if>
+      <if test="restrustaccno != null" >
+        RESTRUSTACCNO,
+      </if>
+      <if test="rescustactbankid != null" >
+        RESCUSTACTBANKID,
+      </if>
+      <if test="rescustodian != null" >
+        RESCUSTODIAN,
+      </if>
+      <if test="trustaccname != null" >
+        TRUSTACCNAME,
+      </if>
+      <if test="trustaccno != null" >
+        TRUSTACCNO,
+      </if>
+      <if test="custaccountbankid != null" >
+        CUSTACCOUNTBANKID,
+      </if>
+      <if test="custodian != null" >
+        CUSTODIAN,
+      </if>
+      <if test="custodianid != null" >
+        CUSTODIANID,
+      </if>
+      <if test="drawrate != null" >
+        DRAWRATE,
+      </if>
+      <if test="investrate != null" >
+        INVESTRATE,
+      </if>
+      <if test="custodianfee != null" >
+        CUSTODIANFEE,
+      </if>
+      <if test="investmentrate != null" >
+        INVESTMENTRATE,
+      </if>
+      <if test="trusteefee != null" >
+        TRUSTEEFEE,
+      </if>
+      <if test="custodianfeedesc != null" >
+        CUSTODIANFEEDESC,
+      </if>
+      <if test="trusteefeedesc != null" >
+        TRUSTEEFEEDESC,
+      </if>
+      <if test="investratedesc != null" >
+        INVESTRATEDESC,
+      </if>
+      <if test="portfoliotype != null" >
+        PORTFOLIOTYPE,
+      </if>
+      <if test="fixincmanager != null" >
+        FIXINCMANAGER,
+      </if>
+      <if test="stockmanager != null" >
+        STOCKMANAGER,
+      </if>
+      <if test="lastupddate != null" >
+        LASTUPDDATE,
+      </if>
+      <if test="firstpricedate != null" >
+        FIRSTPRICEDATE,
+      </if>
+      <if test="portfoliostat != null" >
+        PORTFOLIOSTAT,
+      </if>
+      <if test="portfoliooriprice != null" >
+        PORTFOLIOORIPRICE,
+      </if>
+      <if test="status != null" >
+        STATUS,
+      </if>
+      <if test="ts != null" >
+        TS,
+      </if>
+      <if test="memo != null" >
+        MEMO,
+      </if>
+      <if test="workflowno != null" >
+        WORKFLOWNO,
+      </if>
+      <if test="column1 != null" >
+        COLUMN1,
+      </if>
+      <if test="column2 != null" >
+        COLUMN2,
+      </if>
+      <if test="column3 != null" >
+        COLUMN3,
+      </if>
+      <if test="column4 != null" >
+        COLUMN4,
+      </if>
+      <if test="column5 != null" >
+        COLUMN5,
+      </if>
+      <if test="column6 != null" >
+        COLUMN6,
+      </if>
+      <if test="column7 != null" >
+        COLUMN7,
+      </if>
+      <if test="column8 != null" >
+        COLUMN8,
+      </if>
+      <if test="column9 != null" >
+        COLUMN9,
+      </if>
+      <if test="column10 != null" >
+        COLUMN10,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="pkInvst != null" >
+        #{pkInvst,jdbcType=VARCHAR},
+      </if>
+      <if test="pkPlan != null" >
+        #{pkPlan,jdbcType=VARCHAR},
+      </if>
+      <if test="planlicid != null" >
+        #{planlicid,jdbcType=VARCHAR},
+      </if>
+      <if test="planname != null" >
+        #{planname,jdbcType=VARCHAR},
+      </if>
+      <if test="accountplanid != null" >
+        #{accountplanid,jdbcType=VARCHAR},
+      </if>
+      <if test="planid != null" >
+        #{planid,jdbcType=VARCHAR},
+      </if>
+      <if test="portfolioid != null" >
+        #{portfolioid,jdbcType=VARCHAR},
+      </if>
+      <if test="investmantid != null" >
+        #{investmantid,jdbcType=VARCHAR},
+      </if>
+      <if test="portfolioname != null" >
+        #{portfolioname,jdbcType=VARCHAR},
+      </if>
+      <if test="dealingperiod != null" >
+        #{dealingperiod,jdbcType=VARCHAR},
+      </if>
+      <if test="rounding != null" >
+        #{rounding,jdbcType=VARCHAR},
+      </if>
+      <if test="portfolioenddate != null" >
+        #{portfolioenddate,jdbcType=VARCHAR},
+      </if>
+      <if test="portfoliobegdate != null" >
+        #{portfoliobegdate,jdbcType=VARCHAR},
+      </if>
+      <if test="investmanager != null" >
+        #{investmanager,jdbcType=VARCHAR},
+      </if>
+      <if test="currency != null" >
+        #{currency,jdbcType=VARCHAR},
+      </if>
+      <if test="restrustaccname != null" >
+        #{restrustaccname,jdbcType=VARCHAR},
+      </if>
+      <if test="restrustaccno != null" >
+        #{restrustaccno,jdbcType=VARCHAR},
+      </if>
+      <if test="rescustactbankid != null" >
+        #{rescustactbankid,jdbcType=VARCHAR},
+      </if>
+      <if test="rescustodian != null" >
+        #{rescustodian,jdbcType=VARCHAR},
+      </if>
+      <if test="trustaccname != null" >
+        #{trustaccname,jdbcType=VARCHAR},
+      </if>
+      <if test="trustaccno != null" >
+        #{trustaccno,jdbcType=VARCHAR},
+      </if>
+      <if test="custaccountbankid != null" >
+        #{custaccountbankid,jdbcType=VARCHAR},
+      </if>
+      <if test="custodian != null" >
+        #{custodian,jdbcType=VARCHAR},
+      </if>
+      <if test="custodianid != null" >
+        #{custodianid,jdbcType=VARCHAR},
+      </if>
+      <if test="drawrate != null" >
+        #{drawrate,jdbcType=DECIMAL},
+      </if>
+      <if test="investrate != null" >
+        #{investrate,jdbcType=DECIMAL},
+      </if>
+      <if test="custodianfee != null" >
+        #{custodianfee,jdbcType=DECIMAL},
+      </if>
+      <if test="investmentrate != null" >
+        #{investmentrate,jdbcType=DECIMAL},
+      </if>
+      <if test="trusteefee != null" >
+        #{trusteefee,jdbcType=DECIMAL},
+      </if>
+      <if test="custodianfeedesc != null" >
+        #{custodianfeedesc,jdbcType=VARCHAR},
+      </if>
+      <if test="trusteefeedesc != null" >
+        #{trusteefeedesc,jdbcType=VARCHAR},
+      </if>
+      <if test="investratedesc != null" >
+        #{investratedesc,jdbcType=VARCHAR},
+      </if>
+      <if test="portfoliotype != null" >
+        #{portfoliotype,jdbcType=VARCHAR},
+      </if>
+      <if test="fixincmanager != null" >
+        #{fixincmanager,jdbcType=VARCHAR},
+      </if>
+      <if test="stockmanager != null" >
+        #{stockmanager,jdbcType=VARCHAR},
+      </if>
+      <if test="lastupddate != null" >
+        #{lastupddate,jdbcType=VARCHAR},
+      </if>
+      <if test="firstpricedate != null" >
+        #{firstpricedate,jdbcType=VARCHAR},
+      </if>
+      <if test="portfoliostat != null" >
+        #{portfoliostat,jdbcType=VARCHAR},
+      </if>
+      <if test="portfoliooriprice != null" >
+        #{portfoliooriprice,jdbcType=DECIMAL},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=CHAR},
+      </if>
+      <if test="ts != null" >
+        #{ts,jdbcType=TIMESTAMP},
+      </if>
+      <if test="memo != null" >
+        #{memo,jdbcType=VARCHAR},
+      </if>
+      <if test="workflowno != null" >
+        #{workflowno,jdbcType=VARCHAR},
+      </if>
+      <if test="column1 != null" >
+        #{column1,jdbcType=VARCHAR},
+      </if>
+      <if test="column2 != null" >
+        #{column2,jdbcType=VARCHAR},
+      </if>
+      <if test="column3 != null" >
+        #{column3,jdbcType=VARCHAR},
+      </if>
+      <if test="column4 != null" >
+        #{column4,jdbcType=VARCHAR},
+      </if>
+      <if test="column5 != null" >
+        #{column5,jdbcType=VARCHAR},
+      </if>
+      <if test="column6 != null" >
+        #{column6,jdbcType=VARCHAR},
+      </if>
+      <if test="column7 != null" >
+        #{column7,jdbcType=VARCHAR},
+      </if>
+      <if test="column8 != null" >
+        #{column8,jdbcType=VARCHAR},
+      </if>
+      <if test="column9 != null" >
+        #{column9,jdbcType=VARCHAR},
+      </if>
+      <if test="column10 != null" >
+        #{column10,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="org.dicp.oa.account.model.entity.TmpInvstOAVOCriteria" resultType="java.lang.Integer" >
+    select count(*) from TMP_OA_INVST
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update TMP_OA_INVST
+    <set >
+      <if test="record.pkInvst != null" >
+        PK_INVST = #{record.pkInvst,jdbcType=VARCHAR},
+      </if>
+      <if test="record.pkPlan != null" >
+        PK_PLAN = #{record.pkPlan,jdbcType=VARCHAR},
+      </if>
+      <if test="record.planlicid != null" >
+        PLANLICID = #{record.planlicid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.planname != null" >
+        PLANNAME = #{record.planname,jdbcType=VARCHAR},
+      </if>
+      <if test="record.accountplanid != null" >
+        ACCOUNTPLANID = #{record.accountplanid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.planid != null" >
+        PLANID = #{record.planid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.portfolioid != null" >
+        PORTFOLIOID = #{record.portfolioid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.investmantid != null" >
+        INVESTMANTID = #{record.investmantid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.portfolioname != null" >
+        PORTFOLIONAME = #{record.portfolioname,jdbcType=VARCHAR},
+      </if>
+      <if test="record.dealingperiod != null" >
+        DEALINGPERIOD = #{record.dealingperiod,jdbcType=VARCHAR},
+      </if>
+      <if test="record.rounding != null" >
+        ROUNDING = #{record.rounding,jdbcType=VARCHAR},
+      </if>
+      <if test="record.portfolioenddate != null" >
+        PORTFOLIOENDDATE = #{record.portfolioenddate,jdbcType=VARCHAR},
+      </if>
+      <if test="record.portfoliobegdate != null" >
+        PORTFOLIOBEGDATE = #{record.portfoliobegdate,jdbcType=VARCHAR},
+      </if>
+      <if test="record.investmanager != null" >
+        INVESTMANAGER = #{record.investmanager,jdbcType=VARCHAR},
+      </if>
+      <if test="record.currency != null" >
+        CURRENCY = #{record.currency,jdbcType=VARCHAR},
+      </if>
+      <if test="record.restrustaccname != null" >
+        RESTRUSTACCNAME = #{record.restrustaccname,jdbcType=VARCHAR},
+      </if>
+      <if test="record.restrustaccno != null" >
+        RESTRUSTACCNO = #{record.restrustaccno,jdbcType=VARCHAR},
+      </if>
+      <if test="record.rescustactbankid != null" >
+        RESCUSTACTBANKID = #{record.rescustactbankid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.rescustodian != null" >
+        RESCUSTODIAN = #{record.rescustodian,jdbcType=VARCHAR},
+      </if>
+      <if test="record.trustaccname != null" >
+        TRUSTACCNAME = #{record.trustaccname,jdbcType=VARCHAR},
+      </if>
+      <if test="record.trustaccno != null" >
+        TRUSTACCNO = #{record.trustaccno,jdbcType=VARCHAR},
+      </if>
+      <if test="record.custaccountbankid != null" >
+        CUSTACCOUNTBANKID = #{record.custaccountbankid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.custodian != null" >
+        CUSTODIAN = #{record.custodian,jdbcType=VARCHAR},
+      </if>
+      <if test="record.custodianid != null" >
+        CUSTODIANID = #{record.custodianid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.drawrate != null" >
+        DRAWRATE = #{record.drawrate,jdbcType=DECIMAL},
+      </if>
+      <if test="record.investrate != null" >
+        INVESTRATE = #{record.investrate,jdbcType=DECIMAL},
+      </if>
+      <if test="record.custodianfee != null" >
+        CUSTODIANFEE = #{record.custodianfee,jdbcType=DECIMAL},
+      </if>
+      <if test="record.investmentrate != null" >
+        INVESTMENTRATE = #{record.investmentrate,jdbcType=DECIMAL},
+      </if>
+      <if test="record.trusteefee != null" >
+        TRUSTEEFEE = #{record.trusteefee,jdbcType=DECIMAL},
+      </if>
+      <if test="record.custodianfeedesc != null" >
+        CUSTODIANFEEDESC = #{record.custodianfeedesc,jdbcType=VARCHAR},
+      </if>
+      <if test="record.trusteefeedesc != null" >
+        TRUSTEEFEEDESC = #{record.trusteefeedesc,jdbcType=VARCHAR},
+      </if>
+      <if test="record.investratedesc != null" >
+        INVESTRATEDESC = #{record.investratedesc,jdbcType=VARCHAR},
+      </if>
+      <if test="record.portfoliotype != null" >
+        PORTFOLIOTYPE = #{record.portfoliotype,jdbcType=VARCHAR},
+      </if>
+      <if test="record.fixincmanager != null" >
+        FIXINCMANAGER = #{record.fixincmanager,jdbcType=VARCHAR},
+      </if>
+      <if test="record.stockmanager != null" >
+        STOCKMANAGER = #{record.stockmanager,jdbcType=VARCHAR},
+      </if>
+      <if test="record.lastupddate != null" >
+        LASTUPDDATE = #{record.lastupddate,jdbcType=VARCHAR},
+      </if>
+      <if test="record.firstpricedate != null" >
+        FIRSTPRICEDATE = #{record.firstpricedate,jdbcType=VARCHAR},
+      </if>
+      <if test="record.portfoliostat != null" >
+        PORTFOLIOSTAT = #{record.portfoliostat,jdbcType=VARCHAR},
+      </if>
+      <if test="record.portfoliooriprice != null" >
+        PORTFOLIOORIPRICE = #{record.portfoliooriprice,jdbcType=DECIMAL},
+      </if>
+      <if test="record.status != null" >
+        STATUS = #{record.status,jdbcType=CHAR},
+      </if>
+      <if test="record.ts != null" >
+        TS = #{record.ts,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.memo != null" >
+        MEMO = #{record.memo,jdbcType=VARCHAR},
+      </if>
+      <if test="record.workflowno != null" >
+        WORKFLOWNO = #{record.workflowno,jdbcType=VARCHAR},
+      </if>
+      <if test="record.column1 != null" >
+        COLUMN1 = #{record.column1,jdbcType=VARCHAR},
+      </if>
+      <if test="record.column2 != null" >
+        COLUMN2 = #{record.column2,jdbcType=VARCHAR},
+      </if>
+      <if test="record.column3 != null" >
+        COLUMN3 = #{record.column3,jdbcType=VARCHAR},
+      </if>
+      <if test="record.column4 != null" >
+        COLUMN4 = #{record.column4,jdbcType=VARCHAR},
+      </if>
+      <if test="record.column5 != null" >
+        COLUMN5 = #{record.column5,jdbcType=VARCHAR},
+      </if>
+      <if test="record.column6 != null" >
+        COLUMN6 = #{record.column6,jdbcType=VARCHAR},
+      </if>
+      <if test="record.column7 != null" >
+        COLUMN7 = #{record.column7,jdbcType=VARCHAR},
+      </if>
+      <if test="record.column8 != null" >
+        COLUMN8 = #{record.column8,jdbcType=VARCHAR},
+      </if>
+      <if test="record.column9 != null" >
+        COLUMN9 = #{record.column9,jdbcType=VARCHAR},
+      </if>
+      <if test="record.column10 != null" >
+        COLUMN10 = #{record.column10,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update TMP_OA_INVST
+    set PK_INVST = #{record.pkInvst,jdbcType=VARCHAR},
+      PK_PLAN = #{record.pkPlan,jdbcType=VARCHAR},
+      PLANLICID = #{record.planlicid,jdbcType=VARCHAR},
+      PLANNAME = #{record.planname,jdbcType=VARCHAR},
+      ACCOUNTPLANID = #{record.accountplanid,jdbcType=VARCHAR},
+      PLANID = #{record.planid,jdbcType=VARCHAR},
+      PORTFOLIOID = #{record.portfolioid,jdbcType=VARCHAR},
+      INVESTMANTID = #{record.investmantid,jdbcType=VARCHAR},
+      PORTFOLIONAME = #{record.portfolioname,jdbcType=VARCHAR},
+      DEALINGPERIOD = #{record.dealingperiod,jdbcType=VARCHAR},
+      ROUNDING = #{record.rounding,jdbcType=VARCHAR},
+      PORTFOLIOENDDATE = #{record.portfolioenddate,jdbcType=VARCHAR},
+      PORTFOLIOBEGDATE = #{record.portfoliobegdate,jdbcType=VARCHAR},
+      INVESTMANAGER = #{record.investmanager,jdbcType=VARCHAR},
+      CURRENCY = #{record.currency,jdbcType=VARCHAR},
+      RESTRUSTACCNAME = #{record.restrustaccname,jdbcType=VARCHAR},
+      RESTRUSTACCNO = #{record.restrustaccno,jdbcType=VARCHAR},
+      RESCUSTACTBANKID = #{record.rescustactbankid,jdbcType=VARCHAR},
+      RESCUSTODIAN = #{record.rescustodian,jdbcType=VARCHAR},
+      TRUSTACCNAME = #{record.trustaccname,jdbcType=VARCHAR},
+      TRUSTACCNO = #{record.trustaccno,jdbcType=VARCHAR},
+      CUSTACCOUNTBANKID = #{record.custaccountbankid,jdbcType=VARCHAR},
+      CUSTODIAN = #{record.custodian,jdbcType=VARCHAR},
+      CUSTODIANID = #{record.custodianid,jdbcType=VARCHAR},
+      DRAWRATE = #{record.drawrate,jdbcType=DECIMAL},
+      INVESTRATE = #{record.investrate,jdbcType=DECIMAL},
+      CUSTODIANFEE = #{record.custodianfee,jdbcType=DECIMAL},
+      INVESTMENTRATE = #{record.investmentrate,jdbcType=DECIMAL},
+      TRUSTEEFEE = #{record.trusteefee,jdbcType=DECIMAL},
+      CUSTODIANFEEDESC = #{record.custodianfeedesc,jdbcType=VARCHAR},
+      TRUSTEEFEEDESC = #{record.trusteefeedesc,jdbcType=VARCHAR},
+      INVESTRATEDESC = #{record.investratedesc,jdbcType=VARCHAR},
+      PORTFOLIOTYPE = #{record.portfoliotype,jdbcType=VARCHAR},
+      FIXINCMANAGER = #{record.fixincmanager,jdbcType=VARCHAR},
+      STOCKMANAGER = #{record.stockmanager,jdbcType=VARCHAR},
+      LASTUPDDATE = #{record.lastupddate,jdbcType=VARCHAR},
+      FIRSTPRICEDATE = #{record.firstpricedate,jdbcType=VARCHAR},
+      PORTFOLIOSTAT = #{record.portfoliostat,jdbcType=VARCHAR},
+      PORTFOLIOORIPRICE = #{record.portfoliooriprice,jdbcType=DECIMAL},
+      STATUS = #{record.status,jdbcType=CHAR},
+      TS = #{record.ts,jdbcType=TIMESTAMP},
+      MEMO = #{record.memo,jdbcType=VARCHAR},
+      WORKFLOWNO = #{record.workflowno,jdbcType=VARCHAR},
+      COLUMN1 = #{record.column1,jdbcType=VARCHAR},
+      COLUMN2 = #{record.column2,jdbcType=VARCHAR},
+      COLUMN3 = #{record.column3,jdbcType=VARCHAR},
+      COLUMN4 = #{record.column4,jdbcType=VARCHAR},
+      COLUMN5 = #{record.column5,jdbcType=VARCHAR},
+      COLUMN6 = #{record.column6,jdbcType=VARCHAR},
+      COLUMN7 = #{record.column7,jdbcType=VARCHAR},
+      COLUMN8 = #{record.column8,jdbcType=VARCHAR},
+      COLUMN9 = #{record.column9,jdbcType=VARCHAR},
+      COLUMN10 = #{record.column10,jdbcType=VARCHAR}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+</mapper>

@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.dicp.oa.account.dao.mybatis.ContributionSetlistOAVOMapper" >
+  <resultMap id="BaseResultMap" type="org.dicp.oa.account.model.entity.ContributionSetlistOAVO" >
+    <result column="PK_CONTRIBUTIONSETLIST" property="pkContributionsetlist" jdbcType="VARCHAR" />
+    <result column="PK_CONTRIBUTIONSET" property="pkContributionset" jdbcType="VARCHAR" />
+    <result column="COLLECTIONACCNO" property="collectionaccno" jdbcType="VARCHAR" />
+    <result column="COLLECTIONACCNAME" property="collectionaccname" jdbcType="VARCHAR" />
+    <result column="DRAWAMOUNT" property="drawamount" jdbcType="DECIMAL" />
+    <result column="TS" property="ts" jdbcType="TIMESTAMP" />
+    <result column="COLLECTTYPE" property="collecttype" jdbcType="VARCHAR" />
+    <result column="PLANID" property="planid" jdbcType="VARCHAR" />
+    <result column="ACCOUNTPLANID" property="accountplanid" jdbcType="VARCHAR" />
+    <result column="PLANNAME" property="planname" jdbcType="VARCHAR" />
+    <result column="PLANLICID" property="planlicid" jdbcType="VARCHAR" />
+    <result column="TRUSTORID" property="trustorid" jdbcType="VARCHAR" />
+    <result column="TRUSTORNAME" property="trustorname" jdbcType="VARCHAR" />
+    <result column="CONTRIBUTIONNOTDATE" property="contributionnotdate" jdbcType="VARCHAR" />
+    <result column="CURRENCY" property="currency" jdbcType="VARCHAR" />
+    <result column="CUSTODIAN" property="custodian" jdbcType="VARCHAR" />
+    <result column="CUSTACCOUNTBANKID" property="custaccountbankid" jdbcType="VARCHAR" />
+    <result column="PAYSERIAL" property="payserial" jdbcType="VARCHAR" />
+    <result column="CONTRIBUTIONDATE" property="contributiondate" jdbcType="VARCHAR" />
+    <result column="PAYBANKPROV" property="paybankprov" jdbcType="VARCHAR" />
+    <result column="PAYBANKCITY" property="paybankcity" jdbcType="VARCHAR" />
+    <result column="PAYBANK" property="paybank" jdbcType="VARCHAR" />
+    <result column="PAYBANKID" property="paybankid" jdbcType="VARCHAR" />
+    <result column="PAYBANKACCNAME" property="paybankaccname" jdbcType="VARCHAR" />
+    <result column="PAYBANKACCNO" property="paybankaccno" jdbcType="VARCHAR" />
+    <result column="CONTRIBUTION" property="contribution" jdbcType="DECIMAL" />
+    <result column="MEMO" property="memo" jdbcType="VARCHAR" />
+    <result column="WORKFLOWNO" property="workflowno" jdbcType="VARCHAR" />
+    <result column="COLUMN1" property="column1" jdbcType="VARCHAR" />
+    <result column="COLUMN2" property="column2" jdbcType="VARCHAR" />
+    <result column="COLUMN3" property="column3" jdbcType="VARCHAR" />
+    <result column="COLUMN4" property="column4" jdbcType="VARCHAR" />
+    <result column="COLUMN5" property="column5" jdbcType="VARCHAR" />
+    <result column="COLUMN6" property="column6" jdbcType="VARCHAR" />
+    <result column="COLUMN7" property="column7" jdbcType="VARCHAR" />
+    <result column="COLUMN8" property="column8" jdbcType="VARCHAR" />
+    <result column="COLUMN9" property="column9" jdbcType="VARCHAR" />
+    <result column="COLUMN10" property="column10" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    PK_CONTRIBUTIONSETLIST, PK_CONTRIBUTIONSET, COLLECTIONACCNO, COLLECTIONACCNAME, DRAWAMOUNT, 
+    TS, COLLECTTYPE, PLANID, ACCOUNTPLANID, PLANNAME, PLANLICID, TRUSTORID, TRUSTORNAME, 
+    CONTRIBUTIONNOTDATE, CURRENCY, CUSTODIAN, CUSTACCOUNTBANKID, PAYSERIAL, CONTRIBUTIONDATE, 
+    PAYBANKPROV, PAYBANKCITY, PAYBANK, PAYBANKID, PAYBANKACCNAME, PAYBANKACCNO, CONTRIBUTION, 
+    MEMO, WORKFLOWNO, COLUMN1, COLUMN2, COLUMN3, COLUMN4, COLUMN5, COLUMN6, COLUMN7, 
+    COLUMN8, COLUMN9, COLUMN10
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="org.dicp.oa.account.model.entity.ContributionSetlistOAVOCriteria" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from CSIP_OA_CONTRIBUTIONSETLIST
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <delete id="deleteByExample" parameterType="org.dicp.oa.account.model.entity.ContributionSetlistOAVOCriteria" >
+    delete from CSIP_OA_CONTRIBUTIONSETLIST
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="org.dicp.oa.account.model.entity.ContributionSetlistOAVO" >
+    insert into CSIP_OA_CONTRIBUTIONSETLIST (PK_CONTRIBUTIONSETLIST, PK_CONTRIBUTIONSET, 
+      COLLECTIONACCNO, COLLECTIONACCNAME, DRAWAMOUNT, 
+      TS, COLLECTTYPE, PLANID, 
+      ACCOUNTPLANID, PLANNAME, PLANLICID, 
+      TRUSTORID, TRUSTORNAME, CONTRIBUTIONNOTDATE, 
+      CURRENCY, CUSTODIAN, CUSTACCOUNTBANKID, 
+      PAYSERIAL, CONTRIBUTIONDATE, PAYBANKPROV, 
+      PAYBANKCITY, PAYBANK, PAYBANKID, 
+      PAYBANKACCNAME, PAYBANKACCNO, CONTRIBUTION, 
+      MEMO, WORKFLOWNO, COLUMN1, 
+      COLUMN2, COLUMN3, COLUMN4, 
+      COLUMN5, COLUMN6, COLUMN7, 
+      COLUMN8, COLUMN9, COLUMN10
+      )
+    values (#{pkContributionsetlist,jdbcType=VARCHAR}, #{pkContributionset,jdbcType=VARCHAR}, 
+      #{collectionaccno,jdbcType=VARCHAR}, #{collectionaccname,jdbcType=VARCHAR}, #{drawamount,jdbcType=DECIMAL}, 
+      #{ts,jdbcType=TIMESTAMP}, #{collecttype,jdbcType=VARCHAR}, #{planid,jdbcType=VARCHAR}, 
+      #{accountplanid,jdbcType=VARCHAR}, #{planname,jdbcType=VARCHAR}, #{planlicid,jdbcType=VARCHAR}, 
+      #{trustorid,jdbcType=VARCHAR}, #{trustorname,jdbcType=VARCHAR}, #{contributionnotdate,jdbcType=VARCHAR}, 
+      #{currency,jdbcType=VARCHAR}, #{custodian,jdbcType=VARCHAR}, #{custaccountbankid,jdbcType=VARCHAR}, 
+      #{payserial,jdbcType=VARCHAR}, #{contributiondate,jdbcType=VARCHAR}, #{paybankprov,jdbcType=VARCHAR}, 
+      #{paybankcity,jdbcType=VARCHAR}, #{paybank,jdbcType=VARCHAR}, #{paybankid,jdbcType=VARCHAR}, 
+      #{paybankaccname,jdbcType=VARCHAR}, #{paybankaccno,jdbcType=VARCHAR}, #{contribution,jdbcType=DECIMAL}, 
+      #{memo,jdbcType=VARCHAR}, #{workflowno,jdbcType=VARCHAR}, #{column1,jdbcType=VARCHAR}, 
+      #{column2,jdbcType=VARCHAR}, #{column3,jdbcType=VARCHAR}, #{column4,jdbcType=VARCHAR}, 
+      #{column5,jdbcType=VARCHAR}, #{column6,jdbcType=VARCHAR}, #{column7,jdbcType=VARCHAR}, 
+      #{column8,jdbcType=VARCHAR}, #{column9,jdbcType=VARCHAR}, #{column10,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="org.dicp.oa.account.model.entity.ContributionSetlistOAVO" >
+    insert into CSIP_OA_CONTRIBUTIONSETLIST
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="pkContributionsetlist != null" >
+        PK_CONTRIBUTIONSETLIST,
+      </if>
+      <if test="pkContributionset != null" >
+        PK_CONTRIBUTIONSET,
+      </if>
+      <if test="collectionaccno != null" >
+        COLLECTIONACCNO,
+      </if>
+      <if test="collectionaccname != null" >
+        COLLECTIONACCNAME,
+      </if>
+      <if test="drawamount != null" >
+        DRAWAMOUNT,
+      </if>
+      <if test="ts != null" >
+        TS,
+      </if>
+      <if test="collecttype != null" >
+        COLLECTTYPE,
+      </if>
+      <if test="planid != null" >
+        PLANID,
+      </if>
+      <if test="accountplanid != null" >
+        ACCOUNTPLANID,
+      </if>
+      <if test="planname != null" >
+        PLANNAME,
+      </if>
+      <if test="planlicid != null" >
+        PLANLICID,
+      </if>
+      <if test="trustorid != null" >
+        TRUSTORID,
+      </if>
+      <if test="trustorname != null" >
+        TRUSTORNAME,
+      </if>
+      <if test="contributionnotdate != null" >
+        CONTRIBUTIONNOTDATE,
+      </if>
+      <if test="currency != null" >
+        CURRENCY,
+      </if>
+      <if test="custodian != null" >
+        CUSTODIAN,
+      </if>
+      <if test="custaccountbankid != null" >
+        CUSTACCOUNTBANKID,
+      </if>
+      <if test="payserial != null" >
+        PAYSERIAL,
+      </if>
+      <if test="contributiondate != null" >
+        CONTRIBUTIONDATE,
+      </if>
+      <if test="paybankprov != null" >
+        PAYBANKPROV,
+      </if>
+      <if test="paybankcity != null" >
+        PAYBANKCITY,
+      </if>
+      <if test="paybank != null" >
+        PAYBANK,
+      </if>
+      <if test="paybankid != null" >
+        PAYBANKID,
+      </if>
+      <if test="paybankaccname != null" >
+        PAYBANKACCNAME,
+      </if>
+      <if test="paybankaccno != null" >
+        PAYBANKACCNO,
+      </if>
+      <if test="contribution != null" >
+        CONTRIBUTION,
+      </if>
+      <if test="memo != null" >
+        MEMO,
+      </if>
+      <if test="workflowno != null" >
+        WORKFLOWNO,
+      </if>
+      <if test="column1 != null" >
+        COLUMN1,
+      </if>
+      <if test="column2 != null" >
+        COLUMN2,
+      </if>
+      <if test="column3 != null" >
+        COLUMN3,
+      </if>
+      <if test="column4 != null" >
+        COLUMN4,
+      </if>
+      <if test="column5 != null" >
+        COLUMN5,
+      </if>
+      <if test="column6 != null" >
+        COLUMN6,
+      </if>
+      <if test="column7 != null" >
+        COLUMN7,
+      </if>
+      <if test="column8 != null" >
+        COLUMN8,
+      </if>
+      <if test="column9 != null" >
+        COLUMN9,
+      </if>
+      <if test="column10 != null" >
+        COLUMN10,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="pkContributionsetlist != null" >
+        #{pkContributionsetlist,jdbcType=VARCHAR},
+      </if>
+      <if test="pkContributionset != null" >
+        #{pkContributionset,jdbcType=VARCHAR},
+      </if>
+      <if test="collectionaccno != null" >
+        #{collectionaccno,jdbcType=VARCHAR},
+      </if>
+      <if test="collectionaccname != null" >
+        #{collectionaccname,jdbcType=VARCHAR},
+      </if>
+      <if test="drawamount != null" >
+        #{drawamount,jdbcType=DECIMAL},
+      </if>
+      <if test="ts != null" >
+        #{ts,jdbcType=TIMESTAMP},
+      </if>
+      <if test="collecttype != null" >
+        #{collecttype,jdbcType=VARCHAR},
+      </if>
+      <if test="planid != null" >
+        #{planid,jdbcType=VARCHAR},
+      </if>
+      <if test="accountplanid != null" >
+        #{accountplanid,jdbcType=VARCHAR},
+      </if>
+      <if test="planname != null" >
+        #{planname,jdbcType=VARCHAR},
+      </if>
+      <if test="planlicid != null" >
+        #{planlicid,jdbcType=VARCHAR},
+      </if>
+      <if test="trustorid != null" >
+        #{trustorid,jdbcType=VARCHAR},
+      </if>
+      <if test="trustorname != null" >
+        #{trustorname,jdbcType=VARCHAR},
+      </if>
+      <if test="contributionnotdate != null" >
+        #{contributionnotdate,jdbcType=VARCHAR},
+      </if>
+      <if test="currency != null" >
+        #{currency,jdbcType=VARCHAR},
+      </if>
+      <if test="custodian != null" >
+        #{custodian,jdbcType=VARCHAR},
+      </if>
+      <if test="custaccountbankid != null" >
+        #{custaccountbankid,jdbcType=VARCHAR},
+      </if>
+      <if test="payserial != null" >
+        #{payserial,jdbcType=VARCHAR},
+      </if>
+      <if test="contributiondate != null" >
+        #{contributiondate,jdbcType=VARCHAR},
+      </if>
+      <if test="paybankprov != null" >
+        #{paybankprov,jdbcType=VARCHAR},
+      </if>
+      <if test="paybankcity != null" >
+        #{paybankcity,jdbcType=VARCHAR},
+      </if>
+      <if test="paybank != null" >
+        #{paybank,jdbcType=VARCHAR},
+      </if>
+      <if test="paybankid != null" >
+        #{paybankid,jdbcType=VARCHAR},
+      </if>
+      <if test="paybankaccname != null" >
+        #{paybankaccname,jdbcType=VARCHAR},
+      </if>
+      <if test="paybankaccno != null" >
+        #{paybankaccno,jdbcType=VARCHAR},
+      </if>
+      <if test="contribution != null" >
+        #{contribution,jdbcType=DECIMAL},
+      </if>
+      <if test="memo != null" >
+        #{memo,jdbcType=VARCHAR},
+      </if>
+      <if test="workflowno != null" >
+        #{workflowno,jdbcType=VARCHAR},
+      </if>
+      <if test="column1 != null" >
+        #{column1,jdbcType=VARCHAR},
+      </if>
+      <if test="column2 != null" >
+        #{column2,jdbcType=VARCHAR},
+      </if>
+      <if test="column3 != null" >
+        #{column3,jdbcType=VARCHAR},
+      </if>
+      <if test="column4 != null" >
+        #{column4,jdbcType=VARCHAR},
+      </if>
+      <if test="column5 != null" >
+        #{column5,jdbcType=VARCHAR},
+      </if>
+      <if test="column6 != null" >
+        #{column6,jdbcType=VARCHAR},
+      </if>
+      <if test="column7 != null" >
+        #{column7,jdbcType=VARCHAR},
+      </if>
+      <if test="column8 != null" >
+        #{column8,jdbcType=VARCHAR},
+      </if>
+      <if test="column9 != null" >
+        #{column9,jdbcType=VARCHAR},
+      </if>
+      <if test="column10 != null" >
+        #{column10,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="org.dicp.oa.account.model.entity.ContributionSetlistOAVOCriteria" resultType="java.lang.Integer" >
+    select count(*) from CSIP_OA_CONTRIBUTIONSETLIST
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update CSIP_OA_CONTRIBUTIONSETLIST
+    <set >
+      <if test="record.pkContributionsetlist != null" >
+        PK_CONTRIBUTIONSETLIST = #{record.pkContributionsetlist,jdbcType=VARCHAR},
+      </if>
+      <if test="record.pkContributionset != null" >
+        PK_CONTRIBUTIONSET = #{record.pkContributionset,jdbcType=VARCHAR},
+      </if>
+      <if test="record.collectionaccno != null" >
+        COLLECTIONACCNO = #{record.collectionaccno,jdbcType=VARCHAR},
+      </if>
+      <if test="record.collectionaccname != null" >
+        COLLECTIONACCNAME = #{record.collectionaccname,jdbcType=VARCHAR},
+      </if>
+      <if test="record.drawamount != null" >
+        DRAWAMOUNT = #{record.drawamount,jdbcType=DECIMAL},
+      </if>
+      <if test="record.ts != null" >
+        TS = #{record.ts,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.collecttype != null" >
+        COLLECTTYPE = #{record.collecttype,jdbcType=VARCHAR},
+      </if>
+      <if test="record.planid != null" >
+        PLANID = #{record.planid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.accountplanid != null" >
+        ACCOUNTPLANID = #{record.accountplanid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.planname != null" >
+        PLANNAME = #{record.planname,jdbcType=VARCHAR},
+      </if>
+      <if test="record.planlicid != null" >
+        PLANLICID = #{record.planlicid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.trustorid != null" >
+        TRUSTORID = #{record.trustorid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.trustorname != null" >
+        TRUSTORNAME = #{record.trustorname,jdbcType=VARCHAR},
+      </if>
+      <if test="record.contributionnotdate != null" >
+        CONTRIBUTIONNOTDATE = #{record.contributionnotdate,jdbcType=VARCHAR},
+      </if>
+      <if test="record.currency != null" >
+        CURRENCY = #{record.currency,jdbcType=VARCHAR},
+      </if>
+      <if test="record.custodian != null" >
+        CUSTODIAN = #{record.custodian,jdbcType=VARCHAR},
+      </if>
+      <if test="record.custaccountbankid != null" >
+        CUSTACCOUNTBANKID = #{record.custaccountbankid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.payserial != null" >
+        PAYSERIAL = #{record.payserial,jdbcType=VARCHAR},
+      </if>
+      <if test="record.contributiondate != null" >
+        CONTRIBUTIONDATE = #{record.contributiondate,jdbcType=VARCHAR},
+      </if>
+      <if test="record.paybankprov != null" >
+        PAYBANKPROV = #{record.paybankprov,jdbcType=VARCHAR},
+      </if>
+      <if test="record.paybankcity != null" >
+        PAYBANKCITY = #{record.paybankcity,jdbcType=VARCHAR},
+      </if>
+      <if test="record.paybank != null" >
+        PAYBANK = #{record.paybank,jdbcType=VARCHAR},
+      </if>
+      <if test="record.paybankid != null" >
+        PAYBANKID = #{record.paybankid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.paybankaccname != null" >
+        PAYBANKACCNAME = #{record.paybankaccname,jdbcType=VARCHAR},
+      </if>
+      <if test="record.paybankaccno != null" >
+        PAYBANKACCNO = #{record.paybankaccno,jdbcType=VARCHAR},
+      </if>
+      <if test="record.contribution != null" >
+        CONTRIBUTION = #{record.contribution,jdbcType=DECIMAL},
+      </if>
+      <if test="record.memo != null" >
+        MEMO = #{record.memo,jdbcType=VARCHAR},
+      </if>
+      <if test="record.workflowno != null" >
+        WORKFLOWNO = #{record.workflowno,jdbcType=VARCHAR},
+      </if>
+      <if test="record.column1 != null" >
+        COLUMN1 = #{record.column1,jdbcType=VARCHAR},
+      </if>
+      <if test="record.column2 != null" >
+        COLUMN2 = #{record.column2,jdbcType=VARCHAR},
+      </if>
+      <if test="record.column3 != null" >
+        COLUMN3 = #{record.column3,jdbcType=VARCHAR},
+      </if>
+      <if test="record.column4 != null" >
+        COLUMN4 = #{record.column4,jdbcType=VARCHAR},
+      </if>
+      <if test="record.column5 != null" >
+        COLUMN5 = #{record.column5,jdbcType=VARCHAR},
+      </if>
+      <if test="record.column6 != null" >
+        COLUMN6 = #{record.column6,jdbcType=VARCHAR},
+      </if>
+      <if test="record.column7 != null" >
+        COLUMN7 = #{record.column7,jdbcType=VARCHAR},
+      </if>
+      <if test="record.column8 != null" >
+        COLUMN8 = #{record.column8,jdbcType=VARCHAR},
+      </if>
+      <if test="record.column9 != null" >
+        COLUMN9 = #{record.column9,jdbcType=VARCHAR},
+      </if>
+      <if test="record.column10 != null" >
+        COLUMN10 = #{record.column10,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update CSIP_OA_CONTRIBUTIONSETLIST
+    set PK_CONTRIBUTIONSETLIST = #{record.pkContributionsetlist,jdbcType=VARCHAR},
+      PK_CONTRIBUTIONSET = #{record.pkContributionset,jdbcType=VARCHAR},
+      COLLECTIONACCNO = #{record.collectionaccno,jdbcType=VARCHAR},
+      COLLECTIONACCNAME = #{record.collectionaccname,jdbcType=VARCHAR},
+      DRAWAMOUNT = #{record.drawamount,jdbcType=DECIMAL},
+      TS = #{record.ts,jdbcType=TIMESTAMP},
+      COLLECTTYPE = #{record.collecttype,jdbcType=VARCHAR},
+      PLANID = #{record.planid,jdbcType=VARCHAR},
+      ACCOUNTPLANID = #{record.accountplanid,jdbcType=VARCHAR},
+      PLANNAME = #{record.planname,jdbcType=VARCHAR},
+      PLANLICID = #{record.planlicid,jdbcType=VARCHAR},
+      TRUSTORID = #{record.trustorid,jdbcType=VARCHAR},
+      TRUSTORNAME = #{record.trustorname,jdbcType=VARCHAR},
+      CONTRIBUTIONNOTDATE = #{record.contributionnotdate,jdbcType=VARCHAR},
+      CURRENCY = #{record.currency,jdbcType=VARCHAR},
+      CUSTODIAN = #{record.custodian,jdbcType=VARCHAR},
+      CUSTACCOUNTBANKID = #{record.custaccountbankid,jdbcType=VARCHAR},
+      PAYSERIAL = #{record.payserial,jdbcType=VARCHAR},
+      CONTRIBUTIONDATE = #{record.contributiondate,jdbcType=VARCHAR},
+      PAYBANKPROV = #{record.paybankprov,jdbcType=VARCHAR},
+      PAYBANKCITY = #{record.paybankcity,jdbcType=VARCHAR},
+      PAYBANK = #{record.paybank,jdbcType=VARCHAR},
+      PAYBANKID = #{record.paybankid,jdbcType=VARCHAR},
+      PAYBANKACCNAME = #{record.paybankaccname,jdbcType=VARCHAR},
+      PAYBANKACCNO = #{record.paybankaccno,jdbcType=VARCHAR},
+      CONTRIBUTION = #{record.contribution,jdbcType=DECIMAL},
+      MEMO = #{record.memo,jdbcType=VARCHAR},
+      WORKFLOWNO = #{record.workflowno,jdbcType=VARCHAR},
+      COLUMN1 = #{record.column1,jdbcType=VARCHAR},
+      COLUMN2 = #{record.column2,jdbcType=VARCHAR},
+      COLUMN3 = #{record.column3,jdbcType=VARCHAR},
+      COLUMN4 = #{record.column4,jdbcType=VARCHAR},
+      COLUMN5 = #{record.column5,jdbcType=VARCHAR},
+      COLUMN6 = #{record.column6,jdbcType=VARCHAR},
+      COLUMN7 = #{record.column7,jdbcType=VARCHAR},
+      COLUMN8 = #{record.column8,jdbcType=VARCHAR},
+      COLUMN9 = #{record.column9,jdbcType=VARCHAR},
+      COLUMN10 = #{record.column10,jdbcType=VARCHAR}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+</mapper>
