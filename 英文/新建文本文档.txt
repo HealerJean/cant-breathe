@@ -1,16 +1,9 @@
-﻿Authentication ֤ʵ
+﻿Authentication ֤ʵ a sen ti kai shen 
 
-iterator 
+iterator  i te rei tor
 
-Criteria  
+Criteria  ke rei ti rei a 
 
-Serializable
+Serializable si rui a 
 
 separator
-
-
-http://blog.csdn.net/qq_34021712/article/details/70478281
-
-http://blog.csdn.net/u014749862/article/details/48894409
-
-http://blog.csdn.net/fighterandknight/article/details/53432276/
