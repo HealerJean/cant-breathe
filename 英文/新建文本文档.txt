@@ -7,3 +7,8 @@ Criteria  ke rei ti rei a
 Serializable si rui a 
 
 separator
+
+
+设计模式 
+数据结构
+代码优化
