@@ -37,7 +37,7 @@
 
 	<bean id="commonClientFactory" class="org.apache.cxf.jaxws.JaxWsProxyFactoryBean">
 		<property name="serviceClass" value="com.hlj.webservice.CommonWSInter" />
-		<property name="address" value="http://localhost:8080/SpringProject/services/CommonService" />
+		<property name="address" value="http://localhost:8080/SpringWebService/services/CommonService" />
  	<!--<property name="address" value="http://10.3.181.48:8080/dsp_oa/services/CommonService" /> -->
  	</bean>
  	

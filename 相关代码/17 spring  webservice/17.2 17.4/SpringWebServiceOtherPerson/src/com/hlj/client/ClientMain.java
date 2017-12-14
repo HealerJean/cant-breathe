@@ -20,14 +20,15 @@ public class ClientMain {
 		
 		CommonWSInter client = (CommonWSInter) context.getBean("commonClient");
 		
-		Map<String,String>  map = new HashMap<String,String> ();
+	   String a = client.receiveOARequestFromTransfer("zhang");
+
 		
+		Map<String,String>  map = new HashMap<String,String> ();
 		map.put("name", "zhang");
 		map.put("xml", "xml");
 		map.put("age", "34");
-		
-		String a = client.receiveOARequestFromTransfer("zhang");
-		client.sendMap(map);
+		//map 不能成功，会抛异常
+		client.sendMap(map); 
 		System.out.println(a); 
 	}
 }
