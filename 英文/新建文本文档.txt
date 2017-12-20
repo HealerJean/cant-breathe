@@ -1,13 +1,14 @@
-﻿Authentication ֤ʵ a sen ti kai shen 
+﻿Authentication a sen ti kai shen 
 
 iterator  i te rei tor
 
 Criteria  ke rei ti rei a 
 
-Serializable si rui a 
+Serializable si rui a la z bol
 
 separator
 
+Arithmetic e ruis mai ti ke
 
 设计模式 
 数据结构
