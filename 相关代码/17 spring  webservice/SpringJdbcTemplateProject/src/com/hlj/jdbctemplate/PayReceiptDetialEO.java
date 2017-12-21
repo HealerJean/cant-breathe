@@ -9,7 +9,9 @@ import org.springframework.jdbc.core.RowMapper;
 
 public class PayReceiptDetialEO implements Serializable {
 
-	private static final long serialVersionUID = 208618036531396867L;
+
+	private static final long serialVersionUID = 1L;
+	
 	private String drawDate;
 	private String drawTime;
 	private String bankSerialNo;
@@ -45,7 +47,7 @@ public class PayReceiptDetialEO implements Serializable {
 	private String personid;
 	private String ssnum;
 	private String flag;
-
+	private String listno;
 	
 	
 	public String getFlag() {
@@ -260,6 +262,12 @@ public class PayReceiptDetialEO implements Serializable {
 	}
 	public void setIdno(String idno) {
 		this.idno = idno;
+	}
+	public String getListno() {
+		return listno;
+	}
+	public void setListno(String listno) {
+		this.listno = listno;
 	}
 	
 }

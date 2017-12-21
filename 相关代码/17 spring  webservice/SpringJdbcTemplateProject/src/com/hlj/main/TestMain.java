@@ -3,7 +3,6 @@ package com.hlj.main;
 import org.springframework.context.ApplicationContext;
 
 import com.hlj.jdbctemplate.ISequenceDao;
-import com.hlj.jdbctemplate.SequenceDaoImp;
 import com.hlj.util.ApplicaionContextUtil;
 
 /** 
@@ -21,6 +20,8 @@ public class TestMain {
 		
 		System.out.println(iSequenceDao.getFlowNo());
 		
-		System.out.println(iSequenceDao.getBySql().toString());
+		System.out.println(iSequenceDao.getBySql());
+		
+		System.out.println("object ****"+iSequenceDao.getByObjectSql().getListno()); 
 	}
 }

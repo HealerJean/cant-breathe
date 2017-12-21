@@ -26,12 +26,12 @@
         <property name="dataSource" ref="dataSource"/>
     </bean>
     
-	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
-	    <property name="driverClass" value="oracle.jdbc.driver.OracleDriver"/>
-		<property name="jdbcUrl"  value="jdbc:oracle:thin:@192.168.31.165:1521:orcl"/>
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close"> 
+	 	<property name="driverClass" value="oracle.jdbc.driver.OracleDriver"/>
+		<property name="jdbcUrl"  value="jdbc:oracle:thin:@10.152.60.15:1521:wbglrjk"/>
 		<property name="user" value="dicp"/>
 		<property name="password" value="password"/>  
-	 	
+	   
 	 	<!-- 初始化时的连接数 -->
 		<property name="initialPoolSize" value="3" />
 		<!-- 连接池保留的最小连接数 -->

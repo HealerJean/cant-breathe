@@ -1,6 +1,8 @@
 package com.hlj.jdbctemplate;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
@@ -94,12 +96,22 @@ public class SequenceDaoImp implements ISequenceDao {
 		    		   " ON CPI.PK_PAYLISTINFO = CT.PK_PAYLISTINFO" +
 		    		 " JOIN CSIP_OA_PAYLIST CP" +
 		    		   " ON CP.PK_TASKFILE = CT.PK_TASKFILE" +
-		    		" WHERE CPI.INNER_LISTNO = 'w201709190001327'" ;
+		    		" WHERE CPI.INNER_LISTNO = 'w201704210000704'" ;
 
 		    
 			List<PayReceiptDetialEO> rows = jdbcTemplate.query(sql,new BeanPropertyRowMapper<PayReceiptDetialEO>(PayReceiptDetialEO.class));
 		
 		return rows;
+	}
+
+	@Override
+	public PayReceiptDetialEO getByObjectSql() {
+
+	    String sql = "SELECT * from CSIP_OA_PAYLISTINFO cop where cop.INNER_LISTNO = 'w201704210000704'" ;
+
+	    PayReceiptDetialEO payReceiptDetialEO = jdbcTemplate.queryForObject(sql,  new BeanPropertyRowMapper<PayReceiptDetialEO>(PayReceiptDetialEO.class));
+		 
+		return payReceiptDetialEO;
 	}
 
 	
