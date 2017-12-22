@@ -22,6 +22,8 @@ public class TestMain {
 		
 		System.out.println(iSequenceDao.getBySql());
 		
-		System.out.println("object ****"+iSequenceDao.getByObjectSql().getListno()); 
+		System.out.println("object ****"+iSequenceDao.getByObjectSql()); 
+		
+		System.out.println("123");
 	}
 }

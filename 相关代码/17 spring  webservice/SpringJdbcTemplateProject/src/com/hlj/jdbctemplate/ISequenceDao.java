@@ -59,7 +59,7 @@ public interface ISequenceDao {
 	
 	public abstract List<PayReceiptDetialEO> getBySql(); 
 
-	public abstract PayReceiptDetialEO getByObjectSql(); 
+	public abstract Object getByObjectSql(); 
 
 	
 }

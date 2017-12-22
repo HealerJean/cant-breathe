@@ -105,13 +105,46 @@ public class SequenceDaoImp implements ISequenceDao {
 	}
 
 	@Override
-	public PayReceiptDetialEO getByObjectSql() {
+	public Object getByObjectSql() {
 
-	    String sql = "SELECT * from CSIP_OA_PAYLISTINFO cop where cop.INNER_LISTNO = 'w201704210000704'" ;
-
-	    PayReceiptDetialEO payReceiptDetialEO = jdbcTemplate.queryForObject(sql,  new BeanPropertyRowMapper<PayReceiptDetialEO>(PayReceiptDetialEO.class));
-		 
-		return payReceiptDetialEO;
+/*			String sql="select "
+					+ "'123' as planid, "
+					+ "'123' as accountplanid,"
+					+ "'123' as planlicid,"
+					+ "'123' as trustorid,"
+					+ "'123' as trustorname,"
+					+ "'123' as contributionnotno,"
+					+ "'123' as collecttype,"
+					+ "'123' as drawamount,"
+					+ "'123' as currency,"
+					+ "'123' as trustaccname,"
+					+ "'123' as trustaccno,"
+					+ "'123' as custodian,"
+					+ "'123' as custaccountbankid,"
+					+ "'123' as payserial,"
+					+ "'123' as payserial,"
+					+ "'123' as paybank,"
+					+ "'123' as paybankid,"
+					+ "'123' as paybankaccname,"
+					+ "'123' as paybankaccno,"
+					+ "'123' as paybankprov,"
+					+ "'123' as paybankcity,"
+					+ "'123' as Contribution,"
+					+ "'123' as paidupamt,"
+					+ "'123' as paidupdate,"
+					+ "'123' as paidupflag,"
+					+ "'123' as paidupnotno,"
+					+ "'123' as memo,"
+					+ "'123' as ts"
+					+ " from dual";*/
+			
+			String sql="select * from CSIP_OA_CONTRICONFIRM  where  ROWNUM <= 1";
+			
+			
+			ContriConfmSetListEO confmSetListEO = jdbcTemplate.queryForObject(sql,  new BeanPropertyRowMapper<ContriConfmSetListEO>(ContriConfmSetListEO.class));
+			 System.out.println(confmSetListEO.toString());
+		  
+		return confmSetListEO;
 	}
 
 	
