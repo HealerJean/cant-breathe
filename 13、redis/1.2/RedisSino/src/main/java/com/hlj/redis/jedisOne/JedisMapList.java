@@ -1,13 +1,17 @@
 package com.hlj.redis.jedisOne;
 
+import java.nio.channels.Pipe;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.TimeUnit;
 
 import org.junit.Test;
 
+import org.springframework.data.redis.core.RedisTemplate;
 import redis.clients.jedis.Jedis;
+import redis.clients.jedis.Pipeline;
 
 /** 
  * @author : HealerJean
@@ -23,7 +27,7 @@ public class JedisMapList {
     /**
 	 * @param args
 	 */
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		JedisMapList t =new JedisMapList();
 		t.testString();
 	}
@@ -33,17 +37,31 @@ public class JedisMapList {
     /**
      * redis存储字符串
      */
-    public void testString() {
+    public void testString() throws InterruptedException {
+      Jedis  jedis = new Jedis("127.0.0.1",6379);
+
         //-----添加数据----------  
         jedis.set("name","xinxin");//向key-->name中放入了value-->xinxin  
         System.out.println(jedis.get("name"));//执行结果：xinxin  
-        
+
+
+
+        TimeUnit.SECONDS.sleep(31);
+        System.out.println(jedis.ping());
+
+        TimeUnit.SECONDS.sleep(5);
+
+        jedis.close();
+
+
         jedis.append("name", " is my lover"); //拼接
         System.out.println(jedis.get("name")); 
         
         jedis.del("name");  //删除某个键
         System.out.println(jedis.get("name"));
         //设置多个键值对
+
+
         jedis.mset("name","liuling","age","23","qq","476777XXX");
         jedis.incr("age"); //进行加1操作
         System.out.println(jedis.get("name") + "-" + jedis.get("age") + "-" + jedis.get("qq"));
@@ -135,5 +153,22 @@ public class JedisMapList {
         System.out.println(jedis.lrange("a",0,-1));  
     }  
     
-    
+
+    @Test
+    public void pipeline(){
+        Pipeline pipeline = jedis.pipelined();
+        pipeline.set("hello","hello");
+        pipeline.set("count","1");
+        pipeline.incr("count");
+
+        RedisTemplate redisTemplate = new RedisTemplate();
+
+        List<Object> result= pipeline.syncAndReturnAll();
+
+        for(Object o :result){
+            System.out.println(o);
+        }
+
+    }
 }
+
