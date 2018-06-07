@@ -1,0 +1,77 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v1.4.4.RELEASE)
+
+2018-05-25 14:14:13.559  INFO 23359 --- [           main] c.duodian.youhui.admin.AdminApplication  : Starting AdminApplication v1.0-SNAPSHOT with PID 23359 (/usr/local/webproject/admin-1.0-SNAPSHOT.jar started by root in /usr/local/webproject)
+2018-05-25 14:14:13.578  INFO 23359 --- [           main] c.duodian.youhui.admin.AdminApplication  : No active profile set, falling back to default profiles: default
+2018-05-25 14:14:13.831  INFO 23359 --- [           main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4629104a: startup date [Fri May 25 14:14:13 CST 2018]; root of context hierarchy
+2018-05-25 14:14:17.119  INFO 23359 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-05-25 14:14:19.261  INFO 23359 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 80 (http)
+2018-05-25 14:14:19.302  INFO 23359 --- [           main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2018-05-25 14:14:19.304  INFO 23359 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.11
+2018-05-25 14:14:19.607  INFO 23359 --- [ost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-05-25 14:14:19.607  INFO 23359 --- [ost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5790 ms
+2018-05-25 14:14:20.076  INFO 23359 --- [ost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-05-25 14:14:20.092  INFO 23359 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-05-25 14:14:20.093  INFO 23359 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-05-25 14:14:20.093  INFO 23359 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-05-25 14:14:20.093  INFO 23359 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-05-25 14:14:20.093  INFO 23359 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'resourceUrlEncodingFilter' to: [/*]
+2018-05-25 14:14:20.983  INFO 23359 --- [           main] o.s.ui.freemarker.SpringTemplateLoader   : SpringTemplateLoader for FreeMarker: using resource loader [org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4629104a: startup date [Fri May 25 14:14:13 CST 2018]; root of context hierarchy] and template loader path [classpath:/templates/]
+2018-05-25 14:14:20.985  INFO 23359 --- [           main] o.s.w.s.v.f.FreeMarkerConfigurer         : ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2018-05-25 14:14:21.233  INFO 23359 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4629104a: startup date [Fri May 25 14:14:13 CST 2018]; root of context hierarchy
+2018-05-25 14:14:21.255  INFO 23359 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Detected @ModelAttribute methods in controllerConfig
+2018-05-25 14:14:21.404  INFO 23359 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/duodian/youhui],methods=[POST]}" onto public java.lang.String com.duodian.youhui.admin.moudle.chat.controller.ChatController.wechatServicePost(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-05-25 14:14:21.406  INFO 23359 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/duodian/youhui],methods=[GET]}" onto public void com.duodian.youhui.admin.moudle.chat.controller.WechatValidateController.wechatService(java.io.PrintWriter,javax.servlet.http.HttpServletResponse,javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+2018-05-25 14:14:21.410  INFO 23359 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello],methods=[GET]}" onto public java.lang.String com.duodian.youhui.admin.moudle.TestController.get()
+2018-05-25 14:14:21.418  INFO 23359 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-05-25 14:14:21.419  INFO 23359 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-05-25 14:14:21.520  INFO 23359 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-25 14:14:21.527  INFO 23359 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-25 14:14:21.638  INFO 23359 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-25 14:14:22.217  WARN 23359 --- [           main] o.s.b.a.f.FreeMarkerAutoConfiguration    : Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+2018-05-25 14:14:22.407  INFO 23359 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-05-25 14:14:22.536  INFO 23359 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 80 (http)
+2018-05-25 14:14:22.547  INFO 23359 --- [           main] c.duodian.youhui.admin.AdminApplication  : Started AdminApplication in 10.594 seconds (JVM running for 11.69)
+2018-05-25 14:15:23.454  INFO 23359 --- [p-nio-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-05-25 14:15:23.455  INFO 23359 --- [p-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-05-25 14:15:23.492  INFO 23359 --- [p-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 37 ms
+2018-05-25 14:15:23.596  INFO 23359 --- [p-nio-80-exec-1] c.d.y.a.m.c.s.impl.ChatServiceImpl       : {Content=startup.sh, CreateTime=1527228923, ToUserName=gh_81a6ed0aee68, FromUserName=oqcUu0xCuGIyHg3Lv1_pOQOVAucE, MsgType=text, MsgId=6559398278214265770}
+2018-05-25 14:15:23.841  INFO 23359 --- [p-nio-80-exec-1] c.d.y.a.m.c.s.impl.ChatServiceImpl       : <xml>
+  <ToUserName>oqcUu0xCuGIyHg3Lv1_pOQOVAucE</ToUserName>
+  <FromUserName>gh_81a6ed0aee68</FromUserName>
+  <CreateTime>1527228923598</CreateTime>
+  <MsgType>text</MsgType>
+  <Content>正在帮您搜索【startup.sh】的独家优惠券，请稍等…
+
+&lt;a href=&apos;http://graceway.m.quchongzhi.net/Supersearch/result?title=startup.sh&apos;&gt;已搜索到【startup.sh】优惠券，点击领取&lt;/a&gt;
+
+您也可以点下方找优惠券菜单自助查券哦！</Content>
+</xml>
+2018-05-25 14:15:59.867  INFO 23359 --- [p-nio-80-exec-3] c.d.y.a.m.c.s.impl.ChatServiceImpl       : {CreateTime=1527228959, EventKey=shikeErWeiMa, Event=CLICK, ToUserName=gh_81a6ed0aee68, FromUserName=oqcUu03C8wqiX9pgGwz4YE1UT7Xw, MsgType=event}
+2018-05-25 14:15:59.887  INFO 23359 --- [p-nio-80-exec-3] c.d.y.a.m.c.s.impl.ChatServiceImpl       : <xml>
+  <ToUserName>oqcUu03C8wqiX9pgGwz4YE1UT7Xw</ToUserName>
+  <FromUserName>gh_81a6ed0aee68</FromUserName>
+  <CreateTime>1527228959877</CreateTime>
+  <MsgType>image</MsgType>
+  <Image>
+    <MediaId>ermlNaH2V4_F9ssfADqs4c94OVHbWC42Ve7tCSSbKYwcIMpKwOS55RXreClMN_E9</MediaId>
+  </Image>
+</xml>
+2018-05-25 14:16:13.226  INFO 23359 --- [p-nio-80-exec-5] c.d.y.a.m.c.s.impl.ChatServiceImpl       : {MenuId=423959837, CreateTime=1527228973, EventKey=http://graceway.m.quchongzhi.net/index/index.html, Event=VIEW, ToUserName=gh_81a6ed0aee68, FromUserName=oqcUu03C8wqiX9pgGwz4YE1UT7Xw, MsgType=event}
+2018-05-25 14:16:23.943  INFO 23359 --- [p-nio-80-exec-7] c.d.y.a.m.c.s.impl.ChatServiceImpl       : {MenuId=423959837, CreateTime=1527228983, EventKey=http://graceway.m.quchongzhi.net/supersearch/index/header_click/1, Event=VIEW, ToUserName=gh_81a6ed0aee68, FromUserName=oqcUu03C8wqiX9pgGwz4YE1UT7Xw, MsgType=event}
+2018-05-25 14:16:36.410  INFO 23359 --- [p-nio-80-exec-9] c.d.y.a.m.c.s.impl.ChatServiceImpl       : {CreateTime=1527228996, EventKey=shikeErWeiMa, Event=CLICK, ToUserName=gh_81a6ed0aee68, FromUserName=oqcUu03C8wqiX9pgGwz4YE1UT7Xw, MsgType=event}
+2018-05-25 14:16:36.420  INFO 23359 --- [p-nio-80-exec-9] c.d.y.a.m.c.s.impl.ChatServiceImpl       : <xml>
+  <ToUserName>oqcUu03C8wqiX9pgGwz4YE1UT7Xw</ToUserName>
+  <FromUserName>gh_81a6ed0aee68</FromUserName>
+  <CreateTime>1527228996410</CreateTime>
+  <MsgType>image</MsgType>
+  <Image>
+    <MediaId>ermlNaH2V4_F9ssfADqs4c94OVHbWC42Ve7tCSSbKYwcIMpKwOS55RXreClMN_E9</MediaId>
+  </Image>
+</xml>
