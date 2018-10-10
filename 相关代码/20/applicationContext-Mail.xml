@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+
+    
+    <!-- 简单的发送者 -->
+    <bean id="mailMessage" class="org.springframework.mail.SimpleMailMessage">  
+        <property name="from">  
+            <value>${mail.from}</value>  
+        </property>  
+        <!-- 查看SimpleMailMessage源码还可以注入标题,内容等 -->  
+    </bean>  
+    
+     <!-- 邮件发送器 163，qq，sohu  -->
+    <!-- 申明JavaMailSenderImpl对象 -->  
+    <bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">  
+        <property name="host" value="${mail.host}" />  
+        <property name="username" value="${mail.username}" />  
+        <property name="password" value="${mail.password}" /> 
+        <property name="defaultEncoding" value="UTF-8" /> 
+        <property name="protocol" value="smtp"/> 
+        <!--<property name="port" value="465" /> &lt;!&ndash; 默认提供端口支持，默认是25 &ndash;&gt;-->
+        <property name="javaMailProperties">
+            <props>
+                <!-- 启动调试开关 -->
+                <prop key="mail.debug">debug</prop>
+                 <!-- 验证身份， 设置认证开关 ，默认false，这里设置为true-->  
+                <prop key="mail.smtp.auth">${mail.smtp.auth}</prop>
+                 <!-- 设置发送延时 -->
+                <prop key="mail.smtp.timeout">${mail.smtp.timeout}</prop>  
+               <!--  <prop key="mail.smtp.port">25</prop>  相关属性也可以设置在这里 -->
+                <!-- <prop key="mail.transport.protocol">smtp</prop>  同上面设置上面的 protocol 要装入session的协议  -->
+            </props>
+        </property>
+    </bean>
+
+
+    
+</beans>
