@@ -11,16 +11,16 @@ import javax.servlet.http.HttpSession;
 
 public class WsContext {
 	
-	/* ½øÈëµÄÇëÇóÏûÏ¢ */
+	/* è¿›å…¥çš„è¯·æ±‚æ¶ˆæ¯ */
 	public static final String IN_REQ_MESSAGE = "IN.REQ.MESSAGE";
 	
-	/* ³öÈ¥µÄÏìÓ¦ÏûÏ¢ */
+	/* å‡ºå»çš„å“åº”æ¶ˆæ¯ */
 	public static final String OUT_RESP_MESSAGE = "OUT.RESP.MESSAGE";
 	
-	/* Ó¦ÓÃContextPath */
+	/* åº”ç”¨ContextPath */
 	public static final String REQUEST_BASEPATH = "REQUEST.BASEPATH";
 	
-	/* ÉÏÏÂÎÄ±êÊ¶ */
+	/* ä¸Šä¸‹æ–‡æ ‡è¯† */
 	public static final String CONTEXT_ID = "CONTEXT.ID";
 	
 	private static ThreadLocal<WsContext> threadLocal = new ThreadLocal<WsContext>() {
@@ -54,7 +54,7 @@ public class WsContext {
     public String getBasePath() {
     	HttpServletRequest request = getHttpServletRequest();
     	if (request == null) {
-    		// ÇëÇó¶ÔÏó²»´æÔÚÔò´ÓcontextÖĞ²éÕÒ
+    		// è¯·æ±‚å¯¹è±¡ä¸å­˜åœ¨åˆ™ä»contextä¸­æŸ¥æ‰¾
         	String basePath = (String) get(REQUEST_BASEPATH);
         	if (basePath != null && basePath.trim().length() > 0) {
         		return basePath;
