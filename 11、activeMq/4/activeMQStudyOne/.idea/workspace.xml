@@ -1,73 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f0a48f12-9e1a-4e3c-8a41-8de1470490c6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../3/activeMQStudyOne/src/main/java/com/hlj/activemqOne/QueueSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../3/activeMQStudyOne/src/main/java/com/hlj/activemqOne/QueueSender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../3/activeMQStudyOne/src/main/java/com/hlj/four/spring/MyMessageListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../3/activeMQStudyOne/src/main/java/com/hlj/four/spring/MyMessageListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../3/activeMQStudyOne/src/main/java/com/hlj/four/spring/prepetries/QueuePropetriesReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../3/activeMQStudyOne/src/main/java/com/hlj/four/spring/prepetries/QueuePropetriesReceiver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../3/activeMQStudyOne/src/main/java/com/hlj/four/spring/prepetries/QueuePropetriesSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../3/activeMQStudyOne/src/main/java/com/hlj/four/spring/prepetries/QueuePropetriesSender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../3/activeMQStudyOne/target/classes/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../3/activeMQStudyOne/target/classes/META-INF/maven/activeMQStudyOneId/activeMQStudyOne/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../3/activeMQStudyOne/target/classes/META-INF/maven/activeMQStudyOneId/activeMQStudyOne/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../3/activeMQStudyOne/target/classes/com/hlj/activemqOne/QueueReceiver.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../3/activeMQStudyOne/target/classes/com/hlj/activemqOne/QueueReceiver.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../3/activeMQStudyOne/target/classes/com/hlj/activemqOne/QueueSender$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../3/activeMQStudyOne/target/classes/com/hlj/activemqOne/QueueSender$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../3/activeMQStudyOne/target/classes/com/hlj/activemqOne/QueueSender.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../3/activeMQStudyOne/target/classes/com/hlj/activemqOne/QueueSender.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../3/activeMQStudyOne/target/classes/com/hlj/activemqOne/Receiver.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../3/activeMQStudyOne/target/classes/com/hlj/activemqOne/Receiver.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../3/activeMQStudyOne/target/classes/com/hlj/activemqOne/Sender.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../3/activeMQStudyOne/target/classes/com/hlj/activemqOne/Sender.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../3/activeMQStudyOne/target/classes/com/hlj/four/spring/MyMessageListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../3/activeMQStudyOne/target/classes/com/hlj/four/spring/MyMessageListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../3/activeMQStudyOne/target/classes/com/hlj/four/spring/QueueMessageListenerSender$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../3/activeMQStudyOne/target/classes/com/hlj/four/spring/QueueMessageListenerSender$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../3/activeMQStudyOne/target/classes/com/hlj/four/spring/QueueMessageListenerSender.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../3/activeMQStudyOne/target/classes/com/hlj/four/spring/QueueMessageListenerSender.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../3/activeMQStudyOne/target/classes/com/hlj/four/spring/QueueReceiver.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../3/activeMQStudyOne/target/classes/com/hlj/four/spring/QueueReceiver.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../3/activeMQStudyOne/target/classes/com/hlj/four/spring/QueueSender$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../3/activeMQStudyOne/target/classes/com/hlj/four/spring/QueueSender$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../3/activeMQStudyOne/target/classes/com/hlj/four/spring/QueueSender.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../3/activeMQStudyOne/target/classes/com/hlj/four/spring/QueueSender.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../3/activeMQStudyOne/target/classes/com/hlj/four/spring/TopicReceiver.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../3/activeMQStudyOne/target/classes/com/hlj/four/spring/TopicReceiver.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../3/activeMQStudyOne/target/classes/com/hlj/four/spring/TopicSender$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../3/activeMQStudyOne/target/classes/com/hlj/four/spring/TopicSender$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../3/activeMQStudyOne/target/classes/com/hlj/four/spring/TopicSender.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../3/activeMQStudyOne/target/classes/com/hlj/four/spring/TopicSender.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../3/activeMQStudyOne/target/classes/com/hlj/three/broker/BrokerOne.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../3/activeMQStudyOne/target/classes/com/hlj/three/broker/BrokerOne.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../3/activeMQStudyOne/target/classes/com/hlj/three/broker/BrokerThreeSprignXml.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../3/activeMQStudyOne/target/classes/com/hlj/three/broker/BrokerThreeSprignXml.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../3/activeMQStudyOne/target/classes/com/hlj/three/broker/BrokerTwo.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../3/activeMQStudyOne/target/classes/com/hlj/three/broker/BrokerTwo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../3/activeMQStudyOne/target/classes/com/hlj/two/topic/NoPersistenceReceiver.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../3/activeMQStudyOne/target/classes/com/hlj/two/topic/NoPersistenceReceiver.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../3/activeMQStudyOne/target/classes/com/hlj/two/topic/NoPersistenceSender.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../3/activeMQStudyOne/target/classes/com/hlj/two/topic/NoPersistenceSender.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../3/activeMQStudyOne/target/classes/com/hlj/two/topic/PersistenceReceiver.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../3/activeMQStudyOne/target/classes/com/hlj/two/topic/PersistenceReceiver.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../3/activeMQStudyOne/target/classes/com/hlj/two/topic/PersistenceSender.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../3/activeMQStudyOne/target/classes/com/hlj/two/topic/PersistenceSender.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hlj/five/staticnetworkConnectors/QueueReceiverThread1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hlj/five/staticnetworkConnectors/QueueReceiverThread1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hlj/five/staticnetworkConnectors/QueueReceiverThread2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hlj/five/staticnetworkConnectors/QueueReceiverThread2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hlj/five/staticnetworkConnectors/QueueSenderThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hlj/five/staticnetworkConnectors/QueueSenderThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/maven/activeMQStudyOneId/activeMQStudyOne/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/maven/activeMQStudyOneId/activeMQStudyOne/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hlj/activemqOne/QueueReceiver.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hlj/activemqOne/QueueReceiver.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hlj/activemqOne/QueueSender$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hlj/activemqOne/QueueSender$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hlj/activemqOne/QueueSender.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hlj/activemqOne/QueueSender.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hlj/activemqOne/Receiver.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hlj/activemqOne/Receiver.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hlj/activemqOne/Sender.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hlj/activemqOne/Sender.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hlj/five/staticnetworkConnectors/FailoverSender.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hlj/five/staticnetworkConnectors/FailoverSender.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hlj/five/staticnetworkConnectors/JmsStaticReceiver.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hlj/five/staticnetworkConnectors/JmsStaticReceiver.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hlj/five/staticnetworkConnectors/JmsStaticSend.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hlj/five/staticnetworkConnectors/JmsStaticSend.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hlj/five/staticnetworkConnectors/MyThread$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hlj/five/staticnetworkConnectors/MyThread$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hlj/five/staticnetworkConnectors/MyThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hlj/five/staticnetworkConnectors/MyThread.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hlj/five/staticnetworkConnectors/MyThread2$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hlj/five/staticnetworkConnectors/MyThread2$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hlj/five/staticnetworkConnectors/MyThread2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hlj/five/staticnetworkConnectors/MyThread2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hlj/five/staticnetworkConnectors/QueueReceiverThread1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hlj/five/staticnetworkConnectors/QueueReceiverThread1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hlj/five/staticnetworkConnectors/QueueReceiverThread2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hlj/five/staticnetworkConnectors/QueueReceiverThread2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hlj/five/staticnetworkConnectors/QueueSenderThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hlj/five/staticnetworkConnectors/QueueSenderThread.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hlj/four/spring/MyMessageListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hlj/four/spring/MyMessageListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hlj/four/spring/QueueMessageListenerSender$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hlj/four/spring/QueueMessageListenerSender$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hlj/four/spring/QueueMessageListenerSender.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hlj/four/spring/QueueMessageListenerSender.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hlj/four/spring/QueueReceiver.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hlj/four/spring/QueueReceiver.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hlj/four/spring/QueueSender$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hlj/four/spring/QueueSender$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hlj/four/spring/QueueSender.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hlj/four/spring/QueueSender.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hlj/four/spring/TopicReceiver.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hlj/four/spring/TopicReceiver.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hlj/four/spring/TopicSender$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hlj/four/spring/TopicSender$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hlj/four/spring/TopicSender.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hlj/four/spring/TopicSender.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hlj/three/broker/BrokerOne.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hlj/three/broker/BrokerOne.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hlj/three/broker/BrokerThreeSprignXml.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hlj/three/broker/BrokerThreeSprignXml.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hlj/three/broker/BrokerTwo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hlj/three/broker/BrokerTwo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hlj/two/topic/NoPersistenceReceiver.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hlj/two/topic/NoPersistenceReceiver.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hlj/two/topic/NoPersistenceSender.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hlj/two/topic/NoPersistenceSender.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hlj/two/topic/PersistenceReceiver.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hlj/two/topic/PersistenceReceiver.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hlj/two/topic/PersistenceSender.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hlj/two/topic/PersistenceSender.class" afterDir="false" />
-    </list>
+    <list default="true" id="f0a48f12-9e1a-4e3c-8a41-8de1470490c6" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -80,8 +14,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/hlj/five/staticnetworkConnectors/QueueReceiverThread1.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
+            <state relative-caret-position="319">
+              <caret line="47" column="30" selection-start-line="47" selection-start-column="30" selection-end-line="47" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -89,8 +23,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/hlj/five/staticnetworkConnectors/QueueSenderThread.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="343">
-              <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+            <state relative-caret-position="267">
+              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
             </state>
           </provider>
         </entry>
@@ -98,8 +32,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/hlj/five/staticnetworkConnectors/QueueReceiverThread2.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="609">
-              <caret line="63" column="41" lean-forward="true" selection-start-line="63" selection-start-column="41" selection-end-line="63" selection-end-column="41" />
+            <state relative-caret-position="230">
+              <caret line="24" column="17" lean-forward="true" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
               <folding>
                 <element signature="e#1348#1992#0" expanded="true" />
                 <element signature="e#1991#1992#0" expanded="true" />
@@ -131,7 +65,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-1928" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
@@ -246,7 +180,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1567596989039" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1567599131208" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -267,7 +201,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.QueueSenderThread">
+  <component name="RunManager" selected="Application.QueueReceiverThread2">
     <configuration name="QueueReceiverThread1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.hlj.five.staticnetworkConnectors.QueueReceiverThread1" />
       <module name="activeMQStudyOne" />
@@ -309,9 +243,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.QueueSenderThread" />
         <item itemvalue="Application.QueueReceiverThread2" />
         <item itemvalue="Application.QueueReceiverThread1" />
+        <item itemvalue="Application.QueueSenderThread" />
       </list>
     </recent_temporary>
   </component>
@@ -325,15 +259,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1567585382415</updated>
-      <workItem from="1567585384169" duration="2965000" />
+      <workItem from="1567585384169" duration="3677000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2965000" />
+    <option name="totallyTimeSpent" value="3677000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1928" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-1928" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Designer" />
@@ -341,7 +275,7 @@
       <window_info id="Capture Tool" />
       <window_info id="UI Designer" />
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Run with VisualVM" />
       <window_info anchor="bottom" id="Spring" />
@@ -377,20 +311,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hlj/five/staticnetworkConnectors/QueueSenderThread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hlj/five/staticnetworkConnectors/QueueReceiverThread1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/geronimo/specs/geronimo-jms_1.1_spec/1.1.1/geronimo-jms_1.1_spec-1.1.1.jar!/javax/jms/MessageConsumer.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="261">
@@ -398,10 +318,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hlj/five/staticnetworkConnectors/QueueSenderThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hlj/five/staticnetworkConnectors/QueueReceiverThread1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="47" column="30" selection-start-line="47" selection-start-column="30" selection-end-line="47" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/hlj/five/staticnetworkConnectors/QueueReceiverThread2.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="609">
-          <caret line="63" column="41" lean-forward="true" selection-start-line="63" selection-start-column="41" selection-end-line="63" selection-end-column="41" />
+        <state relative-caret-position="230">
+          <caret line="24" column="17" lean-forward="true" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
           <folding>
             <element signature="e#1348#1992#0" expanded="true" />
             <element signature="e#1991#1992#0" expanded="true" />
