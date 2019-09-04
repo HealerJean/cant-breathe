@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="600e98a2-7681-4346-91c3-d7b8ea4de030" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hlj/activemqOne/QueueSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hlj/activemqOne/QueueSender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hlj/four/spring/MyMessageListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hlj/four/spring/MyMessageListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hlj/four/spring/prepetries/QueuePropetriesReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hlj/four/spring/prepetries/QueuePropetriesReceiver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hlj/four/spring/prepetries/QueuePropetriesSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hlj/four/spring/prepetries/QueuePropetriesSender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/maven/activeMQStudyOneId/activeMQStudyOne/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/maven/activeMQStudyOneId/activeMQStudyOne/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hlj/activemqOne/QueueReceiver.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hlj/activemqOne/QueueReceiver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hlj/activemqOne/QueueSender$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hlj/activemqOne/QueueSender$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hlj/activemqOne/QueueSender.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hlj/activemqOne/QueueSender.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hlj/activemqOne/Receiver.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hlj/activemqOne/Receiver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hlj/activemqOne/Sender.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hlj/activemqOne/Sender.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hlj/four/spring/MyMessageListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hlj/four/spring/MyMessageListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hlj/four/spring/QueueMessageListenerSender$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hlj/four/spring/QueueMessageListenerSender$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hlj/four/spring/QueueMessageListenerSender.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hlj/four/spring/QueueMessageListenerSender.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hlj/four/spring/QueueReceiver.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hlj/four/spring/QueueReceiver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hlj/four/spring/QueueSender$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hlj/four/spring/QueueSender$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hlj/four/spring/QueueSender.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hlj/four/spring/QueueSender.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hlj/four/spring/TopicReceiver.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hlj/four/spring/TopicReceiver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hlj/four/spring/TopicSender$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hlj/four/spring/TopicSender$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hlj/four/spring/TopicSender.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hlj/four/spring/TopicSender.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hlj/three/broker/BrokerOne.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hlj/three/broker/BrokerOne.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hlj/three/broker/BrokerThreeSprignXml.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hlj/three/broker/BrokerThreeSprignXml.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hlj/three/broker/BrokerTwo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hlj/three/broker/BrokerTwo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hlj/two/topic/NoPersistenceReceiver.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hlj/two/topic/NoPersistenceReceiver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hlj/two/topic/NoPersistenceSender.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hlj/two/topic/NoPersistenceSender.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hlj/two/topic/PersistenceReceiver.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hlj/two/topic/PersistenceReceiver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hlj/two/topic/PersistenceSender.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hlj/two/topic/PersistenceSender.class" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/hlj/three/broker/BrokerThreeSprignXml.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="145">
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/hlj/three/broker/BrokerOne.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="261">
+              <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/hlj/four/spring/prepetries/QueuePropetriesSender.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="232">
+              <caret line="18" column="43" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/hlj/four/spring/prepetries/QueuePropetriesReceiver.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="522">
+              <caret line="22" column="1" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/hlj/four/spring/MyMessageListener.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="435">
+              <caret line="18" selection-end-line="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/hlj/activemqOne/QueueSender.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="439">
+              <caret line="51" column="17" selection-start-line="51" selection-start-column="17" selection-end-line="51" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/hlj/four/spring/QueueSender.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="145">
+              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/hlj/four/spring/QueueMessageListenerSender.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="145">
+              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/hlj/four/spring/QueueReceiver.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="145">
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/hlj/activemqOne/QueueReceiver.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="493">
+              <caret line="24" column="24" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="986">
+              <caret line="34" column="17" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/com/hlj/four/spring/prepetries/QueuePropetriesSender.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hlj/four/spring/prepetries/QueuePropetriesReceiver.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hlj/four/spring/MyMessageListener.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hlj/activemqOne/QueueSender.java" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="activeMQStudyOne" type="b2602c69:ProjectViewProjectNode" />
+              <item name="activeMQStudyOne" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="activeMQStudyOne" type="b2602c69:ProjectViewProjectNode" />
+              <item name="activeMQStudyOne" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="activeMQStudyOne" type="b2602c69:ProjectViewProjectNode" />
+              <item name="activeMQStudyOne" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="activeMQStudyOne" type="b2602c69:ProjectViewProjectNode" />
+              <item name="activeMQStudyOne" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="activeMQStudyOne" type="b2602c69:ProjectViewProjectNode" />
+              <item name="activeMQStudyOne" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="activeMQStudyOne" type="b2602c69:ProjectViewProjectNode" />
+              <item name="activeMQStudyOne" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="hlj" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="activeMQStudyOne" type="b2602c69:ProjectViewProjectNode" />
+              <item name="activeMQStudyOne" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="hlj" type="462c0819:PsiDirectoryNode" />
+              <item name="activemqOne" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="activeMQStudyOne" type="b2602c69:ProjectViewProjectNode" />
+              <item name="activeMQStudyOne" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="hlj" type="462c0819:PsiDirectoryNode" />
+              <item name="four" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="activeMQStudyOne" type="b2602c69:ProjectViewProjectNode" />
+              <item name="activeMQStudyOne" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="hlj" type="462c0819:PsiDirectoryNode" />
+              <item name="four" type="462c0819:PsiDirectoryNode" />
+              <item name="spring" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="activeMQStudyOne" type="b2602c69:ProjectViewProjectNode" />
+              <item name="activeMQStudyOne" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="hlj" type="462c0819:PsiDirectoryNode" />
+              <item name="four" type="462c0819:PsiDirectoryNode" />
+              <item name="spring" type="462c0819:PsiDirectoryNode" />
+              <item name="prepetries" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="activeMQStudyOne" type="b2602c69:ProjectViewProjectNode" />
+              <item name="activeMQStudyOne" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="hlj" type="462c0819:PsiDirectoryNode" />
+              <item name="three" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1567567788897" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="org.infernus.idea.checkstyle.CheckStyleConfigurable" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.QueueSender">
+    <configuration name="BrokerOne" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.hlj.three.broker.BrokerOne" />
+      <module name="activeMQStudyOne" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.hlj.three.broker.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="QueueSender" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.hlj.activemqOne.QueueSender" />
+      <module name="activeMQStudyOne" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.hlj.activemqOne.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.QueueSender" />
+        <item itemvalue="Application.BrokerOne" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="600e98a2-7681-4346-91c3-d7b8ea4de030" name="Default Changelist" comment="" />
+      <created>1567566256509</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1567566256509</updated>
+      <workItem from="1567566258207" duration="1270000" />
+      <workItem from="1567585316828" duration="14000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="1284000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.253212" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32964602" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Tail" order="7" />
+      <window_info anchor="bottom" id="Spring" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="CheckStyle" order="11" />
+      <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.32964602" />
+      <window_info anchor="bottom" id="Run with VisualVM" order="14" />
+      <window_info anchor="bottom" id="Database Changes" order="15" />
+      <window_info anchor="bottom" id="Version Control" order="16" />
+      <window_info anchor="bottom" id="MyBatis Sql Log" order="17" />
+      <window_info anchor="bottom" id="Debug with VisualVM" order="18" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hlj/three/broker/BrokerThreeSprignXml.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hlj/three/broker/BrokerOne.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hlj/four/spring/prepetries/QueuePropetriesSender.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="18" column="43" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hlj/four/spring/prepetries/QueuePropetriesReceiver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="22" column="1" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hlj/four/spring/MyMessageListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hlj/four/spring/QueueMessageListenerSender.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hlj/four/spring/QueueReceiver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hlj/activemqOne/QueueReceiver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="24" column="24" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="986">
+          <caret line="34" column="17" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hlj/activemqOne/QueueSender.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="439">
+          <caret line="51" column="17" selection-start-line="51" selection-start-column="17" selection-end-line="51" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hlj/four/spring/QueueSender.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.20377359" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

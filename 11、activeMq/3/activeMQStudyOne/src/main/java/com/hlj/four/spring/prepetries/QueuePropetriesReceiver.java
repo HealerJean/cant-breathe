@@ -8,16 +8,16 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class QueuePropetriesReceiver {
-	@Autowired
-	private JmsTemplate activeMqJmsTemplate = null;
+    @Autowired
+    private JmsTemplate activeMqJmsTemplate = null;
 
-	public static void main(String[] args) throws Exception {
-		ApplicationContext context = new ClassPathXmlApplicationContext("spring-mq-propetries.xml");
-		QueuePropetriesReceiver queueReceiver = (QueuePropetriesReceiver) context.getBean(QueuePropetriesReceiver.class);
-		
-		String msg = (String) queueReceiver.activeMqJmsTemplate.receiveAndConvert();
-	
-		System.out.println("msg===" + msg);		
-	}
+    public static void main(String[] args) throws Exception {
+        ApplicationContext context = new ClassPathXmlApplicationContext("spring-mq-propetries.xml");
+        QueuePropetriesReceiver queueReceiver = (QueuePropetriesReceiver) context.getBean(QueuePropetriesReceiver.class);
+
+        String msg = (String) queueReceiver.activeMqJmsTemplate.receiveAndConvert();
+
+        System.out.println("msg===" + msg);
+    }
 
 }

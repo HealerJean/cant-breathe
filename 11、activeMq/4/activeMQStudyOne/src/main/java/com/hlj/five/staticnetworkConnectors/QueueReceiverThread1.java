@@ -15,10 +15,10 @@ import org.apache.activemq.ActiveMQConnectionFactory;
 public class QueueReceiverThread1 {
 	public static void main(String[] args) throws Exception {
 
-		String linuxIp = "myLinuxQj";
+		String linuxIp = "localhost";
 		ConnectionFactory cf = new ActiveMQConnectionFactory(
 				"tcp://"+linuxIp+":61616");
-		
+
 		for(int i=0;i<30;i++){
 			Thread t = new MyThread(cf);
 			t.start();
@@ -42,14 +42,14 @@ class MyThread extends Thread{
 		try{
 			final Connection connection = cf.createConnection();
 			connection.start();
-	
+
 			final Session session = connection.createSession(Boolean.TRUE,
 					Session.AUTO_ACKNOWLEDGE);
 			Destination destination = session.createQueue("Thread.Consumer.queue");//"my-queue");
-	
+
 			MessageConsumer consumer = session.createConsumer(destination);
 			consumer.setMessageListener(new MessageListener() {
-				
+
 				public void onMessage(Message msg) {
 						try {
 							TextMessage txtMsg = (TextMessage)msg;
@@ -76,9 +76,9 @@ class MyThread extends Thread{
 					}
 				}
 			});
-			
-			
-			
+
+
+
 		}catch(Exception err){
 			err.printStackTrace();
 		}
